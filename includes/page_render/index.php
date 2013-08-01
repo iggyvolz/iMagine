@@ -22,7 +22,7 @@ function page_render()
 	$replacements=array(
 	'<!-- RESPONSE -->' => $response,
 	'<!-- METHOD -->' => $use_get ? 'GET' : 'POST',
-	'<!-- DUMP -->' => $_SESSION['iMagine']['debug']?'':print_r($GLOBALS,TRUE),
+	'<!-- DUMP -->' => $_SESSION['iMagine']['debug']?print_r($GLOBALS,TRUE):'',
 	'<!-- ENERGY_TONY -->' => $_SESSION['iMagine']['people']['tony']['energy'],
 	'<!-- ENERGY_EDYN -->' => $_SESSION['iMagine']['people']['edyn']['energy'],
 	'<!-- ENERGY_STRAG -->' => $_SESSION['iMagine']['people']['strag']['energy'],
