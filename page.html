@@ -1,0 +1,50 @@
+<HEAD>
+<title>iMagine</title>
+<script>
+function scrollDown()
+{
+var objDiv = document.getElementById("results");
+objDiv.scrollTop = objDiv.scrollHeight;
+}
+</script>
+<script src="js/html5slider.js"></script>
+<style>
+aside {
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid rgb(0, 221, 0);
+    border-radius: 2px 2px 2px 2px;
+    background-color: rgb(0, 161, 0);
+    width: 30%;
+}
+input[type=range]
+{
+	width: 100%;
+}
+</style>
+</HEAD>
+<BODY onload="scrollDown();">
+<!-- DUMP -->
+<form action="" method="<!-- METHOD -->">
+<p><input type="text" name="contents" autofocus autocomplete="off" /></p>
+<p><textarea id="results" readonly rows="4" cols="60">
+<!-- RESPONSE -->
+</textarea></p>
+<p><input type="submit" /></p>
+<aside style="float:left;">
+<p style="text-align:center;">Tony's energy</p>
+<p style="text-align:center;"><!-- ENERGY_TONY --></p>
+<input type="range" min="0" max="1000" disabled value="<!-- ENERGY_TONY -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;">Edyn's energy</p>
+<p style="text-align:center;"><!-- ENERGY_EDYN --></p>
+<input type="range" min="0" max="1000" disabled value="<!-- ENERGY_EDYN -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;">Strag's energy</p>
+<p style="text-align:center;"><!-- ENERGY_STRAG --></p>
+<input type="range" min="0" max="1000" disabled value="<!-- ENERGY_STRAG -->">
+</aside>
+</form>
+</BODY>
