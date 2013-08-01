@@ -1,7 +1,6 @@
 <?php
 @session_start(); // Don't return an error if session already started
 include './includes/index.php';
-require './kint/Kint.class.php';
 $use_get=FALSE;
 if($use_get)
 {
