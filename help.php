@@ -23,7 +23,7 @@ Tony is selected by default.  For more info, see the <a href="http://magination.
 Furok is Tony's main dream creature and the only one currently implimented in the game.  Catch phrase: "Let the fur fly!"  For more information, see the <a href="http://magination.wikia.com/wiki/Furok#In_the_TV_Series">Magi Nation Wiki</a>.
 <h3>Edyn</h3>
 For more info, see the <a href="http://magination.wikia.com/wiki/Edyn">Magi Nation Wiki</a>.
-<h4>Ugger<h4>
+<h4>Ugger</h4>
 Ugger is Edyn's main dream creature and the only one currently implimented in the game.  No catch phrase yet (see the <a href="https://github.com/iggyvolz/iMagine/issues/1">GitHub issue</a>).  For more information, see the <a href="http://magination.wikia.com/wiki/Ugger#In_the_TV_Series">Magi Nation Wiki</a>.
 <h3>Strag</h3>
 For more info, see the <a href="http://magination.wikia.com/wiki/Strag">Magi Nation Wiki</a>.
