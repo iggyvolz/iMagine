@@ -43,4 +43,9 @@ This "magines" a Dream Creature.  It costs 100 energy (subject to change).  It b
 Resets the game.  This happens without warning.  Person and parameter are ignored.
 <h3>ToTheDreamPlane</h3>
 This returns a Dream Creature to the Dream Plane.  For more info, see the <a href="http://magination.wikia.com/wiki/Animite#In_the_TV_Series">Magi Nation Wiki</a>.  Person must be a Dream Creature that is active (not in the Dream Plane).  Parameter is ignored.
+<h2>Credit</h2>
+<p>Magi-Nation and its respective characters, names, spells, etc. are copyrighted by Interactive Imagination Corporation, 2i, and Cookie Jar Entertainment. This game was created in the fan base and claims no affiliation with the copyright holders.</p>
+<p>All information for the game is taken from the <a href="http://magination.wikia.com/">Magi Nation Wiki</a></p>
+<p><a href="https://github.com/fryn/html5slider">html5slider</a> - a JS implementation of <input type=range> for Firefox 16 and up, Copyright (c) 2010-2013 Frank Yan, <a href="http://frankyan.com">frankyan.com</a></p>
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></p>.
 </BODY>
