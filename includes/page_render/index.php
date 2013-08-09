@@ -7,7 +7,7 @@ function page_render()
 	{
 		return;
 	}
-	$page=file_get_contents('http://localhost/iMagine/page.html');
+	$page=file_get_contents('./page.html');
 	$response='Welcome to iMagine - the unofficial Magi Nation video game!';
 	$response.=PHP_EOL;
 	$response.='For help, type help';
