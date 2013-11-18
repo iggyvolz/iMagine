@@ -1,11 +1,7 @@
 <?php
-$root = scandir('./includes');
-foreach($root as $value)
-{
-	if(strpos($value,'.')!==false) // $value is a file
-	{
-		continue;
-	}
-	include './includes/'.$value.'/index.php';
-	continue;
-}
+
+require __DIR__ . '/constants/index.php';
+require __DIR__ . '/initiate_session/index.php';
+require __DIR__ . '/classes/index.php';
+require __DIR__ . '/page_render/index.php';
+require __DIR__ . '/parse_contents/index.php';

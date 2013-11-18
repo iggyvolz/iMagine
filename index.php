@@ -1,36 +1,27 @@
 <?php
+
+error_reporting(E_ALL);
 @session_start(); // Don't return an error if session already started
-include './includes/index.php';
-$use_get=FALSE;
-if($use_get)
+require './includes/index.php';
+if (!isset($_POST['contents']))
 {
-	if(!isset($_GET['contents']))
-	{
-		die;
-	}
-	export_array(parse_contents($contents=strtolower($_GET['contents'])));
-}
-else
-{
-	if(!isset($_POST['contents']))
-	{
-		die;
-	}
-	export_array(parse_contents($contents=strtolower($_POST['contents'])));
-}
-$_SESSION['iMagine']['returns'][]='>'.$contents;
-if(isset($error))
-{
-	$_SESSION['iMagine']['returns'][]=$error;
 	die;
 }
-if(!function_exists('iMagine_action_'.$action))
+$_POST['contents'] = htmlspecialchars($_POST['contents']); // Sanitize input
+$contents = strtolower($_POST['contents']);
+$_SESSION['iMagine']['returns'][] = '>' . $contents;
+if (parse_contents($contents)) // Set $action, $person, $pars
 {
-	$_SESSION['iMagine']['returns'][]='Error: Invalid function';
+	$_SESSION['iMagine']['returns'][] = 'Who is ' . $person . '???';
 	die;
 }
-$returned=call_user_func('iMagine_action_'.$action,$person,$pars);
-foreach($returned as $value)
+if (!is_callable(array($$person, $action)))
 {
-	$_SESSION['iMagine']['returns'][]=$value;
+	$_SESSION['iMagine']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
+	die;
+}
+$returned = call_user_func(array($$person, $action), $pars);
+foreach ($returned as $value)
+{
+	$_SESSION['iMagine']['returns'][] = $value;
 }

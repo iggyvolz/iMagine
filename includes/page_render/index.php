@@ -1,32 +1,37 @@
 <?php
+
 register_shutdown_function('page_render');
+
 function page_render()
 {
-	global $use_get;
-	if(isset($no_render_page))
+	if (defined('iMAGINE_REFRESH'))
 	{
-		return;
+		echo '<HEAD><title>Resetting game, please refresh</title><script>window.onload=function() { location.reload(); };</script></HEAD><BODY>Please reload the page to reset the game.</BODY>';
+		die;
 	}
-	$page=file_get_contents(__DIR__.'/../../page.html');
-	$response='Welcome to iMagine - the unofficial Magi Nation video game!';
+	global $debug, $tony, $edyn, $strag;
+	ob_start();
+	require_once __DIR__ . '/page.html';
+	$page = ob_get_contents();
+	ob_end_clean();
+	$response = 'Welcome to iMagine - the unofficial Magi Nation video game!';
 	$response.=PHP_EOL;
-	$response.='For help, type help';
-	if(!empty($_SESSION['iMagine']['returns']))
+	$response.='For help and credits, type help then press enter.';
+	if (!empty($_SESSION['iMagine']['returns']))
 	{
-		foreach($_SESSION['iMagine']['returns'] as $value)
+		foreach ($_SESSION['iMagine']['returns'] as $value)
 		{
 			$response.=PHP_EOL;
 			$response.=$value;
 		}
 	}
-	$replacements=array(
-	'<!-- RESPONSE -->' => $response,
-	'<!-- METHOD -->' => $use_get ? 'GET' : 'POST',
-	'<!-- DUMP -->' => $_SESSION['iMagine']['debug']?'<pre>'.print_r($GLOBALS,TRUE).'</pre>':'',
-	'<!-- ENERGY_TONY -->' => $_SESSION['iMagine']['people']['tony']['energy'],
-	'<!-- ENERGY_EDYN -->' => $_SESSION['iMagine']['people']['edyn']['energy'],
-	'<!-- ENERGY_STRAG -->' => $_SESSION['iMagine']['people']['strag']['energy'],
+	$replacements = array(
+		'<!-- RESPONSE -->' => $response,
+		'<!-- DUMP -->' => $_SESSION['iMagine']['debug'] ? '<pre>' . print_r($GLOBALS, TRUE) . '</pre>' : '',
+		'<!-- ENERGY_TONY -->' => $tony->energy,
+		'<!-- ENERGY_EDYN -->' => $edyn->energy,
+		'<!-- ENERGY_STRAG -->' => $strag->energy,
 	);
-	$page=str_replace(array_keys($replacements),array_values($replacements),$page);
+	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;
 }

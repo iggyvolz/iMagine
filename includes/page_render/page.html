@@ -1,11 +1,7 @@
 <HEAD>
 <title>iMagine</title>
 <script>
-function scrollDown()
-{
-var objDiv = document.getElementById("results");
-objDiv.scrollTop = objDiv.scrollHeight;
-}
+    window.onload=function() { document.getElementById("results").scrollTop = document.getElementById("results").scrollHeight; };
 </script>
 <script src="js/html5slider.js"></script>
 <style>
@@ -23,14 +19,13 @@ input[type=range]
 }
 </style>
 </HEAD>
-<BODY onload="scrollDown();">
+<BODY>
 <!-- DUMP -->
-<form action="" method="<!-- METHOD -->">
-<p><input type="text" name="contents" autofocus autocomplete="off" /></p>
+<form action="" method="POST">
+<p><input type="text" name="contents" autofocus autocomplete="off" /><input type="submit" /></p>
 <p><textarea id="results" readonly rows="4" cols="60">
 <!-- RESPONSE -->
 </textarea></p>
-<p><input type="submit" /></p>
 <aside style="float:left;">
 <p style="text-align:center;">Tony's energy</p>
 <p style="text-align:center;"><!-- ENERGY_TONY --></p>

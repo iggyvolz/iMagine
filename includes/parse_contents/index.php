@@ -1,42 +1,38 @@
 <?php
-function parse_contents($contents)
+
+function parse_contents($contents) // Returns true if invalid person.  Invalid action is checked elsewhere
 {
-	if(strpos($contents,'.')===false)
+	global $me, $action, $person, $pars;
+	if (strpos($contents, '.') === false)
 	{
-		$actionWithPars=$contents;
-		$person='N/A';
+		$actionWithPars = $contents;
 	}
 	else
 	{
-		$person=explode('.',$contents)[0];
-		$actionWithPars=explode('.',$contents)[1];
+		$actionWithPars = explode('.', $contents)[1];
 	}
-	$action=explode('(',$actionWithPars)[0];
-	if(strpos($contents,'(')===false)
+	if (strpos($contents, '.') === false OR explode('.', $contents)[0] == 'i')
 	{
-		$pars='N/A';
+		$person = $me;
 	}
 	else
 	{
-		$pars=explode('(',$actionWithPars)[1];
-		$pars=explode(')',$pars)[0]; //furok
+		$person = explode('.', $contents)[0];
+		if (!in_array($person, array('tony', 'edyn', 'strag', 'furok', 'ugger', 'freep'))) // Prevent access of unwanted variables
+		{
+			return true;
+		}
 	}
-	$data=array('action' => $action, 'person' => $person, 'pars' => $pars);
-	if(isset($pars))
+	$action = explode('(', $actionWithPars)[0];
+	if (strpos($contents, '(') === false)
 	{
-		$data['pars']=$pars;
+		$pars = null;
 	}
 	else
 	{
-		$data['pars']='N/A';
+		$pars = explode('(', $actionWithPars)[1];
+		$pars = explode(')', $pars)[0];
+		$pars = explode(',', $pars);
 	}
-	if(isset($person))
-	{
-		$data['person']=$person;
-	}
-	else
-	{
-		$data['person']='N/A';
-	}
-	return $data;
+	return false;
 }
