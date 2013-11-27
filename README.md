@@ -1,3 +1,5 @@
+Note - We are in the process of renaming the entire software from iMagine to Fightmon the Game: Reemon.  Documentation may be out of date
+
 Please note: This program is in development.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/iMagine/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/iMagine/issues/new">add a new one</a>.
 <h2>Setup</h2>
 You need to set up a PHP server to play on.  I highly reccomend <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.  Download the iMagine files to (XAMPP install directory)/xamppfiles/htdocs/iMagine.  Open the XAMPP manager and start the Apache module (you can start mySQL and proFTPD, but they are not required).  Then go to http://localhost/iMagine to play.  Some applications, like Skype, Internet Information Services, and many game development softwares use localhost, so you will need to quit these programs completely. On Mac, click and hold the dock icon and press Quit, you may need to confirm.  On Windows, right-click the dock icon and press Quit, you may need to confirm.
