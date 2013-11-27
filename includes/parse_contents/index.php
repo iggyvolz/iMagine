@@ -18,7 +18,7 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	else
 	{
 		$person = explode('.', $contents)[0];
-		if (!in_array($person, array('tony', 'edyn', 'strag', 'furok', 'ugger', 'freep'))) // Prevent access of unwanted variables
+		if (!in_array($person, array('nechka', 'apparition', 'shade', 'reemon', 'pluff', 'dragiri'))) // Prevent access of unwanted variables
 		{
 			return true;
 		}

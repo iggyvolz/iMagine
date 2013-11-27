@@ -3,37 +3,37 @@
 class person
 {
 
-	private $creatures;
-	public $energy = iMAGINE_STARTING_ENERGY;
+	private $fightmon;
+	public $energy = FTGR_STARTING_ENERGY;
 
 	public function __construct()
 	{
-		if (isset($_SESSION['iMagine'][get_class($this) . 'energy']))
+		if (isset($_SESSION['ftgr'][get_class($this) . 'energy']))
 		{
-			$this->energy = $_SESSION['iMagine'][get_class($this) . 'energy'];
+			$this->energy = $_SESSION['ftgr'][get_class($this) . 'energy'];
 		}
-		$_SESSION['iMagine'][get_class($this) . 'energy'];
+		$_SESSION['ftgr'][get_class($this) . 'energy'];
 	}
 
 	public function __destruct()
 	{
-		$_SESSION['iMagine'][get_class($this) . 'energy'] = $this->energy;
+		$_SESSION['ftgr'][get_class($this) . 'energy'] = $this->energy;
 	}
 
 	public function changeto($args = NULL)
 	{
-		$_SESSION['iMagine']['me'] = get_class($this);
+		$_SESSION['ftgr']['me'] = get_class($this);
 		$GLOBALS['me'] = get_class($this);
 		return array(ucfirst(get_class($this)) . ' is now selected!');
 	}
 
 	public function debug($args = NULL)
 	{
-		if (func_num_args() == 0 AND $_SESSION['iMagine']['debug'])
+		if (func_num_args() == 0 AND $_SESSION['ftgr']['debug'])
 		{
 			return $this->debug_off();
 		}
-		if (func_num_args() == 0 AND !$_SESSION['iMagine']['debug'])
+		if (func_num_args() == 0 AND !$_SESSION['ftgr']['debug'])
 		{
 			return $this->debug_on();
 		}
@@ -45,11 +45,11 @@ class person
 		{
 			return $this->debug_off();
 		}
-		if ($_SESSION['iMagine']['debug'])
+		if ($_SESSION['ftgr']['debug'])
 		{
 			return $this->debug_off();
 		}
-		if (!$_SESSION['iMagine']['debug'])
+		if (!$_SESSION['ftgr']['debug'])
 		{
 			return $this->debug_on();
 		}
@@ -57,13 +57,13 @@ class person
 
 	private function debug_on($args = NULL)
 	{
-		$_SESSION['iMagine']['debug'] = TRUE;
+		$_SESSION['ftgr']['debug'] = TRUE;
 		return array('Debug mode is now on.');
 	}
 
 	private function debug_off($args = NULL)
 	{
-		$_SESSION['iMagine']['debug'] = FALSE;
+		$_SESSION['ftgr']['debug'] = FALSE;
 		return array('Debug mode is now off.');
 	}
 
@@ -73,59 +73,68 @@ class person
 		return array('Opened help');
 	}
 
-	public function magine($args = NULL)
+	public function register($fightmon)
 	{
-		$creature = $args[0];
-		global $dreamplane;
-		if (!$dreamplane->evercontains($creature))
-		{
-			return array(ucfirst(get_class($this)) . ': What kind of creature is a' . (in_array($creature[0], array('a', 'e', 'i', 'o', 'u')) ? 'n' : '') . ' "' . ucfirst($creature) . '"?');
-		}
-		if (!in_array($creature, $this->creatures))
-		{
-			return array(ucfirst(get_class($this)) . ': I can\'t magine ' . ucfirst($creature) . '!');
-		}
-		if (!$dreamplane->contains($creature))
-		{
-			return array(ucfirst($creature) . ": Hey! I'm already in battle!");
-		}
-		if ($this->energy - 100 < 0)
-		{
-			return array(ucfirst(get_class($this)) . ': I\'m too weak to magine ' . ucfirst($creature) . '!');
-		}
-		$GLOBALS['dreamplanecontains'] = $dreamplane->contains($creature);
-		$dreamplane->deregister($creature);
-		$this->energy-=100;
-		return array(ucfirst(get_class($this)) . ": With this animite, I magine " . ucfirst($creature) . '!');
-	}
-
-	public function register($creature)
-	{
-		$this->creatures[] = $creature;
+		$this->fightmon[] = $fightmon;
 	}
 
 	public function reset($args = NULL)
 	{
-		$args = func_get_args();
 		session_destroy();
 		init_session();
-		define('iMAGINE_REFRESH', TRUE);
+		define('FTGR_REFRESH', TRUE);
 		return array('');
+	}
+
+	public function version($args = NULL)
+	{
+		$location = $args[0];
+		if ($location === NULL || $location == 'local')
+		{
+			return array('Current version is ' . FTGR_VERSION);
+		}
+		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/Fightmon-the-Game--Reemon/releases'), TRUE);
+		$latest_of_version = "0.0.0";
+		foreach ($version as $value)
+		{
+			if (version_compare($latest_of_version, $value["tag_name"], '<'))
+			{
+				if ($location === 'any')
+				{
+					$latest_of_version = $value["tag_name"];
+					continue;
+				}
+				if ($location === 'stable')
+				{
+					if ((strpos($value["tag_name"], 'alpha') === FALSE) AND (strpos($value["tag_name"], 'beta') === FALSE) AND (strpos($value["tag_name"], 'dev') === FALSE))
+					{
+						$latest_of_version = $value["tag_name"];
+						continue;
+					}
+				}
+				if ((strpos($value["tag_name"], $location) !== FALSE) AND in_array($location, array('alpha', 'beta', 'dev')))
+				{
+					$latest_of_version = $value["tag_name"];
+					continue;
+				}
+			}
+		}
+		return array($latest_of_version);
 	}
 
 }
 
-class tony extends person
+class nechka extends person
 {
-	// Allows Tony-specific functions to be implimented in later versions
+	// Allows Nechka-specific functions to be implimented in later versions
 }
 
-class edyn extends person
+class shade extends person
 {
-	// Allows Edyn-specific functions to be implimented in later versions
+	// Allows Shade-specific functions to be implimented in later versions
 }
 
-class strag extends person
+class apparition extends person
 {
-	// Allows Strag-specific functions to be implimented in later versions
+	// Allows Apparition-specific functions to be implimented in later versions
 }

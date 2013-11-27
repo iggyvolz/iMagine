@@ -9,19 +9,19 @@ if (!isset($_POST['contents']))
 }
 $_POST['contents'] = htmlspecialchars($_POST['contents']); // Sanitize input
 $contents = strtolower($_POST['contents']);
-$_SESSION['iMagine']['returns'][] = '>' . $contents;
+$_SESSION['ftgr']['returns'][] = '>' . $contents;
 if (parse_contents($contents)) // Set $action, $person, $pars
 {
-	$_SESSION['iMagine']['returns'][] = 'Who is ' . $person . '???';
+	$_SESSION['ftgr']['returns'][] = 'Who is ' . $person . '???';
 	die;
 }
-if (!is_callable(array($$person, $action)))
+if (!is_callable(array($$person, $action)) OR $action[0] === '_')
 {
-	$_SESSION['iMagine']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
+	$_SESSION['ftgr']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
 	die;
 }
 $returned = call_user_func(array($$person, $action), $pars);
 foreach ($returned as $value)
 {
-	$_SESSION['iMagine']['returns'][] = $value;
+	$_SESSION['ftgr']['returns'][] = $value;
 }
