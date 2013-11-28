@@ -27,17 +27,17 @@
 	<h3>Nechka</h3>
 	Nechka is selected by default.  For more information, see the <a href="http://fightmon.wikia.com/wiki/Nechka">Fightmon Wiki</a>.
 	<h4>Reemon</h4>
-	Reemon is a placeholder Fightmon for Nechka.  Nechka may or may not have a Reemon, we're just using in order to develop the fightmon-related features.
+	Reemon is a placeholder Fightmon for Nechka.  Nechka may or may not have a Reemon, we're just using it in order to develop the fightmon-related features.
 	For more information about Reemon, see the <a href="http://fightmon.wikia.com/wiki/Reemon">Fightmon Wiki</a>.
 	<h3>Shade</h3>
 	For more information, see the <a href="http://fightmon.wikia.com/wiki/Shade">Fightmon Wiki</a>.
 	<h4>Pluff</h4>
-	Pluff is a placeholder Fightmon for Shade.  Shade may or may not have a Pluff, we're just using in order to develop the fightmon-related features.
+	Pluff is a placeholder Fightmon for Shade.  Shade may or may not have a Pluff, we're just using it in order to develop the fightmon-related features.
 	For more information about Pluff, see the <a href="http://fightmon.wikia.com/wiki/Pluff">Fightmon Wiki</a>.
 	<h3>Apparition</h3>
 	For more information, see the <a href="http://fightmon.wikia.com/wiki/Apparition">Fightmon Wiki</a>.
 	<h4>Dragiri</h4>
-	Dragiri is a placeholder Fightmon for Apparition.  Apparition may or may not have a Dragiri, we're just using in order to develop the fightmon-related features.
+	Dragiri is a placeholder Fightmon for Apparition.  Apparition may or may not have a Dragiri, we're just using it in order to develop the fightmon-related features.
 	For more information about Dragiri, see the <a href="http://fightmon.wikia.com/wiki/Dragiri">Fightmon Wiki</a>.
 	<h2>Functions</h2>
 	<h3>Changeto</h3>
