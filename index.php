@@ -1,5 +1,9 @@
 <?php
 
+if (version_compare(PHP_VERSION, '5.4', '<'))
+{
+	die('Error - Fightmon the Game: Reemon requires PHP 5.4+');
+}
 error_reporting(E_ALL);
 @session_start(); // Don't return an error if session already started
 require './includes/index.php';

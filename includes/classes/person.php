@@ -93,13 +93,20 @@ class person
 		{
 			return array('Current version is ' . FTGR_VERSION);
 		}
-		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/Fightmon-the-Game--Reemon/releases'), TRUE);
+		$opts = array(
+			'http' => array(
+				'method' => "GET",
+				'header' => "User-Agent: Fightmon-The-Game-Reemon-" . FTGR_VERSION
+			)
+		);
+		$context = stream_context_create($opts);
+		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/Fightmon-the-Game--Reemon/releases', false, $context), TRUE);
 		$latest_of_version = "0.0.0";
 		foreach ($version as $value)
 		{
 			if (version_compare($latest_of_version, $value["tag_name"], '<'))
 			{
-				if ($location === 'any')
+				if ($location === 'any' OR $location === 'server' OR $location === 'remote')
 				{
 					$latest_of_version = $value["tag_name"];
 					continue;
