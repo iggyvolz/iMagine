@@ -4,7 +4,6 @@ class person
 {
 
 	private $fightmon;
-	public $energy = FTGR_STARTING_ENERGY;
 
 	public function __construct()
 	{
@@ -58,19 +57,19 @@ class person
 	private function debug_on($args = NULL)
 	{
 		$_SESSION['ftgr']['debug'] = TRUE;
-		return array('Debug mode is now on.');
+		return array(FTGR_DEBUG_ON);
 	}
 
 	private function debug_off($args = NULL)
 	{
 		$_SESSION['ftgr']['debug'] = FALSE;
-		return array('Debug mode is now off.');
+		return array(FTGR_DEBUG_OFF);
 	}
 
 	public function help($args = NULL)
 	{
 		header('Location: help.php');
-		return array('Opened help');
+		return array(FTGR_OPENED_HELP);
 	}
 
 	public function register($fightmon)
@@ -91,7 +90,7 @@ class person
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array('Current version is ' . FTGR_VERSION);
+			return array(FTGR_CURRENT_VERSION_IS . ' ' . FTGR_VERSION);
 		}
 		$opts = array(
 			'http' => array(
@@ -133,15 +132,24 @@ class person
 
 class nechka extends person
 {
+
+	public $energy = FTGR_NECHKA_STARTING_ENERGY;
+
 	// Allows Nechka-specific functions to be implimented in later versions
 }
 
 class shade extends person
 {
+
+	public $energy = FTGR_SHADE_STARTING_ENERGY;
+
 	// Allows Shade-specific functions to be implimented in later versions
 }
 
 class apparition extends person
 {
+
+	public $energy = FTGR_APPARITION_STARTING_ENERGY;
+
 	// Allows Apparition-specific functions to be implimented in later versions
 }

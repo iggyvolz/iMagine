@@ -31,6 +31,9 @@ function page_render()
 		'<!-- ENERGY_NECHKA -->' => $nechka->energy,
 		'<!-- ENERGY_SHADE -->' => $shade->energy,
 		'<!-- ENERGY_APPARITION -->' => $apparition->energy,
+		'<!-- NECHKA_NAME -->' => FTGR_NECHKA_NAME,
+		'<!-- SHADE_NAME -->' => FTGR_SHADE_NAME,
+		'<!-- APPARITION_NAME -->' => FTGR_APPARITION_NAME
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;

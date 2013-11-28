@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . '/itemOf/index.php';
 require __DIR__ . '/constants/index.php';
 require __DIR__ . '/initiate_session/index.php';
 require __DIR__ . '/classes/index.php';

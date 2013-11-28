@@ -9,29 +9,29 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	}
 	else
 	{
-		$actionWithPars = explode('.', $contents)[1];
+		$actionWithPars = itemOf(explode('.', $contents), 1);
 	}
-	if (strpos($contents, '.') === false OR explode('.', $contents)[0] == 'i')
+	if (strpos($contents, '.') === false OR itemOf(explode('.', $contents), 0) == 'i')
 	{
 		$person = $me;
 	}
 	else
 	{
-		$person = explode('.', $contents)[0];
-		if (!in_array($person, array('nechka', 'apparition', 'shade', 'reemon', 'pluff', 'dragiri'))) // Prevent access of unwanted variables
+		$person = itemOf(explode('.', $contents), 0);
+		if (!in_array($person, array(strtolower(FTGR_NECHKA_NAME), strtolower(FTGR_APPARITION_NAME), strtolower(FTGR_SHADE_NAME), strtolower(FTGR_REEMON_NAME), 'pluff', 'dragiri'))) // Prevent access of unwanted variables
 		{
 			return true;
 		}
 	}
-	$action = explode('(', $actionWithPars)[0];
+	$action = itemOf(explode('(', $actionWithPars), 0);
 	if (strpos($contents, '(') === false)
 	{
 		$pars = null;
 	}
 	else
 	{
-		$pars = explode('(', $actionWithPars)[1];
-		$pars = explode(')', $pars)[0];
+		$pars = itemOf(explode('(', $actionWithPars), 1);
+		$pars = itemOf(explode(')', $pars), 0);
 		$pars = explode(',', $pars);
 	}
 	return false;
