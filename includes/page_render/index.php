@@ -14,9 +14,9 @@ function page_render()
 	require_once __DIR__ . '/page.html';
 	$page = ob_get_contents();
 	ob_end_clean();
-	$response = 'Welcome to Fightmon the Game: Reemon v' . FTGR_VERSION . '!';
+	$response = FTGR_INTRO_LINE_ONE;
 	$response.=PHP_EOL;
-	$response.='For help and credits, type help then press enter.';
+	$response.=FTGR_INTRO_LINE_TWO;
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
