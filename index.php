@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(E_ALL);
+error_reporting(0);
 @session_start(); // Don't return an error if session already started
 require './includes/index.php';
 if (!isset($_POST['contents']))

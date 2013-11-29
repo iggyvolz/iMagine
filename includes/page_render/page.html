@@ -16,8 +16,8 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-        //console.log(xmlhttp.responseText); //For debug purposes
-        //console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
+        console.log(xmlhttp.responseText); //For debug purposes
+        console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
         document.getElementById('nechka_energy').value=JSON.parse(xmlhttp.responseText).nechka_energy;

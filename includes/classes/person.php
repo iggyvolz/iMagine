@@ -132,6 +132,91 @@ class person
 		return array($latest_of_version);
 	}
 
+	public function update($args = NULL)
+	{
+		global $folder;
+		if (!$_SESSION['ftgr']['valid_session'])
+		{
+			return array(FTGR_UPDATE_REJECT);
+		}
+		if ($args === 'NULL')
+		{
+			return array(FTGR_REQUIRED_PARAM);
+		}
+		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
+		$contents = file_get_contents($url);
+		file_put_contents(__DIR__ . '/ftgr.zip', $contents);
+		$zip = new ZipArchive;
+		$res = $zip->open(__DIR__ . '/ftgr.zip');
+		if ($res === TRUE)
+		{
+			$zip->extractTo(__DIR__ . '/ftgr');
+			$zip->close();
+		}
+		else
+		{
+			return array('Upgrade failed, code: ' . $res);
+		}
+		$folder = __DIR__ . '/ftgr/' . itemOf(scandir(__DIR__ . '/ftgr'), 2);
+		$scan = $this->recursive_scandir($folder);
+		$return = array();
+		foreach ($scan as $value)
+		{
+			$worked = copy($value, str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value));
+			$return[] = 'Copying ' . $value . ' to ' . str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value) . ' and it ' . ($worked ? 'worked' : 'did not work');
+		}
+		unlink(__DIR__ . '/ftgr.zip');
+		$this->update_remove_folder(__DIR__ . '/ftgr');
+		return $return;
+	}
+
+	public function update_code($args = NULL)
+	{
+		if ($args === NULL)
+		{
+			return array(FTGR_REQUIRED_PARAM);
+		}
+		if ($args[0] === strtolower(FTGR_UPDATE_CODE))
+		{
+			return array(FTGR_UPDATE_CODE_ACCEPTED);
+			$_SESSION['ftgr']['valid_session'] = TRUE;
+		}
+		return array(FTGR_UPDATE_CODE_DENIED);
+	}
+
+	private function recursive_scandir($dir)
+	{
+		$result = array();
+		$root = scandir($dir);
+		foreach ($root as $value)
+		{
+			if ($value === '.' || $value === '..')
+			{
+				continue;
+			}
+			if (is_file("$dir/$value"))
+			{
+				$result[] = "$dir/$value";
+				continue;
+			}
+			foreach ($this->recursive_scandir("$dir/$value") as $value)
+			{
+				$result[] = $value;
+			}
+		}
+		return $result;
+	}
+
+	private function update_remove_folder($dir)
+	{
+		$files = array_diff(scandir($dir), array('.', '..'));
+		foreach ($files as $file)
+		{
+			(is_dir("$dir/$file")) ? $this->update_remove_folder("$dir/$file") : unlink("$dir/$file");
+		}
+		return rmdir($dir);
+	}
+
 }
 
 class nechka extends person
