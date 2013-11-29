@@ -28,6 +28,10 @@ class person
 
 	public function debug($args = NULL)
 	{
+		if (!FTGR_DEBUG)
+		{
+			return array(FTGR_DISABLED);
+		}
 		if (func_num_args() == 0 AND $_SESSION['ftgr']['debug'])
 		{
 			return $this->debug_off();

@@ -1,8 +1,8 @@
 <?php
 
-register_shutdown_function('page_render');
+register_shutdown_function('page_render_' . FTGR_MODE);
 
-function page_render()
+function page_render_normal()
 {
 	if (defined('FTGR_REFRESH'))
 	{
@@ -27,14 +27,33 @@ function page_render()
 	}
 	$replacements = array(
 		'<!-- RESPONSE -->' => $response,
-		'<!-- DUMP -->' => $_SESSION['ftgr']['debug'] ? '<pre>' . print_r($GLOBALS, TRUE) . '</pre>' : '',
 		'<!-- ENERGY_NECHKA -->' => $nechka->energy,
 		'<!-- ENERGY_SHADE -->' => $shade->energy,
 		'<!-- ENERGY_APPARITION -->' => $apparition->energy,
+		'<!-- NECHKA_STARTING_ENERGY -->' => FTGR_NECHKA_STARTING_ENERGY,
+		'<!-- SHADE_STARTING_ENERGY -->' => FTGR_SHADE_STARTING_ENERGY,
+		'<!-- APPARITION_STARTING_ENERGY -->' => FTGR_APPARITION_STARTING_ENERGY,
 		'<!-- NECHKA_NAME -->' => FTGR_NECHKA_NAME,
 		'<!-- SHADE_NAME -->' => FTGR_SHADE_NAME,
-		'<!-- APPARITION_NAME -->' => FTGR_APPARITION_NAME
+		'<!-- APPARITION_NAME -->' => FTGR_APPARITION_NAME,
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;
+}
+
+function page_render_api()
+{
+	global $debug, $nechka, $shade, $apparition;
+	$response = FTGR_INTRO_LINE_ONE;
+	$response.=PHP_EOL;
+	$response.=FTGR_INTRO_LINE_TWO;
+	if (!empty($_SESSION['ftgr']['returns']))
+	{
+		foreach ($_SESSION['ftgr']['returns'] as $value)
+		{
+			$response.=PHP_EOL;
+			$response.=$value;
+		}
+	}
+	echo json_encode(array('dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '', 'nechka_energy' => $nechka->energy, 'shade_energy' => $shade->energy, 'apparition_energy' => $apparition->energy, 'response' => $response));
 }
