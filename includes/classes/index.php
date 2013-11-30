@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
+require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
 $reemon = new reemon;
 $pluff = new pluff;
 $dragiri = new dragiri;
