@@ -1,7 +1,7 @@
 <?php
 
-require_once 'person.php';
-require_once 'fightmon.php';
+require_once __DIR__ . FTGR_SLASH . 'person.php';
+require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
 $nechka = new nechka;
 $shade = new shade;
 $apparition = new apparition;

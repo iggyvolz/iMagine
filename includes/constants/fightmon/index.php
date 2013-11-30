@@ -1,5 +1,5 @@
 <?php
 
-require_once __DIR__ . '/reemon.php';
-require_once __DIR__ . '/pluff.php';
-require_once __DIR__ . '/dragiri.php';
+require_once __DIR__ . FTGR_SLASH . 'reemon.php';
+require_once __DIR__ . FTGR_SLASH . 'pluff.php';
+require_once __DIR__ . FTGR_SLASH . 'dragiri.php';

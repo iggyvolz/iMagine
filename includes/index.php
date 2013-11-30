@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . '/itemOf/index.php';
-require __DIR__ . '/constants/index.php';
-require __DIR__ . '/initiate_session/index.php';
-require __DIR__ . '/classes/index.php';
-require __DIR__ . '/page_render/index.php';
-require __DIR__ . '/parse_contents/index.php';
+require __DIR__ . FTGR_SLASH . 'itemOf/index.php';
+require __DIR__ . FTGR_SLASH . 'constants/index.php';
+require __DIR__ . FTGR_SLASH . 'initiate_session/index.php';
+require __DIR__ . FTGR_SLASH . 'classes/index.php';
+require __DIR__ . FTGR_SLASH . 'page_render/index.php';
+require __DIR__ . FTGR_SLASH . 'parse_contents/index.php';

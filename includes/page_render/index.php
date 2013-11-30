@@ -11,7 +11,7 @@ function page_render_normal()
 	}
 	global $debug, $nechka, $shade, $apparition;
 	ob_start();
-	require_once __DIR__ . '/page.html';
+	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
 	ob_end_clean();
 	$response = FTGR_INTRO_LINE_ONE;

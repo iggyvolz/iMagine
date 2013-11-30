@@ -145,28 +145,28 @@ class person
 		}
 		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
 		$contents = file_get_contents($url);
-		file_put_contents(__DIR__ . '/ftgr.zip', $contents);
+		file_put_contents(__DIR__ . FTGR_SLASH . 'ftgr.zip', $contents);
 		$zip = new ZipArchive;
-		$res = $zip->open(__DIR__ . '/ftgr.zip');
+		$res = $zip->open(__DIR__ . FTGR_SLASH . 'ftgr.zip');
 		if ($res === TRUE)
 		{
-			$zip->extractTo(__DIR__ . '/ftgr');
+			$zip->extractTo(__DIR__ . FTGR_SLASH . 'ftgr');
 			$zip->close();
 		}
 		else
 		{
 			return array(FTGR_UNZIP_FAIL . $res);
 		}
-		$folder = __DIR__ . '/ftgr/' . itemOf(scandir(__DIR__ . '/ftgr'), 2);
+		$folder = __DIR__ . FTGR_SLASH . 'ftgr' . FTGR_SLASH . itemOf(scandir(__DIR__ . '/ftgr'), 2);
 		$scan = $this->recursive_scandir($folder);
 		$return = array();
 		foreach ($scan as $value)
 		{
-			$worked = copy($value, str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value));
-			//$return[] = 'Copying ' . $value . ' to ' . str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value) . ' and it ' . ($worked ? 'worked' : 'did not work'); // For debug purposes
+			$worked = copy($value, str_replace(FTGR_SLASH . 'includes' . FTGR_SLASH . 'classes' . FTGR_SLASH . 'ftgr' . FTGR_SLASH . 'Fightmon-the-Game--Reemon-dev' . FTGR_SLASH, FTGR_SLASH, $value));
+			//$return[] = 'Copying ' . $value . ' to ' . str_replace(FTGR_SLASH .'includes'.FTGR_SLASH .'classes'.FTGR_SLASH .'ftgr'.FTGR_SLASH .'Fightmon-the-Game--Reemon-dev'.FTGR_SLASH, FTGR_SLASH, $value) . ' and it ' . ($worked ? 'worked' : 'did not work'); // For debug purposes
 		}
-		unlink(__DIR__ . '/ftgr.zip');
-		$this->update_remove_folder(__DIR__ . '/ftgr');
+		unlink(__DIR__ . FTGR_SLASH . 'ftgr.zip');
+		$this->update_remove_folder(__DIR__ . FTGR_SLASH . 'ftgr');
 		//return $return; // For debug purposes
 		return FTGR_UPDATE_SUCCESS . str_replace('-', '.', $args[0]);
 	}
@@ -195,12 +195,12 @@ class person
 			{
 				continue;
 			}
-			if (is_file("$dir/$value"))
+			if (is_file("$dir" . FTGR_SLASH . "$value"))
 			{
-				$result[] = "$dir/$value";
+				$result[] = "$dir" . FTGR_SLASH . "$value";
 				continue;
 			}
-			foreach ($this->recursive_scandir("$dir/$value") as $value)
+			foreach ($this->recursive_scandir("$dir" . FTGR_SLASH . "$value") as $value)
 			{
 				$result[] = $value;
 			}
@@ -213,7 +213,7 @@ class person
 		$files = array_diff(scandir($dir), array('.', '..'));
 		foreach ($files as $file)
 		{
-			(is_dir("$dir/$file")) ? $this->update_remove_folder("$dir/$file") : unlink("$dir/$file");
+			(is_dir("$dir" . FTGR_SLASH . "$file")) ? $this->update_remove_folder("$dir" . FTGR_SLASH . "$file") : unlink("$dir" . FTGR_SLASH . "$file");
 		}
 		return rmdir($dir);
 	}
