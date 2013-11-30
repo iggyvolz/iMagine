@@ -9,7 +9,7 @@ function page_render_normal()
 		echo '<HEAD><title>Resetting game, please refresh</title><script>window.onload=function() { location.reload(); };</script></HEAD><BODY>Please reload the page to reset the game.</BODY>';
 		die;
 	}
-	global $debug, $nechka, $shade, $apparition;
+	global $debug, $reemon, $pluff, $dragiri;
 	ob_start();
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
@@ -27,15 +27,15 @@ function page_render_normal()
 	}
 	$replacements = array(
 		'<!-- RESPONSE -->' => $response,
-		'<!-- ENERGY_NECHKA -->' => $nechka->energy,
-		'<!-- ENERGY_SHADE -->' => $shade->energy,
-		'<!-- ENERGY_APPARITION -->' => $apparition->energy,
-		'<!-- NECHKA_STARTING_ENERGY -->' => FTGR_NECHKA_STARTING_ENERGY,
-		'<!-- SHADE_STARTING_ENERGY -->' => FTGR_SHADE_STARTING_ENERGY,
-		'<!-- APPARITION_STARTING_ENERGY -->' => FTGR_APPARITION_STARTING_ENERGY,
-		'<!-- NECHKA_NAME -->' => FTGR_NECHKA_NAME,
-		'<!-- SHADE_NAME -->' => FTGR_SHADE_NAME,
-		'<!-- APPARITION_NAME -->' => FTGR_APPARITION_NAME,
+		'<!-- ENERGY_REEMON -->' => $reemon->energy,
+		'<!-- ENERGY_PLUFF -->' => $pluff->energy,
+		'<!-- ENERGY_DRAGIRI -->' => $dragiri->energy,
+		'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_PLUFF -->' => FTGR_PLUFF_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_DRAGIRI -->' => FTGR_DRAGIRI_STARTING_ENERGY,
+		'<!-- NAME_REEMON -->' => FTGR_REEMON_NAME,
+		'<!-- NAME_PLUFF -->' => FTGR_PLUFF_NAME,
+		'<!-- NAME_DRAGIRI -->' => FTGR_DRAGIRI_NAME,
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;
@@ -43,7 +43,12 @@ function page_render_normal()
 
 function page_render_api()
 {
-	global $debug, $nechka, $shade, $apparition;
+	global $debug, $reemon, $pluff, $dragiri;
+	if (defined('FTGR_HELP'))
+	{
+		echo 'help';
+		return;
+	}
 	$response = FTGR_INTRO_LINE_ONE;
 	$response.=PHP_EOL;
 	$response.=FTGR_INTRO_LINE_TWO;
@@ -55,5 +60,5 @@ function page_render_api()
 			$response.=$value;
 		}
 	}
-	echo json_encode(array('dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '', 'nechka_energy' => $nechka->energy, 'shade_energy' => $shade->energy, 'apparition_energy' => $apparition->energy, 'response' => $response));
+	echo json_encode(array('dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '', 'reemon_energy' => $reemon->energy, 'pluff_energy' => $pluff->energy, 'dragiri_energy' => $dragiri->energy, 'response' => $response));
 }

@@ -1,14 +1,10 @@
 <?php
 
-require_once __DIR__ . FTGR_SLASH . 'person.php';
 require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
-$nechka = new nechka;
-$shade = new shade;
-$apparition = new apparition;
 $reemon = new reemon;
 $pluff = new pluff;
 $dragiri = new dragiri;
-$me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Nechka';
+$me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
 
 /*
  * Notes for developers:

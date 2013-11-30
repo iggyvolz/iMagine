@@ -18,9 +18,15 @@ xmlhttp.onreadystatechange=function()
     {
         //console.log(xmlhttp.responseText); //For debug purposes
         //console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
+        if(xmlhttp.responseText==='help')
+        {
+            window.location.replace("help.php");
+        }
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
-        document.getElementById('nechka_energy').value=JSON.parse(xmlhttp.responseText).nechka_energy;
+        document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
+        document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
+        document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
         document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
         if(JSON.parse(xmlhttp.responseText).dump!=='')
         {
@@ -61,18 +67,18 @@ input[type=range]
 <!-- RESPONSE -->
 </textarea></p>
 <aside style="float:left;">
-<p style="text-align:center;"><!-- NECHKA_NAME -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_NECHKA --></p>
-<input type="range" min="0" max="<!-- NECHKA_STARTING_ENERGY -->" id="nechka_energy" disabled value="<!-- ENERGY_NECHKA -->">
+<p style="text-align:center;"><!-- NAME_REEMON -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_REEMON --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_REEMON -->" id="energy_reemon" disabled value="<!-- ENERGY_REEMON -->">
 </aside>
 <aside style="float:left;">
-<p style="text-align:center;"><!-- SHADE_NAME -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_SHADE --></p>
-<input type="range" min="0" max="<!-- SHADE_STARTING_ENERGY -->" disabled value="<!-- ENERGY_SHADE -->">
+<p style="text-align:center;"><!-- NAME_PLUFF -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_PLUFF --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_PLUFF -->" id="energy_pluff" disabled value="<!-- ENERGY_PLUFF -->">
 </aside>
 <aside style="float:left;">
-<p style="text-align:center;"><!-- APPARITION_NAME -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_APPARITION --></p>
-<input type="range" min="0" max="<!-- APPARITION_STARTING_ENERGY -->" disabled value="<!-- ENERGY_APPARITION -->">
+<p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="energy_dragiri" disabled value="<!-- ENERGY_DRAGIRI -->">
 </aside>
 </BODY>
