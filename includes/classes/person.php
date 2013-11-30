@@ -155,7 +155,7 @@ class person
 		}
 		else
 		{
-			return array('Upgrade failed, code: ' . $res);
+			return array(FTGR_UNZIP_FAIL . $res);
 		}
 		$folder = __DIR__ . '/ftgr/' . itemOf(scandir(__DIR__ . '/ftgr'), 2);
 		$scan = $this->recursive_scandir($folder);
@@ -163,11 +163,12 @@ class person
 		foreach ($scan as $value)
 		{
 			$worked = copy($value, str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value));
-			$return[] = 'Copying ' . $value . ' to ' . str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value) . ' and it ' . ($worked ? 'worked' : 'did not work');
+			//$return[] = 'Copying ' . $value . ' to ' . str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/', $value) . ' and it ' . ($worked ? 'worked' : 'did not work'); // For debug purposes
 		}
 		unlink(__DIR__ . '/ftgr.zip');
 		$this->update_remove_folder(__DIR__ . '/ftgr');
-		return $return;
+		//return $return; // For debug purposes
+		return FTGR_UPDATE_SUCCESS . str_replace('-', '.', $args[0]);
 	}
 
 	public function update_code($args = NULL)

@@ -52,6 +52,13 @@
 	<h3>Reset</h3>
 	<p class="italic">Note - Name and parameter are optional and will be ignored if included.</p>
 	Resets the game without warning.  Note that without Javascript enabled you will be forced to refresh the page.
+	<h3>Update</h3>
+	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is required and must be a packaged version of Fightmon the Game: Reemon (see <a href="http://fightmon.eternityincurakai.com/fightmon/ftgr/">package list</a>).</p>
+	<p class="italic">This feature is in development.  We recommend that you back up your game before using this command.  You can disable its use in /includes/constants.</p>
+	Attempts to update the game to the version specified in parameter.  Note that this will reset the game after the next command you enter, and immediately for all other users.
+	The parameter is the version number in the form x-y-zextra.  Note that versions are usually in the form x.y.zextra, but the game will mistake the periods for a name.
+	A full list of packages is avaliable above (take off the .zip).  Pre-release versions may be out-of-date if they are not updated on the site before you update.
+	We reserve the right to take down packages after they go out of date, and we do not guarantee that the site will be up at any given time.
 	<h3>Version</h3>
 	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is optional and defaults to local.  If included, it must be one of the following: local, remote, server, any, alpha, beta, dev, stable.</p>
 	<p class="italic">Note that this function is under development and may not work properly until completed.</p>
