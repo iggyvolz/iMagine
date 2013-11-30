@@ -16,5 +16,7 @@ define('FTGR_DEBUG_OFF', itemOf(array('EN' => 'Debug mode is now off.'), FTGR_LA
 define('FTGR_DEBUG_DISABLED', itemOf(array('EN' => 'Sorry, debug mode has been disabled by an administrator.'), FTGR_LANG));
 define('FTGR_OPENED_HELP', itemOf(array('EN' => 'Opened help.'), FTGR_LANG));
 define('FTGR_CURRENT_VERSION_IS', itemOf(array('EN' => 'Current version is '), FTGR_LANG));
+define('FTGR_REQUIRED_PARAM', itemOf(array('EN' => 'This function requires a parameter.  Please see the documentation.'), FTGR_LANG));
 require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
 require_once __DIR__ . FTGR_SLASH . 'dialogue' . FTGR_SLASH . 'index.php';
+require_once __DIR__ . FTGR_SLASH . 'moves' . FTGR_SLASH . 'index.php';

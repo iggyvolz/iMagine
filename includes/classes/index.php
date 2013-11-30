@@ -14,11 +14,11 @@ $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
  *
  * All callable functions should return an array.
  * Each item of the array will be echoed as a new line at the command prompt.
- * To echo nothing, just return array().
+ * To echo nothing, just return array() (not recommended).
  * Keep your arrays under 3 items, we reccommend only 1.
  *
  * Make sure you allow for 1 input by putting function foo($args=NULL) for function foo.
- * Args will always be a string, if nothing is inputted it will be NULL.
+ * Args will always be an array, if nothing is inputted it will be NULL.
  *
  * All input is in lowercase, regardless of original case.
  *
@@ -26,4 +26,8 @@ $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
  * First, initialize it by calling if(!isset($_SESSION['ftgr']['myshortcode']) { (code to initialize) }
  * Then, you can read and write to $_SESSION['ftgr']['myshortcode'].
  * Be sure you don't conflict with anyone else's short code.
+ *
+ * Naming conventions:
+ * Alphabetic order always.  If you have a sub-function that applies to one function, append the function name.
+ * Like: recursive_scandir is a sub-function of update, so it is named update_recursive_scandir.
  */
