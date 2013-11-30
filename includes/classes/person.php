@@ -72,7 +72,7 @@ class person
 
 	public function help($args = NULL)
 	{
-		header('Location: help.php');
+		define('FTGR_HELP', TRUE);
 		return array(FTGR_OPENED_HELP);
 	}
 

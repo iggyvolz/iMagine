@@ -44,6 +44,11 @@ function page_render_normal()
 function page_render_api()
 {
 	global $debug, $nechka, $shade, $apparition;
+	if (defined('FTGR_HELP'))
+	{
+		echo 'help';
+		return;
+	}
 	$response = FTGR_INTRO_LINE_ONE;
 	$response.=PHP_EOL;
 	$response.=FTGR_INTRO_LINE_TWO;

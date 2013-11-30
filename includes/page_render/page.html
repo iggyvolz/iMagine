@@ -18,6 +18,10 @@ xmlhttp.onreadystatechange=function()
     {
         //console.log(xmlhttp.responseText); //For debug purposes
         //console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
+        if(xmlhttp.responseText==='help')
+        {
+            window.location.replace('help.php');
+        }
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
         document.getElementById('nechka_energy').value=JSON.parse(xmlhttp.responseText).nechka_energy;
