@@ -28,7 +28,7 @@ class fightmon
 	{
 		if (!FTGR_DEBUG)
 		{
-			return array(FTGR_DISABLED);
+			return array(FTGR_DEBUG_DISABLED);
 		}
 		if (func_num_args() == 0 AND $_SESSION['ftgr']['debug'])
 		{
