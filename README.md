@@ -54,7 +54,6 @@ Resets the game without warning.  Note that without Javascript enabled you will 
 <h3>Version</h3>
 <p>Note - Name is optional and will be ignored if included.  Parameter is optional and defaults to local.  If included, it must be one of the following: local, remote, server, any, alpha, beta, dev, stable.</p>
 <p>Note that this function is under development and may not work properly until completed.</p>
-<p>Note that this function currently requires the openssl plugin to be installed.  You can do this by configuring PHP with --with-openssl on the end.</p>
 Gives the current version of the project.  Using "local" in parameter or not including it will return the current version, stored under (Fightmon the Game: Reemon root)/includes/constants/index.php as FTGR_VERSION.  Using "remote", "server", or "any" will return the latest GitHub release of any kind.  Using "alpha" returns the latest alpha release, "beta" the latest beta release, and so on with "dev" and "stable".
 <h2>Credit</h2>
 <p>To see all authors of this software, please see the <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon">GitHub repository</a></p>
