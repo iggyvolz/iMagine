@@ -12,6 +12,8 @@
 	<h2>Setup</h2>
 	<p>You need to set up a PHP server to play on.  I highly recommend <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.  Download the FTG:R files to (XAMPP install directory)/xamppfiles/htdocs/ftgr.  Open the XAMPP manager and start the Apache module (you can start mySQL and proFTPD, but they are not required).  Then go to http://localhost/ftgr to play (you can rename the folder too, I personally name mine ftgr-dev).  Some applications, like Skype, Internet Information Services, and many game development softwares use localhost, so you will need to quit these programs completely. </p>
 	<p>Although this application is written in PHP, it is <em>not</em> recommended that you put this on a production server until a more stable release is out.  There may be server-breaking bugs, and the source code is not tested thoroughly before release to GitHub.  In addition, the documentation is likely to be out of date and functions may change dramatically between releases.  The debug function allows access to all $GLOBALS, and the site is only configured to work on a localhost server.</p>
+	<h3>Windows</h3>
+	<p>For a Windows computer, just change define('FTGR_WINDOWS', FALSE); to define('FTGR_WINDOWS', TRUE); in index.php (in the main directory).  The program will take care of the rest (note that this hasn't officially been tested this on Windows yet so it may not work perfectly).</p>
 	<h2>Syntax</h2>
 	<p>All commands are case-insensitive.  The syntax is: person.action(parameter).  However, the person and/or the parameter can be omitted for some functions.  For example, the function reset requires no name or parameters.  Any of these will do the same thing:<p>
 	<ul>
@@ -55,10 +57,11 @@
 	<h3>Update</h3>
 	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is required and must be a packaged version of Fightmon the Game: Reemon (see <a href="http://fightmon.eternityincurakai.com/fightmon/ftgr/">package list</a>).</p>
 	<p class="italic">This feature is in development.  We recommend that you back up your game before using this command.  You can disable its use in /includes/constants.</p>
-	Attempts to update the game to the version specified in parameter.  Note that this will reset the game after the next command you enter, and immediately for all other users.
-	The parameter is the version number in the form x-y-zextra.  Note that versions are usually in the form x.y.zextra, but the game will mistake the periods for a name.
-	A full list of packages is avaliable above (take off the .zip).  Pre-release versions may be out-of-date if they are not updated on the site before you update.
-	We reserve the right to take down packages after they go out of date, and we do not guarantee that the site will be up at any given time.
+	<p class="italic">Attempts to update the game to the version specified in parameter.  Note that this will reset the game after the next command you enter, and immediately for all other users.</p>
+	<p class="italic">The parameter is the version number in the form x-y-zextra.  Note that versions are usually in the form x.y.zextra, but the game will mistake the periods for a name.</p>
+	<p class="italic">A full list of packages is avaliable above (take off the .zip).  Pre-release versions may be out-of-date if they are not updated on the site before you update.</p>
+	<p class="italic">We reserve the right to take down packages after they go out of date, and we do not guarantee that the site will be up at any given time.</p>
+
 	<h3>Version</h3>
 	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is optional and defaults to local.  If included, it must be one of the following: local, remote, server, any, alpha, beta, dev, stable.</p>
 	<p class="italic">Note that this function is under development and may not work properly until completed.</p>
