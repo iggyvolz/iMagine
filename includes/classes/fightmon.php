@@ -80,20 +80,20 @@ class fightmon
 		{
 			if (rand(1, 100) <= $accuracy)
 			{
-				return array(get_class($this) . ' used ' . $name . '!');
+				return array(ucfirst(get_class($this)) . ' used ' . $name . '!');
 			}
 			else
 			{
-				return array(get_class($this) . ' used ' . $name . ' and it missed!');
+				return array(ucfirst(get_class($this)) . ' used ' . $name . ' and it missed!');
 			}
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(get_class($this) . ' used ' . $name . ' and caused ' . $power . ' damage on ' . $target);
+			return array(ucfirst(get_class($this)) . ' used ' . $name . ' and caused ' . $power . ' damage on ' . $target);
 		}
 		else
 		{
-			return array(get_class($this) . ' used ' . $name . ' on ' . $target . ' and it missed!');
+			return array(ucfirst(get_class($this)) . ' used ' . $name . ' on ' . $target . ' and it missed!');
 		}
 	}
 

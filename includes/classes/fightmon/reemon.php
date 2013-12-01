@@ -18,7 +18,7 @@ class reemon extends fightmon
 	public function deroot($args = NULL)
 	{
 		// Needs custom code
-		return $this->_move(FTGR_DEROOT_NAME, FTGR_DEROOT_POWER, FTGR_DEROOT_ACCURACY, $args[0]);
+		return $this->_move(FTGR_DEROOT_NAME, FTGR_DEROOT_POWER, FTGR_DEROOT_ACCURACY);
 	}
 
 	public function needlethorn($args = NULL)
@@ -27,7 +27,7 @@ class reemon extends fightmon
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		return $this->_move(FTGR_NEEDLETHORN_NAME, FTGR_NEEDLETHORN_POWER, FTGR_NEEDLETHORN_ACCURACY);
+		return $this->_move(FTGR_NEEDLETHORN_NAME, FTGR_NEEDLETHORN_POWER, FTGR_NEEDLETHORN_ACCURACY, $args[0]);
 	}
 
 }
