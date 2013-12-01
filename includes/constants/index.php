@@ -4,7 +4,6 @@ if (!defined('FTGR_MODE'))
 {
 	define('FTGR_MODE', 'normal');
 }
-define('FTGR_STARTING_ENERGY', 1000);
 define('FTGR_VERSION', "0.3.0dev");
 define('FTGR_LANG', 'EN'); //EN - English, other languages pending.
 // NOTE - Translations need some work, we need to separate the localized value of $person from the english value of $person

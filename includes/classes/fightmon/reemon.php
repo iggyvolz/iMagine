@@ -12,7 +12,7 @@ class reemon extends fightmon
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		return $this->_move(FTGR_BITE_NAME, rand(FTGR_BITE_POWER_MIN, FTGR_BITE_POWER_MAX), FTGR_BITE_ACCURACY, $args[0]);
+		return $this->_move(FTGR_BITE_NAME, FTGR_BITE_POWER_REEMON, FTGR_BITE_ACCURACY, $args[0]);
 	}
 
 	public function deroot($args = NULL)
