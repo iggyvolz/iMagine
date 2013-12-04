@@ -26,6 +26,7 @@ xmlhttp.onreadystatechange=function()
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
         document.getElementById('nechka_energy').value=JSON.parse(xmlhttp.responseText).nechka_energy;
         document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
+        document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
         if(JSON.parse(xmlhttp.responseText).dump!=='')
         {
             window.scrollTo(0,document.body.scrollHeight);
@@ -58,6 +59,7 @@ input[type=range]
 </HEAD>
 <BODY>
     <pre id="dump"></pre>
+    <p id="errors"></pre>
 <form onsubmit="loadXMLDoc(); return false">
 <p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
 </form>
