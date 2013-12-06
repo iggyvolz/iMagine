@@ -8,6 +8,7 @@
 	</style>
 </HEAD>
 <BODY>
+	<a href="index.php"><- Back to FTG:R</a>
 	Please note: This program is in development.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.
 	<h2>Setup</h2>
 	<p>The latest stable version is put up at <a href="http://fightmon.eternityincurakai.com/ftgr/latest">fightmon.eternityincurakai.com/ftgr/latest</a>.  Note that there is nothing there yet because no stable build has been released yet.</p>
