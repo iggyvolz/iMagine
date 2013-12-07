@@ -112,7 +112,6 @@ class fightmon
 
 	public function update($args = NULL)
 	{
-		global $folder, $try;
 		if (!$_SESSION['ftgr']['valid_session'])
 		{
 			return array(FTGR_UPDATE_REJECT);
