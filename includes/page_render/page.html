@@ -27,6 +27,9 @@ xmlhttp.onreadystatechange=function()
         document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
         document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
         document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
+        document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
+        document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
+        document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
         document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
         document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
         if(JSON.parse(xmlhttp.responseText).dump!=='')
@@ -82,5 +85,20 @@ input[type=range]
 <p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
 <p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
 <input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="energy_dragiri" disabled value="<!-- ENERGY_DRAGIRI -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_GHOSTSLICER -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_GHOSTSLICER --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_GHOSTSLICER -->" id="energy_ghostslicer" disabled value="<!-- ENERGY_GHOSTSLICER -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_NIGHTWING -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_NIGHTWING --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_NIGHTWING -->" id="energy_nightwing" disabled value="<!-- ENERGY_NIGHTWING -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_REEBEE -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_REEBEE --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_REEBEE -->" id="energy_reebee" disabled value="<!-- ENERGY_REEBEE -->">
 </aside>
 </BODY>

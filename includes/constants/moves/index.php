@@ -3,6 +3,7 @@
 require_once __DIR__ . FTGR_SLASH . 'airram.php';
 require_once __DIR__ . FTGR_SLASH . 'anntenaebeams.php';
 require_once __DIR__ . FTGR_SLASH . 'bite.php';
+require_once __DIR__ . FTGR_SLASH . 'bladeburst.php';
 require_once __DIR__ . FTGR_SLASH . 'deroot.php';
 require_once __DIR__ . FTGR_SLASH . 'echolocate.php';
 require_once __DIR__ . FTGR_SLASH . 'flyby.php';
