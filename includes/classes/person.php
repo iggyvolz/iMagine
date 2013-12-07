@@ -144,7 +144,14 @@ class person
 			return array(FTGR_REQUIRED_PARAM);
 		}
 		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
-		$contents = file_get_contents($url);
+		try
+		{
+			$contents = file_get_contents($url);
+		}
+		catch (Exception $exc)
+		{
+			return array(FTGR_NOT_CONNECTED);
+		}
 		file_put_contents(__DIR__ . FTGR_SLASH . 'ftgr.zip', $contents);
 		$zip = new ZipArchive;
 		$res = $zip->open(__DIR__ . FTGR_SLASH . 'ftgr.zip');
