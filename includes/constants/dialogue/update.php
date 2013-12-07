@@ -5,3 +5,4 @@ define('FTGR_UPDATE_CODE_DENIED', itemOf(array('EN' => 'Your update code has bee
 define('FTGR_UPDATE_REJECT', itemOf(array('EN' => 'You cannot update.  Please enter the update code with update_code()'), FTGR_LANG));
 define('FTGR_UPDATE_SUCCESS', itemOf(array('EN' => 'Successfully upgraded to version '), FTGR_LANG));
 define('FTGR_UNZIP_FAIL', itemOf(array('EN' => 'Upgrade failed, unzip failure code: '), FTGR_LANG));
+define('FTGR_NOT_CONNECTED', itemOf(array('EN' => 'Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'), FTGR_LANG));

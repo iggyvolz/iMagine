@@ -112,7 +112,7 @@ class fightmon
 
 	public function update($args = NULL)
 	{
-		global $folder;
+		global $folder, $try;
 		if (!$_SESSION['ftgr']['valid_session'])
 		{
 			return array(FTGR_UPDATE_REJECT);
@@ -122,7 +122,13 @@ class fightmon
 			return array(FTGR_REQUIRED_PARAM);
 		}
 		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
-		$contents = file_get_contents($url);
+		$err = isset($php_errormsg) ? $php_errormsg : NULL;
+		$contents = @file_get_contents($url);
+		$latesterr = isset($php_errormsg) ? $php_errormsg : NULL;
+		if ($err !== $latesterr)
+		{
+			return array(FTGR_NOT_CONNECTED);
+		}
 		file_put_contents(__DIR__ . FTGR_SLASH . 'ftgr.zip', $contents);
 		$zip = new ZipArchive;
 		$res = $zip->open(__DIR__ . FTGR_SLASH . 'ftgr.zip');
