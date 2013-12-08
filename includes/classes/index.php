@@ -10,6 +10,7 @@ $reebee = new reebee;
 $ghostslicer = new ghostslicer;
 $hartvile = new hartvile;
 $plantsy = new plantsy;
+$fireebee = new fireebee;
 $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
 
 /*

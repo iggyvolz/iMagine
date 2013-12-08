@@ -31,7 +31,7 @@ class reebee extends fightmon
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		return $this->_move(FTGR_FLYBY_NAME, FTGR_FLYBY_POWER, FTGR_FLYBY_ACCURACY, $args[0]);
+		return $this->_move(FTGR_FLYBY_NAME, FTGR_FLYBY_POWER_REE_BEE, FTGR_FLYBY_ACCURACY, $args[0]);
 	}
 
 	public function scratch($args = NULL)
@@ -50,7 +50,7 @@ class reebee extends fightmon
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		return $this->_move(FTGR_STING_NAME, FTGR_STING_POWER, FTGR_STING_ACCURACY, $args[0]);
+		return $this->_move(FTGR_STING_NAME, FTGR_STING_POWER_REE_BEE, FTGR_STING_ACCURACY, $args[0]);
 	}
 
 }
