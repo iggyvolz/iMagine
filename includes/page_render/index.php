@@ -9,7 +9,7 @@ function page_render_normal()
 		echo '<HEAD><title>Resetting game, please refresh</title><script>window.onload=function() { location.reload(); };</script></HEAD><BODY>Please reload the page to reset the game.</BODY>';
 		die;
 	}
-	global $debug, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee;
+	global $debug, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile;
 	ob_start();
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
@@ -33,18 +33,21 @@ function page_render_normal()
 		'<!-- ENERGY_GHOSTSLICER -->' => $ghostslicer->energy,
 		'<!-- ENERGY_NIGHTWING -->' => $nightwing->energy,
 		'<!-- ENERGY_REEBEE -->' => $reebee->energy,
+		'<!-- ENERGY_HARTVILE -->' => $hartvile->energy,
 		'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_PLUFF -->' => FTGR_PLUFF_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_DRAGIRI -->' => FTGR_DRAGIRI_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_GHOSTSLICER -->' => FTGR_GHOST_SLICER_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_NIGHTWING -->' => FTGR_NIGHTWING_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_REEBEE -->' => FTGR_REE_BEE_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_HARTVILE -->' => FTGR_HARTVILE_STARTING_ENERGY,
 		'<!-- NAME_REEMON -->' => FTGR_REEMON_NAME,
 		'<!-- NAME_PLUFF -->' => FTGR_PLUFF_NAME,
 		'<!-- NAME_DRAGIRI -->' => FTGR_DRAGIRI_NAME,
 		'<!-- NAME_GHOSTSLICER -->' => FTGR_GHOST_SLICER_NAME,
 		'<!-- NAME_NIGHTWING -->' => FTGR_NIGHTWING_NAME,
 		'<!-- NAME_REEBEE -->' => FTGR_REE_BEE_NAME,
+		'<!-- NAME_HARTVILE -->' => FTGR_HARTVILE_NAME,
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;
@@ -52,7 +55,7 @@ function page_render_normal()
 
 function page_render_api()
 {
-	global $debug, $errors, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee;
+	global $debug, $errors, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile;
 	if (defined('FTGR_HELP'))
 	{
 		echo 'help';
@@ -77,6 +80,7 @@ function page_render_api()
 		'ghostslicer_energy' => $ghostslicer->energy,
 		'nightwing_energy' => $nightwing->energy,
 		'reebee_energy' => $reebee->energy,
+		'hartvile_energy' => $hartvile->energy,
 		'response' => $response,
 		'errors' => ($errors === array()) ? '' : FTGR_THERE_WERE_ERRORS . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : FTGR_ERRORS_HIDDEN)
 	));

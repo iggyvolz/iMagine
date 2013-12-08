@@ -8,6 +8,7 @@ $dragiri = new dragiri;
 $nightwing = new nightwing;
 $reebee = new reebee;
 $ghostslicer = new ghostslicer;
+$hartvile = new hartvile;
 $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
 
 /*
