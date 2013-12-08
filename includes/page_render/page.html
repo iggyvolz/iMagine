@@ -31,6 +31,7 @@ xmlhttp.onreadystatechange=function()
         document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
         document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
         document.getElementById('energy_hartvile').value=JSON.parse(xmlhttp.responseText).hartvile_energy;
+        document.getElementById('energy_plantsy').value=JSON.parse(xmlhttp.responseText).plantsy_energy;
         document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
         document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
         if(JSON.parse(xmlhttp.responseText).dump!=='')
@@ -106,5 +107,10 @@ input[type=range]
 <p style="text-align:center;"><!-- NAME_HARTVILE -->'s energy</p>
 <p style="text-align:center;"><!-- ENERGY_HARTVILE --></p>
 <input type="range" min="0" max="<!-- STARTING_ENERGY_HARTVILE -->" id="energy_hartvile" disabled value="<!-- ENERGY_HARTVILE -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_PLANTSY -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_PLANTSY --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_PLANTSY -->" id="energy_plantsy" disabled value="<!-- ENERGY_PLANTSY -->">
 </aside>
 </BODY>

@@ -7,3 +7,4 @@ require_once __DIR__ . FTGR_SLASH . 'nightwing.php';
 require_once __DIR__ . FTGR_SLASH . 'reebee.php';
 require_once __DIR__ . FTGR_SLASH . 'ghostslicer.php';
 require_once __DIR__ . FTGR_SLASH . 'hartvile.php';
+require_once __DIR__ . FTGR_SLASH . 'plantsy.php';
