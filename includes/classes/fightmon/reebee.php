@@ -6,13 +6,13 @@ class reebee extends fightmon
 // Allows Ree bee-specific functions to be implimented in later versions
 	public $energy = FTGR_REE_BEE_STARTING_ENERGY;
 
-	public function anntenaebeams($args = NULL)
+	public function antennabeams($args = NULL)
 	{
 		if ($args === NULL)
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		return $this->_move(FTGR_ANNTENAEBEAMS_NAME, FTGR_ANNTENAEBEAMS_POWER, FTGR_ANNTENAEBEAMS_ACCURACY, $args[0]);
+		return $this->_move(FTGR_ANTENNABEAMS_NAME, FTGR_ANTENNABEAMS_POWER, FTGR_ANTENAEBEAMS_ACCURACY, $args[0]);
 	}
 
 	public function bite($args = NULL)
