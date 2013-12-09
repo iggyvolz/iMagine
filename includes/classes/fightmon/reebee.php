@@ -3,7 +3,7 @@
 class reebee extends fightmon
 {
 
-// Allows Reemon-specific functions to be implimented in later versions
+// Allows Ree bee-specific functions to be implimented in later versions
 	public $energy = FTGR_REE_BEE_STARTING_ENERGY;
 
 	public function anntenaebeams($args = NULL)

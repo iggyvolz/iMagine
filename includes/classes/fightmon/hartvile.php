@@ -3,7 +3,7 @@
 class hartvile extends fightmon
 {
 
-// Allows Dragiri-specific functions to be implimented in later versions
+// Allows Hartvile-specific functions to be implimented in later versions
 	public $energy = FTGR_HARTVILE_STARTING_ENERGY;
 
 	public function bite($args = NULL)

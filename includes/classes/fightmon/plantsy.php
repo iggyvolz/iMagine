@@ -3,7 +3,7 @@
 class plantsy extends fightmon
 {
 
-// Allows Nightwing-specific functions to be implimented in later versions
+// Allows Plantsy-specific functions to be implimented in later versions
 	public $energy = FTGR_PLANTSY_STARTING_ENERGY;
 
 	public function metalpetal($args = NULL)

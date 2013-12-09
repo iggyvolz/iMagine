@@ -3,7 +3,7 @@
 class ghostslicer extends fightmon
 {
 
-// Allows Dragiri-specific functions to be implimented in later versions
+// Allows Ghost Slicer-specific functions to be implimented in later versions
 	public $energy = FTGR_GHOST_SLICER_STARTING_ENERGY;
 
 	public function bladeburst($args = NULL)

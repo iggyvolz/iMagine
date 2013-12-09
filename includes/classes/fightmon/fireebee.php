@@ -3,7 +3,7 @@
 class fireebee extends fightmon
 {
 
-// Allows Dragiri-specific functions to be implimented in later versions
+// Allows Firee bee-specific functions to be implimented in later versions
 	public $energy = FTGR_DRAGIRI_STARTING_ENERGY;
 
 	public function bite($args = NULL)
