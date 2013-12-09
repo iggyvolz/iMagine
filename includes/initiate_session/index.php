@@ -7,7 +7,7 @@ if (!isset($_SESSION['ftgr']['init']))
 
 if ($_SESSION['ftgr']['version'] !== FTGR_VERSION)
 {
-	// We've updated since the user has last visited.  Reset!
+	// We've updated since the user has last visited.  Reset! 
 	if (FTGR_MODE === 'api')
 	{
 		die('refresh');
