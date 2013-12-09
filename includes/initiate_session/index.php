@@ -8,9 +8,15 @@ if (!isset($_SESSION['ftgr']['init']))
 if ($_SESSION['ftgr']['version'] !== FTGR_VERSION)
 {
 	// We've updated since the user has last visited.  Reset!
-	session_destroy();
-	init_session();
-	define('FTGR_REFRESH', TRUE);
+	if (FTGR_MODE === 'api')
+	{
+		die('refresh');
+	}
+	else
+	{
+		session_destroy();
+		init_session();
+	}
 }
 
 function init_session()

@@ -22,6 +22,10 @@ xmlhttp.onreadystatechange=function()
         {
             window.location.replace("help.php");
         }
+        if(xmlhttp.responseText==='refresh')
+        {
+            window.location.reload();
+        }
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
         document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
