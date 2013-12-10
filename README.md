@@ -1,3 +1,4 @@
+<h1>NOTE: The alpha branch has now closed and is not accepting any new commits.  Please add any commits to the beta branch.</h1>
 <p>Please note: This version of the program is in alpha.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
 <p>Please note that the next version (0.3) goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
 <p>Important dates:
