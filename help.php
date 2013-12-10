@@ -17,12 +17,12 @@
 </HEAD>
 <BODY>
 	<a href="index.php"><- Back to FTG:R</a>
-	<p>Please note: This version of the program is in alpha.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
+	<p>Please note: This version of the program is in beta.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
 	<p>Please note that the next version (0.3) goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
 	<p>Important dates:
 	<ul>
 		<li class="passed">November 30, 2013 - Feature Freeze/Begin Alpha</li>
-		<li class="notpassed">December 10, 2013 - End Alpha/Begin Beta</li>
+		<li class="passed">December 10, 2013 - End Alpha/Begin Beta</li>
 		<li class="notpassed">December 20, 2013 - End Beta/Begin RC's</li>
 		<li class="notpassed">December 24, 2013 - Final Release</li>
 	</ul></p>
