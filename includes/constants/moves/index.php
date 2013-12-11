@@ -7,6 +7,7 @@ require_once __DIR__ . FTGR_SLASH . 'bladeburst.php';
 require_once __DIR__ . FTGR_SLASH . 'daze.php';
 require_once __DIR__ . FTGR_SLASH . 'deroot.php';
 require_once __DIR__ . FTGR_SLASH . 'echolocate.php';
+require_once __DIR__ . FTGR_SLASH . 'fireflare.php';
 require_once __DIR__ . FTGR_SLASH . 'flyby.php';
 require_once __DIR__ . FTGR_SLASH . 'hornit.php';
 require_once __DIR__ . FTGR_SLASH . 'lovesfall.php';

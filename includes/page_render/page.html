@@ -28,15 +28,16 @@ xmlhttp.onreadystatechange=function()
         }
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
-        document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
-        document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
         document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
-        document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
-        document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
-        document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
-        document.getElementById('energy_hartvile').value=JSON.parse(xmlhttp.responseText).hartvile_energy;
-        document.getElementById('energy_plantsy').value=JSON.parse(xmlhttp.responseText).plantsy_energy;
         document.getElementById('energy_fireebee').value=JSON.parse(xmlhttp.responseText).fireebee_energy;
+        document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
+        document.getElementById('energy_hartvile').value=JSON.parse(xmlhttp.responseText).hartvile_energy;
+        document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
+        document.getElementById('energy_plantsy').value=JSON.parse(xmlhttp.responseText).plantsy_energy;
+        document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
+        document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
+        document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
+        document.getElementById('energy_strab').value=JSON.parse(xmlhttp.responseText).strab_energy;
         document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
         document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
         if(JSON.parse(xmlhttp.responseText).dump!=='')
@@ -122,5 +123,10 @@ input[type=range]
 <p style="text-align:center;"><!-- NAME_FIREEBEE -->'s energy</p>
 <p style="text-align:center;"><!-- ENERGY_FIREEBEE --></p>
 <input type="range" min="0" max="<!-- STARTING_ENERGY_FIREEBEE -->" id="energy_fireebee" disabled value="<!-- ENERGY_FIREEBEE -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_STRAB -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_STRAB --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_STRAB -->" id="energy_strab" disabled value="<!-- ENERGY_STRAB -->">
 </aside>
 </BODY>
