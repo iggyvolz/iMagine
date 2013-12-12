@@ -1,0 +1,99 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fightmon the Game: Reemon\n"
+"POT-Creation-Date: 2013-12-11 21:36-0500\n"
+"PO-Revision-Date: 2013-12-11 21:51-0500\n"
+"Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: ../../../..\n"
+
+#: ../../../../includes/classes/fightmon.php:24
+msgid "is now selected!"
+msgstr "is now selected!"
+
+#: ../../../../includes/classes/fightmon.php:31
+msgid "Sorry, debug mode has been disabled by an administrator."
+msgstr "Sorry, debug mode has been disabled by an administrator."
+
+#: ../../../../includes/classes/fightmon.php:62
+msgid "Debug mode is now on."
+msgstr "Debug mode is now on."
+
+#: ../../../../includes/classes/fightmon.php:68
+msgid "Debug mode is now off."
+msgstr "Debug mode is now off."
+
+#: ../../../../includes/classes/fightmon.php:74
+msgid "Opened help."
+msgstr "Opened help."
+
+#: ../../../../includes/classes/fightmon.php:83
+#: ../../../../includes/classes/fightmon.php:87
+#: ../../../../includes/classes/fightmon.php:92
+#: ../../../../includes/classes/fightmon.php:96
+msgid "used"
+msgstr "used"
+
+#: ../../../../includes/classes/fightmon.php:83
+msgid "!"
+msgstr "!"
+
+#: ../../../../includes/classes/fightmon.php:87
+#: ../../../../includes/classes/fightmon.php:96
+msgid "and it missed!"
+msgstr "and it missed!"
+
+#: ../../../../includes/classes/fightmon.php:92
+msgid "and caused"
+msgstr "and caused"
+
+#: ../../../../includes/classes/fightmon.php:92
+msgid "damage on"
+msgstr "damage on"
+
+#: ../../../../includes/classes/fightmon.php:96
+msgid "on"
+msgstr "on"
+
+#: ../../../../includes/classes/fightmon.php:117
+msgid "You cannot update.  Please enter the update code with update_code()"
+msgstr "You cannot update.  Please enter the update code with update_code()"
+
+#: ../../../../includes/classes/fightmon.php:121
+#: ../../../../includes/classes/fightmon.php:161
+msgid "This function requires a parameter.  Please see the documentation."
+msgstr "This function requires a parameter.  Please see the documentation."
+
+#: ../../../../includes/classes/fightmon.php:129
+msgid ""
+"Either you are not connected to wi-fi, the Fightmon site is down, or you "
+"specified an incorrect version."
+msgstr ""
+"Either you are not connected to wi-fi, the Fightmon site is down, or you "
+"specified an incorrect version."
+
+#: ../../../../includes/classes/fightmon.php:154
+msgid "Successfully upgraded to version"
+msgstr "Successfully upgraded to version"
+
+#: ../../../../includes/classes/fightmon.php:165
+msgid "Your update code has been accepted.  Please proceed with update."
+msgstr "Your update code has been accepted.  Please proceed with update."
+
+#: ../../../../includes/classes/fightmon.php:168
+msgid ""
+"Your update code has been denied.  Please ensure you typed it correctly."
+msgstr ""
+"Your update code has been denied.  Please ensure you typed it correctly."
+
+#: ../../../../includes/classes/fightmon.php:209
+msgid "Current version is"
+msgstr "Current version is most certainly not"

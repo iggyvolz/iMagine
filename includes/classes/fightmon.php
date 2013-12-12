@@ -21,14 +21,14 @@ class fightmon
 	{
 		$_SESSION['ftgr']['me'] = get_class($this);
 		$GLOBALS['me'] = get_class($this);
-		return array(ucfirst(get_class($this)) . ' is now selected!');
+		return array(ucfirst(get_class($this)) . ' ' . _('is now selected!'));
 	}
 
 	public function debug($args = NULL)
 	{
 		if (!FTGR_DEBUG)
 		{
-			return array(FTGR_DEBUG_DISABLED);
+			return array(_('Sorry, debug mode has been disabled by an administrator.'));
 		}
 		if (func_num_args() == 0 AND $_SESSION['ftgr']['debug'])
 		{
@@ -59,19 +59,19 @@ class fightmon
 	private function debug_on($args = NULL)
 	{
 		$_SESSION['ftgr']['debug'] = TRUE;
-		return array(FTGR_DEBUG_ON);
+		return array(_('Debug mode is now on.'));
 	}
 
 	private function debug_off($args = NULL)
 	{
 		$_SESSION['ftgr']['debug'] = FALSE;
-		return array(FTGR_DEBUG_OFF);
+		return array(_('Debug mode is now off.'));
 	}
 
 	public function help($args = NULL)
 	{
 		define('FTGR_HELP', TRUE);
-		return array(FTGR_OPENED_HELP);
+		return array(_('Opened help.'));
 	}
 
 	public function _move($name, $power, $accuracy, $target = NULL)
@@ -80,20 +80,20 @@ class fightmon
 		{
 			if (rand(1, 100) <= $accuracy)
 			{
-				return array(ucfirst(get_class($this)) . ' used ' . $name . '!');
+				return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . _('!'));
 			}
 			else
 			{
-				return array(ucfirst(get_class($this)) . ' used ' . $name . ' and it missed!');
+				return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and it missed!'));
 			}
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(ucfirst(get_class($this)) . ' used ' . $name . ' and caused ' . $power . ' damage on ' . $target);
+			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and caused') . ' ' . $power . ' ' . _('damage on') . ' ' . $target);
 		}
 		else
 		{
-			return array(ucfirst(get_class($this)) . ' used ' . $name . ' on ' . $target . ' and it missed!');
+			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('on') . ' ' . $target . ' ' . _('and it missed!'));
 		}
 	}
 
@@ -114,11 +114,11 @@ class fightmon
 	{
 		if (!$_SESSION['ftgr']['valid_session'])
 		{
-			return array(FTGR_UPDATE_REJECT);
+			return array(_('You cannot update.  Please enter the update code with update_code()'));
 		}
 		if ($args === 'NULL')
 		{
-			return array(FTGR_REQUIRED_PARAM);
+			return array(_('This function requires a parameter.  Please see the documentation.'));
 		}
 		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
 		$err = isset($php_errormsg) ? $php_errormsg : NULL;
@@ -126,7 +126,7 @@ class fightmon
 		$latesterr = isset($php_errormsg) ? $php_errormsg : NULL;
 		if ($err !== $latesterr)
 		{
-			return array(FTGR_NOT_CONNECTED);
+			return array(_('Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'));
 		}
 		file_put_contents(__DIR__ . FTGR_SLASH . 'ftgr.zip', $contents);
 		$zip = new ZipArchive;
@@ -151,21 +151,21 @@ class fightmon
 		unlink(__DIR__ . FTGR_SLASH . 'ftgr.zip');
 		$this->update_remove_folder(__DIR__ . FTGR_SLASH . 'ftgr');
 //return $return; // For debug purposes
-		return FTGR_UPDATE_SUCCESS . str_replace('-', '.', $args[0]);
+		return _('Successfully upgraded to version') . ' ' . str_replace('-', '.', $args[0]);
 	}
 
 	public function update_code($args = NULL)
 	{
 		if ($args === NULL)
 		{
-			return array(FTGR_REQUIRED_PARAM);
+			return array(_('This function requires a parameter.  Please see the documentation.'));
 		}
 		if ($args[0] === strtolower(FTGR_UPDATE_CODE))
 		{
-			return array(FTGR_UPDATE_CODE_ACCEPTED);
+			return array(_('Your update code has been accepted.  Please proceed with update.'));
 			$_SESSION['ftgr']['valid_session'] = TRUE;
 		}
-		return array(FTGR_UPDATE_CODE_DENIED);
+		return array(_('Your update code has been denied.  Please ensure you typed it correctly.'));
 	}
 
 	private function update_recursive_scandir($dir)
@@ -206,7 +206,7 @@ class fightmon
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(FTGR_CURRENT_VERSION_IS . ' ' . FTGR_VERSION);
+			return array(_('Current version is') . ' ' . FTGR_VERSION);
 		}
 		$opts = array(
 			'http' => array(
