@@ -11,3 +11,5 @@ bindtextdomain("ftgr", __DIR__);
 textdomain("ftgr");
 
 // Translation is looking for in ./[FTGR_LANG]/LC_MESSAGES/ftgr.mo now
+
+bind_textdomain_codeset('ftgr', 'UTF-8'); // Use UTF-8
