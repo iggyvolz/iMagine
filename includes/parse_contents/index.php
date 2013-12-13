@@ -19,16 +19,16 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	{
 		$person = itemOf(explode('.', $contents), 0);
 		if (!in_array($person, array(
-					strtolower(FTGR_DRAGIRI_NAME),
-					strtolower(FTGR_FIREE_BEE_NAME),
-					strtolower(FTGR_GHOST_SLICER_NAME),
-					strtolower(FTGR_HARTVILE_NAME),
-					strtolower(FTGR_NIGHTWING_NAME),
-					strtolower(FTGR_PLANTSY_NAME),
-					strtolower(FTGR_PLUFF_NAME),
-					strtolower(FTGR_REE_BEE_NAME),
-					strtolower(FTGR_REEMON_NAME),
-					strtolower(FTGR_STRAB_NAME)
+					strtolower(_("Dragiri")),
+					strtolower(_("FireeBee")),
+					strtolower(_("GhostSlicer")),
+					strtolower(_("Hartvile")),
+					strtolower(_("Nightwing")),
+					strtolower(_("Plantsy")),
+					strtolower(_("Pluff")),
+					strtolower(_("ReeBee")),
+					strtolower(_("Reemon")),
+					strtolower(_("Strab"))
 				))) // Prevent access of unwanted variables
 		{
 			return true;

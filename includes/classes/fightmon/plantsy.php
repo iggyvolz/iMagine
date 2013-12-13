@@ -10,18 +10,18 @@ class plantsy extends fightmon
 	{
 		if ($args === NULL)
 		{
-			return array(FTGR_REQUIRED_PARAM);
+			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(FTGR_METALPETAL_NAME, FTGR_METALPETAL_POWER, FTGR_METALPETAL_ACCURACY, $args[0]);
+		return $this->_move(_("Metal Petal"), FTGR_METALPETAL_POWER, FTGR_METALPETAL_ACCURACY, $args[0]);
 	}
 
 	public function tailwhip($args = NULL)
 	{
 		if ($args === NULL)
 		{
-			return array(FTGR_REQUIRED_PARAM);
+			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(FTGR_TAILWHIP_NAME, FTGR_TAILWHIP_POWER, FTGR_TAILWHIP_ACCURACY, $args[0]);
+		return $this->_move(_("Tail Whip"), FTGR_TAILWHIP_POWER, FTGR_TAILWHIP_ACCURACY, $args[0]);
 	}
 
 }

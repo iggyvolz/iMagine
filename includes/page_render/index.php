@@ -14,9 +14,9 @@ function page_render_normal()
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
 	ob_end_clean();
-	$response = FTGR_INTRO_LINE_ONE;
+	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
 	$response.=PHP_EOL;
-	$response.=FTGR_INTRO_LINE_TWO;
+	$response.=_("For help and credits, type help then press enter.");
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
@@ -47,16 +47,16 @@ function page_render_normal()
 		'<!-- STARTING_ENERGY_REEBEE -->' => FTGR_REE_BEE_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_STRAB -->' => FTGR_STRAB_STARTING_ENERGY,
-		'<!-- NAME_DRAGIRI -->' => FTGR_DRAGIRI_NAME,
-		'<!-- NAME_FIREEBEE -->' => FTGR_FIREE_BEE_NAME,
-		'<!-- NAME_GHOSTSLICER -->' => FTGR_GHOST_SLICER_NAME,
-		'<!-- NAME_HARTVILE -->' => FTGR_HARTVILE_NAME,
-		'<!-- NAME_NIGHTWING -->' => FTGR_NIGHTWING_NAME,
-		'<!-- NAME_PLANTSY -->' => FTGR_PLANTSY_NAME,
-		'<!-- NAME_PLUFF -->' => FTGR_PLUFF_NAME,
-		'<!-- NAME_REEBEE -->' => FTGR_REE_BEE_NAME,
-		'<!-- NAME_REEMON -->' => FTGR_REEMON_NAME,
-		'<!-- NAME_STRAB -->' => FTGR_STRAB_NAME,
+		'<!-- NAME_DRAGIRI -->' => _("Dragiri"),
+		'<!-- NAME_FIREEBEE -->' => _("FireeBee"),
+		'<!-- NAME_GHOSTSLICER -->' => _("GhostSlicer"),
+		'<!-- NAME_HARTVILE -->' => _("Hartvile"),
+		'<!-- NAME_NIGHTWING -->' => _("Nightwing"),
+		'<!-- NAME_PLANTSY -->' => _("Plantsy"),
+		'<!-- NAME_PLUFF -->' => _("Pluff"),
+		'<!-- NAME_REEBEE -->' => _("ReeBee"),
+		'<!-- NAME_REEMON -->' => _("Reemon"),
+		'<!-- NAME_STRAB -->' => _("Strab"),
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
 	echo $page;
@@ -70,9 +70,9 @@ function page_render_api()
 		echo 'help';
 		return;
 	}
-	$response = FTGR_INTRO_LINE_ONE;
+	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
 	$response.=PHP_EOL;
-	$response.=FTGR_INTRO_LINE_TWO;
+	$response.=_("For help and credits, type help then press enter.");
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
@@ -94,6 +94,6 @@ function page_render_api()
 		'reemon_energy' => $reemon->energy,
 		'strab_energy' => $strab->energy,
 		'response' => $response,
-		'errors' => ($errors === array()) ? '' : FTGR_THERE_WERE_ERRORS . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : FTGR_ERRORS_HIDDEN)
+		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : _("Errors have been hidden by an administrator, but they may have been logged."))
 	));
 }

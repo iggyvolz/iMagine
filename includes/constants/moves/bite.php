@@ -1,6 +1,6 @@
 <?php
 
-define('FTGR_BITE_NAME', itemOf(array('EN' => 'Bite'), FTGR_LANG));
+//define('_("Bite")', itemOf(array('EN' => 'Bite'), FTGR_LANG));
 define('FTGR_BITE_POWER_FLIKE', 2);
 define('FTGR_BITE_POWER_FENIIXIS', 3);
 define('FTGR_BITE_POWER_HARTVILE', 3);

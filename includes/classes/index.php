@@ -12,7 +12,7 @@ $hartvile = new hartvile;
 $plantsy = new plantsy;
 $fireebee = new fireebee;
 $strab = new strab;
-$me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : 'Reemon';
+$me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : _('reemon');
 
 /*
  * Notes for developers:

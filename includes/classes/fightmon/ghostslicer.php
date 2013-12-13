@@ -10,9 +10,9 @@ class ghostslicer extends fightmon
 	{
 		if ($args === NULL)
 		{
-			return array(FTGR_REQUIRED_PARAM);
+			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(FTGR_BLADEBURST_NAME, FTGR_BLADEBURST_POWER, FTGR_BLADEBURST_ACCURACY, $args[0]);
+		return $this->_move(_("Blade Burst"), FTGR_BLADEBURST_POWER, FTGR_BLADEBURST_ACCURACY, $args[0]);
 	}
 
 }
