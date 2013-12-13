@@ -5,7 +5,7 @@ if (!defined('FTGR_MODE'))
 	define('FTGR_MODE', 'normal');
 }
 define('FTGR_VERSION', "0.3.0dev");
-define('FTGR_LANG', 'en_US'); //EN - English, other languages pending.
+define('FTGR_LANG', 'en_US'); // en_US - English (US), fr_FR - French (France), es_ES - Spanish (Spain) [In progress]
 // NOTE - Translations need some work, we need to separate the localized value of $person from the english value of $person
 define('FTGR_DEBUG', TRUE); // If TRUE, allow the debug command to run
 define('FTGR_ALLOW_ANY_UPDATE', TRUE); // Allow anyone to run the update command.
