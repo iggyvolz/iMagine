@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fightmon the Game: Reemon\n"
-"POT-Creation-Date: 2013-12-12 20:48-0500\n"
-"PO-Revision-Date: 2013-12-12 20:50-0500\n"
+"POT-Creation-Date: 2013-12-13 20:58-0500\n"
+"PO-Revision-Date: 2013-12-13 20:58-0500\n"
 "Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -44,7 +44,7 @@ msgstr "used"
 
 #: ../../../../includes/classes/fightmon.php:83
 #: ../../../../includes/page_render/index.php:17
-#: ../../../../includes/page_render/index.php:73
+#: ../../../../includes/page_render/index.php:77
 msgid "!"
 msgstr "!"
 
@@ -128,9 +128,9 @@ msgstr ""
 msgid "Current version is"
 msgstr "Current version is most certainly not"
 
-#: ../../../../includes/classes/index.php:15
-#: ../../../../includes/page_render/index.php:58
-#: ../../../../includes/parse_contents/index.php:30
+#: ../../../../includes/classes/index.php:16
+#: ../../../../includes/page_render/index.php:61
+#: ../../../../includes/parse_contents/index.php:31
 msgid "Reemon"
 msgstr "Reemon"
 
@@ -188,6 +188,10 @@ msgstr "Daze"
 msgid "Love's Fall"
 msgstr "Love's Fall"
 
+#: ../../../../includes/classes/fightmon/krabulous.php:12
+msgid "Projectiles"
+msgstr "Projectiles"
+
 #: ../../../../includes/classes/fightmon/nightwing.php:15
 msgid "Air Ram"
 msgstr "Air Ram"
@@ -225,65 +229,70 @@ msgid "Fire Flare"
 msgstr "Fire Flare"
 
 #: ../../../../includes/page_render/index.php:17
-#: ../../../../includes/page_render/index.php:73
+#: ../../../../includes/page_render/index.php:77
 msgid "Welcome to Fightmon the Game: Reemon v"
 msgstr "Welcome to Fightmon the Game: Reemon v"
 
 #: ../../../../includes/page_render/index.php:19
-#: ../../../../includes/page_render/index.php:75
+#: ../../../../includes/page_render/index.php:79
 msgid "For help and credits, type help then press enter."
 msgstr "For help and credits, type help then press enter."
 
-#: ../../../../includes/page_render/index.php:50
+#: ../../../../includes/page_render/index.php:52
 #: ../../../../includes/parse_contents/index.php:22
 msgid "Dragiri"
 msgstr "Dragiri"
 
-#: ../../../../includes/page_render/index.php:51
+#: ../../../../includes/page_render/index.php:53
 #: ../../../../includes/parse_contents/index.php:23
 msgid "FireeBee"
 msgstr "FireeBee"
 
-#: ../../../../includes/page_render/index.php:52
+#: ../../../../includes/page_render/index.php:54
 #: ../../../../includes/parse_contents/index.php:24
 msgid "GhostSlicer"
 msgstr "GhostSlicer"
 
-#: ../../../../includes/page_render/index.php:53
+#: ../../../../includes/page_render/index.php:55
 #: ../../../../includes/parse_contents/index.php:25
 msgid "Hartvile"
 msgstr "Hartvile"
 
-#: ../../../../includes/page_render/index.php:54
+#: ../../../../includes/page_render/index.php:56
 #: ../../../../includes/parse_contents/index.php:26
+msgid "Krabulous"
+msgstr "Krabulous"
+
+#: ../../../../includes/page_render/index.php:57
+#: ../../../../includes/parse_contents/index.php:27
 msgid "Nightwing"
 msgstr "Nightwing"
 
-#: ../../../../includes/page_render/index.php:55
-#: ../../../../includes/parse_contents/index.php:27
+#: ../../../../includes/page_render/index.php:58
+#: ../../../../includes/parse_contents/index.php:28
 msgid "Plantsy"
 msgstr "Plantsy"
 
-#: ../../../../includes/page_render/index.php:56
-#: ../../../../includes/parse_contents/index.php:28
+#: ../../../../includes/page_render/index.php:59
+#: ../../../../includes/parse_contents/index.php:29
 msgid "Pluff"
 msgstr "Pluff"
 
-#: ../../../../includes/page_render/index.php:57
-#: ../../../../includes/parse_contents/index.php:29
+#: ../../../../includes/page_render/index.php:60
+#: ../../../../includes/parse_contents/index.php:30
 msgid "ReeBee"
 msgstr "ReeBee"
 
-#: ../../../../includes/page_render/index.php:59
-#: ../../../../includes/parse_contents/index.php:31
+#: ../../../../includes/page_render/index.php:62
+#: ../../../../includes/parse_contents/index.php:32
 msgid "Strab"
 msgstr "Strab"
 
-#: ../../../../includes/page_render/index.php:97
+#: ../../../../includes/page_render/index.php:102
 msgid "Uh, oh!  There were errors!"
 msgstr "Uh, oh!  There were errors!"
 
-#: ../../../../includes/page_render/index.php:97
+#: ../../../../includes/page_render/index.php:102
 msgid ""
 "Errors have been hidden by an administrator, but they may have been logged."
 msgstr ""

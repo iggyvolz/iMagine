@@ -9,7 +9,7 @@ function page_render_normal()
 		echo '<HEAD><title>Resetting game, please refresh</title><script>window.onload=function() { location.reload(); };</script></HEAD><BODY>Please reload the page to reset the game.</BODY>';
 		die;
 	}
-	global $debug, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile, $plantsy, $fireebee, $strab;
+	global $debug, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile, $plantsy, $fireebee, $strab, $krabulous;
 	ob_start();
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
@@ -31,6 +31,7 @@ function page_render_normal()
 		'<!-- ENERGY_FIREEBEE -->' => $fireebee->energy,
 		'<!-- ENERGY_GHOSTSLICER -->' => $ghostslicer->energy,
 		'<!-- ENERGY_HARTVILE -->' => $hartvile->energy,
+		'<!-- ENERGY_KRABULOUS -->' => $krabulous->energy,
 		'<!-- ENERGY_NIGHTWING -->' => $nightwing->energy,
 		'<!-- ENERGY_PLANTSY -->' => $plantsy->energy,
 		'<!-- ENERGY_PLUFF -->' => $pluff->energy,
@@ -41,6 +42,7 @@ function page_render_normal()
 		'<!-- STARTING_ENERGY_FIREEBEE -->' => FTGR_FIREE_BEE_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_GHOSTSLICER -->' => FTGR_GHOST_SLICER_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_HARTVILE -->' => FTGR_HARTVILE_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_KRABULOUS -->' => FTGR_KRABULOUS_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_NIGHTWING -->' => FTGR_NIGHTWING_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_PLANTSY -->' => FTGR_PLANTSY_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_PLUFF -->' => FTGR_PLUFF_STARTING_ENERGY,
@@ -51,6 +53,7 @@ function page_render_normal()
 		'<!-- NAME_FIREEBEE -->' => _("FireeBee"),
 		'<!-- NAME_GHOSTSLICER -->' => _("GhostSlicer"),
 		'<!-- NAME_HARTVILE -->' => _("Hartvile"),
+		'<!-- NAME_KRABULOUS -->' => _("Krabulous"),
 		'<!-- NAME_NIGHTWING -->' => _("Nightwing"),
 		'<!-- NAME_PLANTSY -->' => _("Plantsy"),
 		'<!-- NAME_PLUFF -->' => _("Pluff"),
@@ -65,7 +68,7 @@ function page_render_normal()
 
 function page_render_api()
 {
-	global $debug, $errors, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile, $plantsy, $fireebee, $strab;
+	global $debug, $errors, $reemon, $pluff, $dragiri, $ghostslicer, $nightwing, $reebee, $hartvile, $plantsy, $fireebee, $strab, $krabulous;
 	if (defined('FTGR_HELP'))
 	{
 		echo 'help';
@@ -88,6 +91,7 @@ function page_render_api()
 		'fireebee_energy' => $fireebee->energy,
 		'ghostslicer_energy' => $ghostslicer->energy,
 		'hartvile_energy' => $hartvile->energy,
+		'krabulous_energy' => $krabulous->energy,
 		'nightwing_energy' => $nightwing->energy,
 		'plantsy_energy' => $plantsy->energy,
 		'pluff_energy' => $pluff->energy,

@@ -13,6 +13,7 @@ require_once __DIR__ . FTGR_SLASH . 'hornit.php';
 require_once __DIR__ . FTGR_SLASH . 'lovesfall.php';
 require_once __DIR__ . FTGR_SLASH . 'metalpetal.php';
 require_once __DIR__ . FTGR_SLASH . 'needlethorn.php';
+require_once __DIR__ . FTGR_SLASH . 'projectiles.php';
 require_once __DIR__ . FTGR_SLASH . 'scratch.php';
 require_once __DIR__ . FTGR_SLASH . 'staticshock.php';
 require_once __DIR__ . FTGR_SLASH . 'sting.php';

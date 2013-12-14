@@ -23,6 +23,7 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 					strtolower(_("FireeBee")),
 					strtolower(_("GhostSlicer")),
 					strtolower(_("Hartvile")),
+					strtolower(_("Krabulous")),
 					strtolower(_("Nightwing")),
 					strtolower(_("Plantsy")),
 					strtolower(_("Pluff")),
