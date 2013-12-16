@@ -2,17 +2,18 @@
 
 require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
 require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
-$reemon = new reemon;
-$pluff = new pluff;
+$blazer = new blazer;
 $dragiri = new dragiri;
-$nightwing = new nightwing;
-$reebee = new reebee;
+$fireebee = new fireebee;
 $ghostslicer = new ghostslicer;
 $hartvile = new hartvile;
-$plantsy = new plantsy;
-$fireebee = new fireebee;
-$strab = new strab;
 $krabulous = new krabulous;
+$nightwing = new nightwing;
+$plantsy = new plantsy;
+$pluff = new pluff;
+$reemon = new reemon;
+$reebee = new reebee;
+$strab = new strab;
 $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : _('Reemon');
 
 /*

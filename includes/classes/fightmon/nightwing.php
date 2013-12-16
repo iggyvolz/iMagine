@@ -12,7 +12,7 @@ class nightwing extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Air Ram"), FTGR_AIRRAM_POWER, FTGR_AIRRAM_ACCURACY, $args[0]);
+		return $this->_move(_("Air Ram"), FTGR_AIRRAM_POWER_NIGHTWING, FTGR_AIRRAM_ACCURACY, $args[0]);
 	}
 
 	public function echolocate($args = NULL)

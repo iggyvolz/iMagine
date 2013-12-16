@@ -28,6 +28,7 @@ xmlhttp.onreadystatechange=function()
         }
         document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
+        document.getElementById('energy_blazer').value=JSON.parse(xmlhttp.responseText).blazer_energy;
         document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
         document.getElementById('energy_fireebee').value=JSON.parse(xmlhttp.responseText).fireebee_energy;
         document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
@@ -134,5 +135,9 @@ input[type=range]
 <p style="text-align:center;"><!-- NAME_KRABULOUS -->'s energy</p>
 <p style="text-align:center;"><!-- ENERGY_KRABULOUS --></p>
 <input type="range" min="0" max="<!-- STARTING_ENERGY_KRABULOUS -->" id="energy_krabulous" disabled value="<!-- ENERGY_KRABULOUS -->">
+</aside><aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_BLAZER -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_BLAZER --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_BLAZER -->" id="energy_blazer" disabled value="<!-- ENERGY_BLAZER -->">
 </aside>
 </BODY>
