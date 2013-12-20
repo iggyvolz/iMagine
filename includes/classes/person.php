@@ -94,7 +94,7 @@ class person
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(FTGR_CURRENT_VERSION_IS . ' ' . FTGR_VERSION);
+			return array(FTGR_CURRENT_VERSION_IS . FTGR_VERSION . ', nicknamed "' . FTGR_VERSION_NICKNAME . '".');
 		}
 		$opts = array(
 			'http' => array(
