@@ -161,3 +161,20 @@ function page_render_api()
 		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : _("Errors have been hidden by an administrator, but they may have been logged."))
 	));
 }
+
+function page_render_PY_test()
+{
+	if ($_GET['ver'] === FTGR_VERSION)
+	{
+		echo 'true';
+	}
+	else
+	{
+		echo 'false';
+	}
+}
+
+function page_render_PY()
+{
+	echo end($_SESSION['ftgr']['returns']);
+}
