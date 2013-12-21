@@ -21,6 +21,7 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 		if (!in_array($person, array(
 					strtolower(_("Blazer")),
 					strtolower(_("Dragiri")),
+					strtolower(_("Fennixis")),
 					strtolower(_("FireeBee")),
 					strtolower(_("Flike")),
 					strtolower(_("GhostSlicer")),

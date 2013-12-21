@@ -30,6 +30,7 @@ xmlhttp.onreadystatechange=function()
         document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
         document.getElementById('energy_blazer').value=JSON.parse(xmlhttp.responseText).blazer_energy;
         document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
+        document.getElementById('energy_fennixis').value=JSON.parse(xmlhttp.responseText).fennixis_energy;
         document.getElementById('energy_fireebee').value=JSON.parse(xmlhttp.responseText).fireebee_energy;
         document.getElementById('energy_flike').value=JSON.parse(xmlhttp.responseText).flike_energy;
         document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
@@ -75,7 +76,7 @@ input[type=range]
 </HEAD>
 <BODY>
     <pre id="dump"></pre>
-    <p id="errors"></pre>
+    <p id="errors"></p>
 <form onsubmit="loadXMLDoc(); return false">
 <p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
 </form>
@@ -146,5 +147,10 @@ input[type=range]
 <p style="text-align:center;"><!-- NAME_FLIKE -->'s energy</p>
 <p style="text-align:center;"><!-- ENERGY_FLIKE --></p>
 <input type="range" min="0" max="<!-- STARTING_ENERGY_FLIKE -->" id="energy_flike" disabled value="<!-- ENERGY_FLIKE -->">
+</aside>
+<aside style="float:left;">
+<p style="text-align:center;"><!-- NAME_FENNIXIS -->'s energy</p>
+<p style="text-align:center;"><!-- ENERGY_FENNIXIS --></p>
+<input type="range" min="0" max="<!-- STARTING_ENERGY_FENNIXIS -->" id="energy_fennixis" disabled value="<!-- ENERGY_FENNIXIS -->">
 </aside>
 </BODY>
