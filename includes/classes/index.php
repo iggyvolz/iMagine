@@ -5,6 +5,7 @@ require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
 $blazer = new blazer;
 $dragiri = new dragiri;
 $fireebee = new fireebee;
+$flike = new flike;
 $ghostslicer = new ghostslicer;
 $hartvile = new hartvile;
 $krabulous = new krabulous;

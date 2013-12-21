@@ -29,6 +29,7 @@ function init_session()
 	$_SESSION['ftgr']['blazerenergy'] = FTGR_BLAZER_STARTING_ENERGY;
 	$_SESSION['ftgr']['dragirienergy'] = FTGR_DRAGIRI_STARTING_ENERGY;
 	$_SESSION['ftgr']['fireebeeenergy'] = FTGR_FIREE_BEE_STARTING_ENERGY;
+	$_SESSION['ftgr']['flikeenergy'] = FTGR_FLIKE_STARTING_ENERGY;
 	$_SESSION['ftgr']['ghostslicerenergy'] = FTGR_GHOST_SLICER_STARTING_ENERGY;
 	$_SESSION['ftgr']['hartvileenergy'] = FTGR_HARTVILE_STARTING_ENERGY;
 	$_SESSION['ftgr']['krabulousenergy'] = FTGR_KRABULOUS_STARTING_ENERGY;
