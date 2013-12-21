@@ -62,3 +62,20 @@ function page_render_api()
 	}
 	echo json_encode(array('dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '', 'nechka_energy' => $nechka->energy, 'shade_energy' => $shade->energy, 'apparition_energy' => $apparition->energy, 'response' => $response, 'errors' => ($errors === array()) ? '' : FTGR_THERE_WERE_ERRORS . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : FTGR_ERRORS_HIDDEN)));
 }
+
+function page_render_PY_test()
+{
+	if ($_GET['ver'] === FTGR_VERSION)
+	{
+		echo 'true';
+	}
+	else
+	{
+		echo 'false';
+	}
+}
+
+function page_render_PY()
+{
+	echo end($_SESSION['ftgr']['returns']);
+}
