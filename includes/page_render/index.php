@@ -11,6 +11,7 @@ function page_render_normal()
 	}
 	global $debug,
 	$blazer,
+	$curleaf,
 	$dragiri,
 	$fennixis,
 	$fireebee,
@@ -42,6 +43,7 @@ function page_render_normal()
 	$replacements = array(
 		'<!-- RESPONSE -->' => $response,
 		'<!-- ENERGY_BLAZER -->' => $blazer->energy,
+		'<!-- ENERGY_CURLEAF -->' => $curleaf->energy,
 		'<!-- ENERGY_DRAGIRI -->' => $dragiri->energy,
 		'<!-- ENERGY_FENNIXIS -->' => $fennixis->energy,
 		'<!-- ENERGY_FIREEBEE -->' => $fireebee->energy,
@@ -56,6 +58,7 @@ function page_render_normal()
 		'<!-- ENERGY_REEMON -->' => $reemon->energy,
 		'<!-- ENERGY_STRAB -->' => $strab->energy,
 		'<!-- STARTING_ENERGY_BLAZER -->' => FTGR_BLAZER_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_CURLEAF -->' => FTGR_CURLEAF_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_DRAGIRI -->' => FTGR_DRAGIRI_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_FENNIXIS -->' => FTGR_FENNIXIS_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_FIREEBEE -->' => FTGR_FIREE_BEE_STARTING_ENERGY,
@@ -70,6 +73,7 @@ function page_render_normal()
 		'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_STRAB -->' => FTGR_STRAB_STARTING_ENERGY,
 		'<!-- NAME_BLAZER -->' => _("Blazer"),
+		'<!-- NAME_CURLEAF -->' => _("Curleaf"),
 		'<!-- NAME_DRAGIRI -->' => _("Dragiri"),
 		'<!-- NAME_FENNIXIS -->' => _("Fennixis"),
 		'<!-- NAME_FIREEBEE -->' => _("FireeBee"),
@@ -94,6 +98,7 @@ function page_render_api()
 	global $debug,
 	$errors,
 	$blazer,
+	$curleaf,
 	$dragiri,
 	$fennixis,
 	$fireebee,
@@ -126,6 +131,7 @@ function page_render_api()
 	echo json_encode(array(
 		'dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '',
 		'blazer_energy' => $blazer->energy,
+		'curleaf_energy' => $curleaf->energy,
 		'dragiri_energy' => $dragiri->energy,
 		'fennixis_energy' => $fennixis->energy,
 		'fireebee_energy' => $fireebee->energy,

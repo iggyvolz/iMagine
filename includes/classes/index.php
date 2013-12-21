@@ -3,6 +3,7 @@
 require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
 require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
 $blazer = new blazer;
+$curleaf = new curleaf;
 $dragiri = new dragiri;
 $fennixis = new fennixis;
 $fireebee = new fireebee;

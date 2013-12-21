@@ -20,6 +20,7 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 		$person = itemOf(explode('.', $contents), 0);
 		if (!in_array($person, array(
 					strtolower(_("Blazer")),
+					strtolower(_("Curleaf")),
 					strtolower(_("Dragiri")),
 					strtolower(_("Fennixis")),
 					strtolower(_("FireeBee")),
