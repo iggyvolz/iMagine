@@ -6,7 +6,7 @@ if (!defined('FTGR_MODE'))
 }
 define('FTGR_PRODUCTION', TRUE); // Set to TRUE if on a production server to automatically set options below
 define('FTGR_STARTING_ENERGY', 1000);
-define('FTGR_VERSION', "0.2.0RC1");
+define('FTGR_VERSION', "0.2.0RC2");
 define('FTGR_VERSION_NICKNAME', 'Helium');
 define('FTGR_LANG', 'EN'); //EN - English, other languages pending.
 define('FTGR_DISABLED', 'Debug mode has been disabled by an administrator.');
