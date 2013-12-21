@@ -89,7 +89,7 @@ class fightmon
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and caused') . ' ' . $power . ' ' . _('damage on') . ' ' . $target);
+			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and caused') . ' ' . $power . ' ' . _('damage on') . ' ' . ucfirst($target));
 		}
 		else
 		{

@@ -1,4 +1,0 @@
-<?php
-
-define('FTGR_FENNIXIS_STARTING_ENERGY', 80);
-

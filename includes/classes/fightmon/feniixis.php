@@ -1,10 +1,10 @@
 <?php
 
-class fennixis extends fightmon
+class feniixis extends fightmon
 {
 
 // Allows Dragiri-specific functions to be implimented in later versions
-	public $energy = FTGR_FENNIXIS_STARTING_ENERGY;
+	public $energy = FTGR_FENIIXIS_STARTING_ENERGY;
 
 	public function bite($args = NULL)
 	{

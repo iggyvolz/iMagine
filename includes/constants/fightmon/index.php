@@ -3,7 +3,7 @@
 require_once __DIR__ . FTGR_SLASH . 'blazer.php';
 require_once __DIR__ . FTGR_SLASH . 'curleaf.php';
 require_once __DIR__ . FTGR_SLASH . 'dragiri.php';
-require_once __DIR__ . FTGR_SLASH . 'fennixis.php';
+require_once __DIR__ . FTGR_SLASH . 'feniixis.php';
 require_once __DIR__ . FTGR_SLASH . 'fireebee.php';
 require_once __DIR__ . FTGR_SLASH . 'flike.php';
 require_once __DIR__ . FTGR_SLASH . 'ghostslicer.php';
