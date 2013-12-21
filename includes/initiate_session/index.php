@@ -40,6 +40,7 @@ function init_session()
 	$_SESSION['ftgr']['pluffenergy'] = FTGR_PLUFF_STARTING_ENERGY;
 	$_SESSION['ftgr']['reebeeenergy'] = FTGR_REE_BEE_STARTING_ENERGY;
 	$_SESSION['ftgr']['reemonenergy'] = FTGR_REEMON_STARTING_ENERGY;
+	$_SESSION['ftgr']['skelestormenergy'] = FTGR_SKELESTORM_STARTING_ENERGY;
 	$_SESSION['ftgr']['strabenergy'] = FTGR_STRAB_STARTING_ENERGY;
 	$_SESSION['ftgr']['version'] = FTGR_VERSION;
 	$_SESSION['ftgr']['valid_session'] = FTGR_ALLOW_ANY_UPDATE;

@@ -33,7 +33,8 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 					strtolower(_("Pluff")),
 					strtolower(_("ReeBee")),
 					strtolower(_("Reemon")),
-					strtolower(_("Strab"))
+					strtolower(_("Skelestorm")),
+					strtolower(_("Strab")),
 				))) // Prevent access of unwanted variables
 		{
 			return true;

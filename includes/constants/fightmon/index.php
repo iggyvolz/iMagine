@@ -14,4 +14,5 @@ require_once __DIR__ . FTGR_SLASH . 'plantsy.php';
 require_once __DIR__ . FTGR_SLASH . 'pluff.php';
 require_once __DIR__ . FTGR_SLASH . 'reebee.php';
 require_once __DIR__ . FTGR_SLASH . 'reemon.php';
+require_once __DIR__ . FTGR_SLASH . 'skelestorm.php';
 require_once __DIR__ . FTGR_SLASH . 'strab.php';

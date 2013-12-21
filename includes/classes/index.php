@@ -16,6 +16,7 @@ $plantsy = new plantsy;
 $pluff = new pluff;
 $reemon = new reemon;
 $reebee = new reebee;
+$skelestorm = new skelestorm;
 $strab = new strab;
 $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : _('Reemon');
 

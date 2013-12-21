@@ -24,6 +24,7 @@ function page_render_normal()
 	$pluff,
 	$reebee,
 	$reemon,
+	$skelestorm,
 	$strab;
 	ob_start();
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
@@ -56,6 +57,7 @@ function page_render_normal()
 		'<!-- ENERGY_PLUFF -->' => $pluff->energy,
 		'<!-- ENERGY_REEBEE -->' => $reebee->energy,
 		'<!-- ENERGY_REEMON -->' => $reemon->energy,
+		'<!-- ENERGY_SKELESTORM -->' => $skelestorm->energy,
 		'<!-- ENERGY_STRAB -->' => $strab->energy,
 		'<!-- STARTING_ENERGY_BLAZER -->' => FTGR_BLAZER_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_CURLEAF -->' => FTGR_CURLEAF_STARTING_ENERGY,
@@ -71,6 +73,7 @@ function page_render_normal()
 		'<!-- STARTING_ENERGY_PLUFF -->' => FTGR_PLUFF_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_REEBEE -->' => FTGR_REE_BEE_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
+		'<!-- STARTING_ENERGY_SKELESTORM -->' => FTGR_SKELESTORM_STARTING_ENERGY,
 		'<!-- STARTING_ENERGY_STRAB -->' => FTGR_STRAB_STARTING_ENERGY,
 		'<!-- NAME_BLAZER -->' => _("Blazer"),
 		'<!-- NAME_CURLEAF -->' => _("Curleaf"),
@@ -86,6 +89,7 @@ function page_render_normal()
 		'<!-- NAME_PLUFF -->' => _("Pluff"),
 		'<!-- NAME_REEBEE -->' => _("ReeBee"),
 		'<!-- NAME_REEMON -->' => _("Reemon"),
+		'<!-- NAME_SKELESTORM -->' => _("Skelestorm"),
 		'<!-- NAME_STRAB -->' => _("Strab"),
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
@@ -111,6 +115,7 @@ function page_render_api()
 	$pluff,
 	$reebee,
 	$reemon,
+	$skelestorm,
 	$strab;
 	if (defined('FTGR_HELP'))
 	{
@@ -144,6 +149,7 @@ function page_render_api()
 		'pluff_energy' => $pluff->energy,
 		'reebee_energy' => $reebee->energy,
 		'reemon_energy' => $reemon->energy,
+		'skelestorm_energy' => $skelestorm->energy,
 		'strab_energy' => $strab->energy,
 		'response' => $response,
 		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : _("Errors have been hidden by an administrator, but they may have been logged."))
