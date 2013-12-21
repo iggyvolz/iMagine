@@ -72,8 +72,16 @@ class person
 
 	public function help($args = NULL)
 	{
-		define('FTGR_HELP', TRUE);
-		return array(FTGR_OPENED_HELP);
+		if (FTGR_MODE !== 'PY')
+		{
+			define('FTGR_HELP', TRUE);
+			return array(FTGR_OPENED_HELP);
+		}
+		$contents = file_get_contents(dirname(dirname(__DIR__)) . FTGR_SLASH . 'help.php');
+		$contents = itemOf(explode('<BODY>', $contents), 1);
+		$contents = itemOf(explode('</BODY>', $contents), 0);
+		$contents = strip_tags($contents);
+		return array($contents);
 	}
 
 	public function register($fightmon)
