@@ -151,7 +151,7 @@ class person
 		{
 			return array(FTGR_REQUIRED_PARAM);
 		}
-		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
+		$url = trim('http://fightmon.eternityincurakai.com/ftgr-download/' . $args[0] . '.zip');
 		$err = isset($php_errormsg) ? $php_errormsg : NULL;
 		$contents = @file_get_contents($url);
 		$latesterr = isset($php_errormsg) ? $php_errormsg : NULL;
