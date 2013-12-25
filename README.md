@@ -1,7 +1,5 @@
 	<a href="index.php"><- Back to FTG:R</a>
 	<p>Please note that the next version (0.3) goes through some major overhaul, including changing the main characters to Fightmon.</p>
-	<p>Please note that this is a release candidate.  Please report any bugs IMMEDIATELY to <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">GitHub</a> so they can be assessed before the final release.</p>
-	<p>The Release Candidate documentation has been finalized for viewing on the website.  This does not cover how to install a PHP server (please see an alpha release for that).</p>
 	<h2>Syntax</h2>
 	<p>All commands are case-insensitive.  The syntax is: person.action(parameter).  However, the person and/or the parameter can be omitted for some functions.  For example, the function reset requires no name or parameters.  Any of these will do the same thing:<p>
 	<ul>
