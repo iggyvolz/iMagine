@@ -34,7 +34,7 @@ class battle
 	public function pick_move($num)
 	{
 		$opponent = $this->opponents[$num];
-		return $opponent->moves[rand(0, length($opponent->moves) - 1)];
+		return $opponent->moves[rand(0, count($opponent->moves) - 1)];
 	}
 
 }

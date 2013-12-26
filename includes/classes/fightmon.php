@@ -105,7 +105,7 @@ class fightmon
 		}
 		else
 		{
-			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('on') . ' ' . $target . ' ' . _('and it missed!'));
+			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('on') . ' ' . ucfirst($target) . ' ' . _('and it missed!'));
 		}
 	}
 

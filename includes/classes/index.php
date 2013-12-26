@@ -4,7 +4,14 @@ require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
 require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
 require_once __DIR__ . FTGR_SLASH . 'battle.php';
 require_once __DIR__ . FTGR_SLASH . 'battles' . FTGR_SLASH . 'index.php';
-$battle = isset($_SESSION['ftgr']['battle']) ? new $_SESSION['ftgr']['battle'] : null;
+if (isset($_SESSION['ftgr']['battle']))
+{
+	$battle = new $_SESSION['ftgr']['battle'];
+}
+else
+{
+	$battle = NULL;
+}
 $blazer = new blazer;
 $curleaf = new curleaf;
 $dragiri = new dragiri;

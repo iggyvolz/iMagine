@@ -5,6 +5,7 @@ class feniixis extends fightmon
 
 // Allows Dragiri-specific functions to be implimented in later versions
 	public $energy = FTGR_FENIIXIS_STARTING_ENERGY;
+	public $moves = array('bite', 'burn', 'scratch');
 
 	public function bite($args = NULL)
 	{
