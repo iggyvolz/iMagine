@@ -122,6 +122,13 @@ class fightmon
 		return array('');
 	}
 
+	public function reset_battle($args = NULL)
+	{
+		$GLOBALS['battle'] = NULL;
+		$_SESSION['ftgr']['battle'] = NULL;
+		return array(_('Successfully reset battle!'));
+	}
+
 	public function update($args = NULL)
 	{
 		if (!$_SESSION['ftgr']['valid_session'])
