@@ -3,6 +3,7 @@
 class fightmon
 {
 
+// public $moves=array(); // Defined in extended class
 	public function __construct()
 	{
 		if (isset($_SESSION['ftgr'][get_class($this) . 'energy']))
@@ -72,6 +73,17 @@ class fightmon
 	{
 		define('FTGR_HELP', TRUE);
 		return array(_('Opened help.'));
+	}
+
+	public function mock_battle($args = NULL)
+	{
+		global $battle, $avaliable_battles;
+		if (isset($args[0]) && in_array($args[0], $avaliable_battles))
+		{
+			$_SESSION['ftgr']['battle'] = $args[0];
+			return array(_('Battle') . ' ' . $args[0] . ' ' . _('now loaded') . _('!'));
+		}
+		return array(_('Error: Invalid battle'));
 	}
 
 	public function _move($name, $power, $accuracy, $target = NULL)
