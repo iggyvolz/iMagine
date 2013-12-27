@@ -24,6 +24,7 @@ class battle
 		$this->opponents_count = count($this->opponents);
 		if (defined('FTGR_BATTLE_CHOSEN'))
 		{
+			throw new Exception(str_replace(array('%1', '%2'), array(get_class($GLOBALS['battle']), _(get_class($this))), _('Battle %1 already selected, tried to select %2.')));
 			throw new Exception(_('Battle') . ' ' . _(get_class($GLOBALS['battle']) . ' ' . _('already selected') . ', ' . _('tried to select') . ' ' . _(get_class($this))));
 			return;
 		}

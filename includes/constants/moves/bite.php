@@ -1,6 +1,5 @@
 <?php
 
-//define('_("Bite")', itemOf(array('EN' => 'Bite'), FTGR_LANG));
 define('FTGR_BITE_POWER_BLAZER', 5);
 define('FTGR_BITE_POWER_DRAGIRI_MIN', 30);
 define('FTGR_BITE_POWER_DRAGIRI_MAX', 40);

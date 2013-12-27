@@ -1,6 +1,5 @@
 <?php
 
-//define('FTGR_SCRATCH_NAME', itemOf(array('EN' => 'Scratch'), FTGR_LANG));
 define('FTGR_SCRATCH_POWER_FLIKE', 3);
 define('FTGR_SCRATCH_POWER_NIGHTWING', 4);
 define('FTGR_SCRATCH_POWER_REE_BEE', 8);

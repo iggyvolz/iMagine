@@ -122,7 +122,7 @@ function page_render_api()
 		echo 'help';
 		return;
 	}
-	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
+	$response = str_replace(array('%1'), array(FTGR_VERSION), _("Welcome to Fightmon the Game: Reemon v%1!"));
 	$response.=PHP_EOL;
 	$response.=_("For help and credits, type help then press enter.");
 	if (!empty($_SESSION['ftgr']['returns']))

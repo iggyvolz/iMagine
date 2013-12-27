@@ -92,20 +92,20 @@ class fightmon
 		{
 			if (rand(1, 100) <= $accuracy)
 			{
-				return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . _('!'));
+				return array(str_replace(array('%1', '%2'), array(ucfirst(get_class($this)), $name), _('%1 used %2!')));
 			}
 			else
 			{
-				return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and it missed!'));
+				return array(str_replace(array('%1', '%2'), array(ucfirst(get_class($this)), $name), _('%1 used %2 and it missed!')));
 			}
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('and caused') . ' ' . $power . ' ' . _('damage on') . ' ' . ucfirst($target));
+			return array(str_replace(array('%1', '%2', '%3', '%4'), array(ucfirst(get_class($this)), $name, $power, ucfirst($target)), _('%1 used %2 and caused %3 damage on %4')));
 		}
 		else
 		{
-			return array(ucfirst(get_class($this)) . ' ' . _('used') . ' ' . $name . ' ' . _('on') . ' ' . ucfirst($target) . ' ' . _('and it missed!'));
+			return array(str_replace(array('%1', '%2', '%3'), array(ucfirst(get_class($this)), $name, ucfirst($target)), _('%1 used %2 on %3 and it missed!')));
 		}
 	}
 
@@ -165,12 +165,10 @@ class fightmon
 		foreach ($scan as $value)
 		{
 			$worked = copy($value, str_replace(FTGR_SLASH . 'includes' . FTGR_SLASH . 'classes' . FTGR_SLASH . 'ftgr' . FTGR_SLASH . 'Fightmon-the-Game--Reemon-dev' . FTGR_SLASH, FTGR_SLASH, $value));
-//$return[] = 'Copying ' . $value . ' to ' . str_replace(FTGR_SLASH .'includes'.FTGR_SLASH .'classes'.FTGR_SLASH .'ftgr'.FTGR_SLASH .'Fightmon-the-Game--Reemon-dev'.FTGR_SLASH, FTGR_SLASH, $value) . ' and it ' . ($worked ? 'worked' : 'did not work'); // For debug purposes
 		}
 		unlink(__DIR__ . FTGR_SLASH . 'ftgr.zip');
 		$this->update_remove_folder(__DIR__ . FTGR_SLASH . 'ftgr');
-//return $return; // For debug purposes
-		return _('Successfully upgraded to version') . ' ' . str_replace('-', '.', $args[0]);
+		return array(str_replace(array('%1'), array(str_replace('-', '.', $args[0])), _('Successfully upgraded to version %1.')));
 	}
 
 	public function update_code($args = NULL)
@@ -225,7 +223,7 @@ class fightmon
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(_('Current version is') . ' ' . FTGR_VERSION);
+			return array(str_replace(array('%1'), array(FTGR_VERSION), _('Current version is %1.')));
 		}
 		$opts = array(
 			'http' => array(
