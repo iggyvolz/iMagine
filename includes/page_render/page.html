@@ -1,169 +1,130 @@
-<!doctype html>
-<HEAD>
-<title>Fightmon the Game: Reemon</title>
-<script src="js/jquery.js"></script>
-<script>
-    window.onload=function() { document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight; };
-    function loadXMLDoc()
-{
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-        //console.log(xmlhttp.responseText); //For debug purposes
-        //console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
-        if(xmlhttp.responseText==='help')
-        {
-            window.location.replace("help.php");
-        }
-        if(xmlhttp.responseText==='refresh')
-        {
-            window.location.reload();
-        }
-        document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
-        document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
-        document.getElementById('energy_blazer').value=JSON.parse(xmlhttp.responseText).blazer_energy;
-        document.getElementById('energy_curleaf').value=JSON.parse(xmlhttp.responseText).curleaf_energy;
-        document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
-        document.getElementById('energy_feniixis').value=JSON.parse(xmlhttp.responseText).feniixis_energy;
-        document.getElementById('energy_fireebee').value=JSON.parse(xmlhttp.responseText).fireebee_energy;
-        document.getElementById('energy_flike').value=JSON.parse(xmlhttp.responseText).flike_energy;
-        document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
-        document.getElementById('energy_hartvile').value=JSON.parse(xmlhttp.responseText).hartvile_energy;
-        document.getElementById('energy_krabulous').value=JSON.parse(xmlhttp.responseText).krabulous_energy;
-        document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
-        document.getElementById('energy_plantsy').value=JSON.parse(xmlhttp.responseText).plantsy_energy;
-        document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
-        document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
-        document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
-        document.getElementById('energy_skelestorm').value=JSON.parse(xmlhttp.responseText).skelestorm_energy;
-        document.getElementById('energy_strab').value=JSON.parse(xmlhttp.responseText).strab_energy;
-        document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
-        document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
-        if(JSON.parse(xmlhttp.responseText).dump!=='')
-        {
-            window.scrollTo(0,document.body.scrollHeight);
-        }
-    }
-  }
-xmlhttp.open("POST","api.php",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("contents="+document.getElementById('contents').value);
-document.getElementById('contents').value='';
-}
-
-</script>
-<script src="js/html5slider.js"></script>
-<style>
-aside {
-    padding: 10px;
-    margin: 3px;
-    border: 1px solid rgb(0, 221, 0);
-    border-radius: 2px 2px 2px 2px;
-    background-color: rgb(0, 161, 0);
-    width: 30%;
-}
-input[type=range]
-{
-	width: 100%;
-}
-</style>
-</HEAD>
-<BODY>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Fightmon the Game: Reemon</title>
+	
+	<!-- dependencies -->
+	<script src="js/jquery.js"></script>
+	<script src="js/html5slider.js"></script>
+	
+	<!-- initialize -->
+	<script src="js/init.js"></script>
+	
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
     <pre id="dump"></pre>
     <p id="errors"></p>
-<form onsubmit="loadXMLDoc(); return false">
-<p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
-</form>
-<p><textarea id="results" readonly rows="4" cols="60">
-<!-- RESPONSE -->
-</textarea></p>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_REEMON -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_REEMON --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_REEMON -->" id="energy_reemon" disabled value="<!-- ENERGY_REEMON -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_PLUFF -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_PLUFF --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_PLUFF -->" id="energy_pluff" disabled value="<!-- ENERGY_PLUFF -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="energy_dragiri" disabled value="<!-- ENERGY_DRAGIRI -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_GHOSTSLICER -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_GHOSTSLICER --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_GHOSTSLICER -->" id="energy_ghostslicer" disabled value="<!-- ENERGY_GHOSTSLICER -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_NIGHTWING -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_NIGHTWING --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_NIGHTWING -->" id="energy_nightwing" disabled value="<!-- ENERGY_NIGHTWING -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_REEBEE -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_REEBEE --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_REEBEE -->" id="energy_reebee" disabled value="<!-- ENERGY_REEBEE -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_HARTVILE -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_HARTVILE --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_HARTVILE -->" id="energy_hartvile" disabled value="<!-- ENERGY_HARTVILE -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_PLANTSY -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_PLANTSY --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_PLANTSY -->" id="energy_plantsy" disabled value="<!-- ENERGY_PLANTSY -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_FIREEBEE -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_FIREEBEE --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_FIREEBEE -->" id="energy_fireebee" disabled value="<!-- ENERGY_FIREEBEE -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_STRAB -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_STRAB --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_STRAB -->" id="energy_strab" disabled value="<!-- ENERGY_STRAB -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_KRABULOUS -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_KRABULOUS --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_KRABULOUS -->" id="energy_krabulous" disabled value="<!-- ENERGY_KRABULOUS -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_BLAZER -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_BLAZER --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_BLAZER -->" id="energy_blazer" disabled value="<!-- ENERGY_BLAZER -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_FLIKE -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_FLIKE --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_FLIKE -->" id="energy_flike" disabled value="<!-- ENERGY_FLIKE -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_FENIIXIS -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_FENIIXIS --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_FENIIXIS -->" id="energy_feniixis" disabled value="<!-- ENERGY_FENIIXIS -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_CURLEAF -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_CURLEAF --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_CURLEAF -->" id="energy_curleaf" disabled value="<!-- ENERGY_CURLEAF -->">
-</aside>
-<aside style="float:left;">
-<p style="text-align:center;"><!-- NAME_SKELESTORM -->'s energy</p>
-<p style="text-align:center;"><!-- ENERGY_SKELESTORM --></p>
-<input type="range" min="0" max="<!-- STARTING_ENERGY_SKELESTORM -->" id="energy_skelestorm" disabled value="<!-- ENERGY_SKELESTORM -->">
-</aside>
-</BODY>
+
+	<form onsubmit="loadXMLDoc(); return false">
+		<p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
+	</form>
+
+	<p><textarea id="results" readonly rows="4" cols="60">
+		<!-- RESPONSE -->
+	</textarea></p>
+	
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_REEMON -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_REEMON --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_REEMON -->" id="energy_reemon" disabled value="<!-- ENERGY_REEMON -->">
+	</aside>
+
+
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_PLUFF -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_PLUFF --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_PLUFF -->" id="energy_pluff" disabled value="<!-- ENERGY_PLUFF -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="energy_dragiri" disabled value="<!-- ENERGY_DRAGIRI -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_GHOSTSLICER -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_GHOSTSLICER --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_GHOSTSLICER -->" id="energy_ghostslicer" disabled value="<!-- ENERGY_GHOSTSLICER -->">
+	</aside>
+	
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_NIGHTWING -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_NIGHTWING --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_NIGHTWING -->" id="energy_nightwing" disabled value="<!-- ENERGY_NIGHTWING -->">
+	</aside>
+	
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_REEBEE -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_REEBEE --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_REEBEE -->" id="energy_reebee" disabled value="<!-- ENERGY_REEBEE -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_HARTVILE -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_HARTVILE --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_HARTVILE -->" id="energy_hartvile" disabled value="<!-- ENERGY_HARTVILE -->">
+	</aside>
+	
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_PLANTSY -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_PLANTSY --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_PLANTSY -->" id="energy_plantsy" disabled value="<!-- ENERGY_PLANTSY -->">
+	</aside>
+
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_FIREEBEE -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_FIREEBEE --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_FIREEBEE -->" id="energy_fireebee" disabled value="<!-- ENERGY_FIREEBEE -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_STRAB -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_STRAB --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_STRAB -->" id="energy_strab" disabled value="<!-- ENERGY_STRAB -->">
+	</aside>
+
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_KRABULOUS -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_KRABULOUS --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_KRABULOUS -->" id="energy_krabulous" disabled value="<!-- ENERGY_KRABULOUS -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_BLAZER -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_BLAZER --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_BLAZER -->" id="energy_blazer" disabled value="<!-- ENERGY_BLAZER -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_FLIKE -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_FLIKE --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_FLIKE -->" id="energy_flike" disabled value="<!-- ENERGY_FLIKE -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_FENIIXIS -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_FENIIXIS --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_FENIIXIS -->" id="energy_feniixis" disabled value="<!-- ENERGY_FENIIXIS -->">
+	</aside>
+	
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_CURLEAF -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_CURLEAF --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_CURLEAF -->" id="energy_curleaf" disabled value="<!-- ENERGY_CURLEAF -->">
+	</aside>
+
+	<aside style="float:left;">
+		<p style="text-align:center;"><!-- NAME_SKELESTORM -->'s energy</p>
+		<p style="text-align:center;"><!-- ENERGY_SKELESTORM --></p>
+		<input type="range" min="0" max="<!-- STARTING_ENERGY_SKELESTORM -->" id="energy_skelestorm" disabled value="<!-- ENERGY_SKELESTORM -->">
+	</aside>
+	
+</body>
+</html>
