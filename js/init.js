@@ -1,56 +1,38 @@
- window.onload=function() { document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight; };
-    function loadXMLDoc()
+window.onload = function() {
+    $('#results').scrollTop($('#results').prop('scrollHeight'));
+};
+function reload()
 {
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-xmlhttp.onreadystatechange=function()
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-        //console.log(xmlhttp.responseText); //For debug purposes
-        //console.log(JSON.parse(xmlhttp.responseText)); //For debug purposes
-        if(xmlhttp.responseText==='help')
+    $.post('api.php', "contents=" + $('#contents').val(), function(data) {
+        if (data === 'help')
         {
             window.location.replace("help.php");
         }
-        if(xmlhttp.responseText==='refresh')
+        console.log(data);
+        $('#contents').val("");
+        $('#results').val(data.response);
+        $('#results').scrollTop($('#results').prop("scrollHeight"));
+        $('#blazer_energy').val(data.blazer_energy);
+        $('#curleaf_energy').val(data.curleaf_energy);
+        $('#dragiri_energy').val(data.dragiri_energy);
+        $('#feniixis_energy').val(data.feniixis_energy);
+        $('#fireebee_energy').val(data.fireebee_energy);
+        $('#flike_energy').val(data.flike_energy);
+        $('#ghostslicer_energy').val(data.ghostslicer_energy);
+        $('#hartvile_energy').val(data.hartvile_energy);
+        $('#krabulous_energy').val(data.krabulous_energy);
+        $('#nightwing_energy').val(data.nightwing_energy);
+        $('#plantsy_energy').val(data.plantsy_energy);
+        $('#pluff_energy').val(data.pluff_energy);
+        $('#reebee_energy').val(data.reebee_energy);
+        $('#reemon_energy').val(data.reemon_energy);
+        $('#skelestorm_energy').val(data.skelestorm_energy);
+        $('#strab_energy').val(data.strab_energy);
+        $('#dump').html(data.dump);
+        $('#errors').html(data.errors);
+        if (data.dump !== "")
         {
-            window.location.reload();
+            window.scrollTo(0, document.body.scrollHeight);
         }
-        document.getElementById('results').value=JSON.parse(xmlhttp.responseText).response;
-        document.getElementById('results').scrollTop = document.getElementById("results").scrollHeight;
-        document.getElementById('energy_blazer').value=JSON.parse(xmlhttp.responseText).blazer_energy;
-        document.getElementById('energy_curleaf').value=JSON.parse(xmlhttp.responseText).curleaf_energy;
-        document.getElementById('energy_dragiri').value=JSON.parse(xmlhttp.responseText).dragiri_energy;
-        document.getElementById('energy_feniixis').value=JSON.parse(xmlhttp.responseText).feniixis_energy;
-        document.getElementById('energy_fireebee').value=JSON.parse(xmlhttp.responseText).fireebee_energy;
-        document.getElementById('energy_flike').value=JSON.parse(xmlhttp.responseText).flike_energy;
-        document.getElementById('energy_ghostslicer').value=JSON.parse(xmlhttp.responseText).ghostslicer_energy;
-        document.getElementById('energy_hartvile').value=JSON.parse(xmlhttp.responseText).hartvile_energy;
-        document.getElementById('energy_krabulous').value=JSON.parse(xmlhttp.responseText).krabulous_energy;
-        document.getElementById('energy_nightwing').value=JSON.parse(xmlhttp.responseText).nightwing_energy;
-        document.getElementById('energy_plantsy').value=JSON.parse(xmlhttp.responseText).plantsy_energy;
-        document.getElementById('energy_pluff').value=JSON.parse(xmlhttp.responseText).pluff_energy;
-        document.getElementById('energy_reebee').value=JSON.parse(xmlhttp.responseText).reebee_energy;
-        document.getElementById('energy_reemon').value=JSON.parse(xmlhttp.responseText).reemon_energy;
-        document.getElementById('energy_skelestorm').value=JSON.parse(xmlhttp.responseText).skelestorm_energy;
-        document.getElementById('energy_strab').value=JSON.parse(xmlhttp.responseText).strab_energy;
-        document.getElementById('dump').innerHTML=JSON.parse(xmlhttp.responseText).dump;
-        document.getElementById('errors').innerHTML=JSON.parse(xmlhttp.responseText).errors;
-        if(JSON.parse(xmlhttp.responseText).dump!=='')
-        {
-            window.scrollTo(0,document.body.scrollHeight);
-        }
-    }
-  }
-xmlhttp.open("POST","api.php",true);
-xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-xmlhttp.send("contents="+document.getElementById('contents').value);
-document.getElementById('contents').value='';
+    }, "json");
 }

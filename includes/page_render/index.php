@@ -119,7 +119,7 @@ function page_render_api()
 	$strab;
 	if (defined('FTGR_HELP'))
 	{
-		echo 'help';
+		echo json_encode('help');
 		return;
 	}
 	$response = str_replace(array('%1'), array(FTGR_VERSION), _("Welcome to Fightmon the Game: Reemon v%1!"));
