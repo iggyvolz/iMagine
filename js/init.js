@@ -34,5 +34,8 @@ function reload()
         {
             window.scrollTo(0, document.body.scrollHeight);
         }
-    }, "json");
+    }, "json").fail(function(data) {
+        $('#errors').html(data.responseText);
+        $('#contents').val("");
+    });
 }
