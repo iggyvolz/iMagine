@@ -1,0 +1,3 @@
+<?php
+
+define('FTGR_STRAB_STARTING_ENERGY', 15);
