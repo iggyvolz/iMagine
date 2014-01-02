@@ -21,10 +21,10 @@
     <p>Please note that this goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
     <p>Important dates:
     <ul>
-        <li class="notpassed">January 1, 2013 - Feature Freeze/Begin Alpha</li>
-        <li class="notpassed">January 10, 2013 - End Alpha/Begin Beta</li>
-        <li class="notpassed">January 20, 2013 - End Beta/Begin RC's</li>
-        <li class="notpassed">January 26, 2013 (working date) - Final Release</li>
+        <li class="notpassed">March 1, 2013 - Feature Freeze/Begin Alpha</li>
+        <li class="notpassed">April 1, 2013 - End Alpha/Begin Beta</li>
+        <li class="notpassed">April 15, 2013 - End Beta/Begin RC's</li>
+        <li class="notpassed">Late April/Early May - Final Release</li>
     </ul></p>
 <h2>Setup</h2>
 <p>You need to set up a PHP server to play on.  I highly recommend <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.  Download the FTG:R files to (XAMPP install directory)/xamppfiles/htdocs/ftgr.  Open the XAMPP manager and start the Apache module (you can start mySQL and proFTPD, but they are not required).  Then go to http://localhost/ftgr to play (you can rename the folder too, I personally name mine ftgr-dev).  Some applications, like Skype, Internet Information Services, and many game development softwares use localhost, so you will need to quit these programs completely. </p>
