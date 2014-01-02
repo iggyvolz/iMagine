@@ -33,6 +33,7 @@ function page_render_normal()
 	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
 	$response.=PHP_EOL;
 	$response.=_("For help and credits, type help then press enter.");
+	$response = trim($response);
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
@@ -125,6 +126,7 @@ function page_render_api()
 	$response = str_replace(array('%1'), array(FTGR_VERSION), _("Welcome to Fightmon the Game: Reemon v%1!"));
 	$response.=PHP_EOL;
 	$response.=_("For help and credits, type help then press enter.");
+	$response = trim($response);
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
@@ -151,7 +153,7 @@ function page_render_api()
 		'reemon_energy' => $reemon->energy,
 		'skelestorm_energy' => $skelestorm->energy,
 		'strab_energy' => $strab->energy,
-		'response' => $response,
+		'response' => trim($response),
 		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : _("Errors have been hidden by an administrator, but they may have been logged."))
 	));
 }
