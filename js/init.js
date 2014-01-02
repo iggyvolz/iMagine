@@ -8,7 +8,6 @@ function reload()
         {
             window.location.replace("help.php");
         }
-        console.log(data);
         $('#contents').val("");
         $('#results').val(data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
