@@ -33,7 +33,7 @@ function page_render_normal()
 	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
 	$response.=PHP_EOL;
 	$response.=_("For help and credits, type help then press enter.");
-	$response = trim($response);
+	$response = $response;
 	if (!empty($_SESSION['ftgr']['returns']))
 	{
 		foreach ($_SESSION['ftgr']['returns'] as $value)
