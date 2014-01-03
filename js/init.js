@@ -1,6 +1,7 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
 };
+var cssbackground=0;
 function reload()
 {
     $.post('api.php', "contents=" + $('#contents').val(), function(data) {
@@ -11,6 +12,14 @@ function reload()
         if(data.cutscene)
         {
             $('#overlay').css('display','inline');
+            interval=setInterval(function() {
+            $('#overlay').css('backgroundColor','rgba(' + ['0','0','0',(cssbackground/500).toString()].join(',') + ')');
+            cssbackground++;
+            if(cssbackground>500)
+            {
+                clearInterval(interval);
+            }
+        },1);
             $('#flashobject').css('display','inline');
             var obj = $("object#flash");
             var orig = obj.html();
