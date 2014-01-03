@@ -8,6 +8,19 @@ function reload()
         {
             window.location.replace("help.php");
         }
+        if(data.cutscene)
+        {
+            $('#overlay').css('display','inline');
+            $('#flashobject').css('display','inline');
+            var obj = $("object#flash");
+            var orig = obj.html();
+            obj.html(orig);
+        }
+        else
+        {
+            $('#flashobject').css('display','none');
+            $('#overlay').css('display','none');
+        }
         $('#contents').val("");
         $('#results').val(data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
@@ -38,3 +51,7 @@ function reload()
         $('#contents').val("");
     });
 }
+$(document).click(function(){
+    $('#flashobject').css('display','none');
+    $('#overlay').css('display','none');
+})

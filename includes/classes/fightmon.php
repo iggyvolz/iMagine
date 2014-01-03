@@ -25,6 +25,18 @@ class fightmon
 		return array(ucfirst(get_class($this)) . ' ' . _('is now selected!'));
 	}
 
+	public function cutscene($args = NULL) // Public wrapper for _cutscene, delete before production
+	{
+		call_user_func(array($this, '_cutscene'), $args);
+		return array(str_replace(array('%1'), array(htmlentities($args[0], ENT_QUOTES)), _('Calling cutscene "%1"')));
+	}
+
+	public function _cutscene($args = NULL)
+	{
+		$_SESSION['ftgr']['cutscene'] = $args[0];
+		define('FTGR_SHOW_CUTSCENE', TRUE);
+	}
+
 	public function debug($args = NULL)
 	{
 		if (!FTGR_DEBUG)

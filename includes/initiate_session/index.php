@@ -26,6 +26,7 @@ function init_session()
 	$_SESSION['ftgr']['debug'] = FALSE;
 	$_SESSION['ftgr']['init'] = TRUE;
 	$_SESSION['ftgr']['returns'] = array();
+	$_SESSION['ftgr']['cutscene'] = NULL;
 	$_SESSION['ftgr']['blazerenergy'] = FTGR_BLAZER_STARTING_ENERGY;
 	$_SESSION['ftgr']['curleafenergy'] = FTGR_CURLEAF_STARTING_ENERGY;
 	$_SESSION['ftgr']['dragirienergy'] = FTGR_DRAGIRI_STARTING_ENERGY;
