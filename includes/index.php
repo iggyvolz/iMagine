@@ -1,12 +1,12 @@
 <?php
 
 // Intentionally non-alphabetized.  In order of prerequisition.
-require_once __DIR__ . FTGR_SLASH . 'array_to_lines' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'error' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'itemOf' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'constants' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'translations' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'initiate_session' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'classes' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'page_render' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'parse_contents' . FTGR_SLASH . 'index.php';
+require_once realpath(__DIR__ . '/array_to_lines/index.php');
+require_once realpath(__DIR__ . '/error/index.php');
+require_once realpath(__DIR__ . '/itemOf/index.php');
+require_once realpath(__DIR__ . '/constants/index.php');
+require_once realpath(__DIR__ . '/translations/index.php');
+require_once realpath(__DIR__ . '/initiate_session/index.php');
+require_once realpath(__DIR__ . '/classes/index.php');
+require_once realpath(__DIR__ . '/page_render/index.php');
+require_once realpath(__DIR__ . '/parse_contents/index.php');

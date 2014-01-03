@@ -159,27 +159,27 @@ class fightmon
 		{
 			return array(_('Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'));
 		}
-		file_put_contents(__DIR__ . FTGR_SLASH . 'ftgr.zip', $contents);
+		file_put_contents(realpath(__DIR__ . '/ftgr.zip'), $contents);
 		$zip = new ZipArchive;
-		$res = $zip->open(__DIR__ . FTGR_SLASH . 'ftgr.zip');
+		$res = $zip->open(__DIR__ . realpath('/ftgr.zip'));
 		if ($res === TRUE)
 		{
-			$zip->extractTo(__DIR__ . FTGR_SLASH . 'ftgr');
+			$zip->extractTo(__DIR__ . realpath('/ftgr'));
 			$zip->close();
 		}
 		else
 		{
 			return array(FTGR_UNZIP_FAIL . $res);
 		}
-		$folder = __DIR__ . FTGR_SLASH . 'ftgr' . FTGR_SLASH . itemOf(scandir(__DIR__ . '/ftgr'), 2);
+		$folder = realpath(__DIR__ . '/ftgr/') . itemOf(scandir(realpath(__DIR__ . '/ftgr')), 2);
 		$scan = $this->update_recursive_scandir($folder);
 		$return = array();
 		foreach ($scan as $value)
 		{
-			$worked = copy($value, str_replace(FTGR_SLASH . 'includes' . FTGR_SLASH . 'classes' . FTGR_SLASH . 'ftgr' . FTGR_SLASH . 'Fightmon-the-Game--Reemon-dev' . FTGR_SLASH, FTGR_SLASH, $value));
+			$worked = copy($value, str_replace(realpath(__DIR__ . '/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/'), realpath(__DIR__ . '/' . $value)));
 		}
-		unlink(__DIR__ . FTGR_SLASH . 'ftgr.zip');
-		$this->update_remove_folder(__DIR__ . FTGR_SLASH . 'ftgr');
+		unlink(realpath(__DIR__ . '/ftgr.zip'));
+		$this->update_remove_folder(realpath(__DIR__ . '/ftgr'));
 		return array(str_replace(array('%1'), array(str_replace('-', '.', $args[0])), _('Successfully upgraded to version %1.')));
 	}
 
@@ -207,12 +207,12 @@ class fightmon
 			{
 				continue;
 			}
-			if (is_file("$dir" . FTGR_SLASH . "$value"))
+			if (is_file(realpath("$dir/$value")))
 			{
-				$result[] = "$dir" . FTGR_SLASH . "$value";
+				$result[] = realpath($dir / $value);
 				continue;
 			}
-			foreach ($this->update_recursive_scandir("$dir" . FTGR_SLASH . "$value") as $value)
+			foreach ($this->update_recursive_scandir(realpath("$dir/$value")) as $value)
 			{
 				$result[] = $value;
 			}
@@ -225,7 +225,7 @@ class fightmon
 		$files = array_diff(scandir($dir), array('.', '..'));
 		foreach ($files as $file)
 		{
-			(is_dir("$dir" . FTGR_SLASH . "$file")) ? $this->update_remove_folder("$dir" . FTGR_SLASH . "$file") : unlink("$dir" . FTGR_SLASH . "$file");
+			(is_dir(realpath("$dir/$file"))) ? $this->update_remove_folder(realpath("$dir/$file")) : unlink(realpath("$dir/$file"));
 		}
 		return rmdir($dir);
 	}

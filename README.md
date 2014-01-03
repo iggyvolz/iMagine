@@ -10,8 +10,6 @@
 <h2>Setup</h2>
 <p>You need to set up a PHP server to play on.  I highly recommend <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.  Download the FTG:R files to (XAMPP install directory)/xamppfiles/htdocs/ftgr.  Open the XAMPP manager and start the Apache module (you can start mySQL and proFTPD, but they are not required).  Then go to http://localhost/ftgr to play (you can rename the folder too, I personally name mine ftgr-dev).  Some applications, like Skype, Internet Information Services, and many game development softwares use localhost, so you will need to quit these programs completely. </p>
 <p>Although this application is written in PHP, it is <em>not</em> recommended that you put this on a production server until a more stable release is out.  There may be server-breaking bugs, and the source code is not tested thoroughly before release to GitHub.  In addition, the documentation is likely to be out of date and functions may change dramatically between releases.  The debug function allows access to all $GLOBALS, and the site is only configured to work on a localhost server.</p>
-<h3>Windows</h3>
-<p>For a Windows computer, just change define('FTGR_WINDOWS', FALSE); to define('FTGR_WINDOWS', TRUE); in index.php and api.php (in the main directory).  The program will take care of the rest (note that this hasn't officially been tested this on Windows yet so it may not work perfectly).</p>
 <h2>Syntax</h2>
 <p>All commands are case-insensitive.  The syntax is: fightmon.action(parameter).  However, the fightmon and/or the parameter can be omitted for some functions.  For example, the function reset requires no name or parameters.  Any of these will do the same thing:<p>
 <ul>

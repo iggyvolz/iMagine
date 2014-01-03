@@ -27,7 +27,7 @@ function page_render_normal()
 	$skelestorm,
 	$strab;
 	ob_start();
-	require_once __DIR__ . FTGR_SLASH . 'page.html';
+	require_once realpath(__DIR__ . '/page.html');
 	$page = ob_get_contents();
 	ob_end_clean();
 	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
