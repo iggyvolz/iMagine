@@ -1,9 +1,9 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
 };
-var cssbackground=0;
 function reload()
 {
+    cssbackground=0;
     $.post('api.php', "contents=" + $('#contents').val(), function(data) {
         if (data === 'help')
         {
