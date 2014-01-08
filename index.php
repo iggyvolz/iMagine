@@ -42,8 +42,7 @@ if (!is_null($battle))
 				$valid_fightmon[] = $value;
 			}
 		}
-		$returned = call_user_func(array($battle->opponents [$i], $battle->pick_move($i)), array($valid_fightmon[rand(0, count($valid_fightmon) - 1)]));
-		foreach ($returned as $value)
+		foreach ($battle->pick_move($i) as $value)
 		{
 			$_SESSION['ftgr']['returns'][] = $value;
 		}

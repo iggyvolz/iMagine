@@ -12,6 +12,7 @@ else
 {
 	$battle = NULL;
 }
+$fightmon = array('blazer', 'curleaf', 'dragiri', 'feniixis', 'fireebee', 'flike', 'ghostslicer', 'hartvile', 'krabulous', 'nightwing', 'plantsy', 'pluff', 'reemon', 'reebee', 'skelestorm', 'strab');
 $blazer = new blazer;
 $curleaf = new curleaf;
 $dragiri = new dragiri;

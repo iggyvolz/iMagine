@@ -109,6 +109,11 @@ class fightmon
 		}
 	}
 
+	public function _move_internal($accuracy)
+	{
+		return (rand(1, 100) <= $accuracy);
+	}
+
 	public function register($fightmon)
 	{
 		$this->fightmon[] = $fightmon;
