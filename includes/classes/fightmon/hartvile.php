@@ -5,6 +5,7 @@ class hartvile extends fightmon
 
 // Allows Hartvile-specific functions to be implimented in later versions
 	public $energy = FTGR_HARTVILE_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_HARTVILE, 'has_target' => TRUE), 'daze' => array('accuracy' => FTGR_DAZE_ACCURACY, 'power' => FTGR_DAZE_POWER, 'has_target' => TRUE), 'lovesfall' => array('accuracy' => FTGR_LOVESFALL_ACCURACY, 'power' => FTGR_LOVESFALL_POWER, 'has_target' => TRUE), 'scratch' => array('accuracy' => FTGR_SCRATCH_ACCURACY, 'power' => FTGR_SCRATCH_POWER_HARTVILE, 'has_target' => TRUE));
 
 	public function bite($args = NULL)
 	{

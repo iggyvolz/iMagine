@@ -5,6 +5,14 @@ class skelestorm extends fightmon
 
 // Allows Skelestorm-specific functions to be implimented in later versions
 	public $energy = FTGR_SKELESTORM_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_SKELESTORM, 'has_target' => TRUE), 'electroshade' => array('accuracy' => FTGR_ELECTROSHADE_ACCURACY, 'power' => FTGR_ELECTROSHADE_POWER, 'has_target' => FALSE), 'lightningstrike' => array('accuracy' => FTGR_LIGHTNINGSTRIKE_ACCURACY, 'power' => NULL, 'has_target' => TRUE), 'repstrike' => array('accuracy' => FTGR_REPSTRIKE_ACCURACY, 'power' => NULL, 'has_target' => TRUE));
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->moves['lightningstrike']['power'] = rand(FTGR_LIGHTNINGSTRIKE_POWER_MIN, FTGR_LIGHTNINGSTRIKE_POWER_MAX);
+		$this->moves['repstrike']['power'] = rand(FTGR_REPSTRIKE_POWER_MIN, FTGR_REPSTRIKE_POWER_MAX);
+	}
 
 	public function bite($args = NULL)
 	{

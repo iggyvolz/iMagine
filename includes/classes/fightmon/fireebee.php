@@ -5,6 +5,13 @@ class fireebee extends fightmon
 
 // Allows Firee bee-specific functions to be implimented in later versions
 	public $energy = FTGR_FIREE_BEE_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_FIREE_BEE, 'has_target' => TRUE), 'flyby' => array('accuracy' => FTGR_FLYBY_ACCURACY, 'power' => FTGR_FLYBY_POWER_FIREE_BEE, 'has_target' => TRUE), 'hornit' => array('accuracy' => FTGR_SCRATCH_ACCURACY, 'power' => FTGR_SCRATCH_POWER_FENIIXIS, 'has_target' => TRUE), 'scratch' => array('accuracy' => FTGR_SCRATCH_ACCURACY, 'power' => FTGR_SCRATCH_POWER_FIREE_BEE, 'has_target' => TRUE), 'sting' => array('accuracy' => FTGR_STING_ACCURACY, 'power' => FTGR_STING_POWER_FIREE_BEE, 'has_target' => TRUE));
+
+	public function __construct()
+	{
+		parent::__construct();
+		$this->moves['hornit']['power'] = rand(FTGR_HORNIT_POWER_MIN, FTGR_HORNIT_POWER_MAX);
+	}
 
 	public function bite($args = NULL)
 	{

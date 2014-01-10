@@ -5,6 +5,7 @@ class reemon extends fightmon
 
 // Allows Reemon-specific functions to be implimented in later versions
 	public $energy = FTGR_REEMON_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_REEMON, 'has_target' => TRUE), 'deroot' => array('accuracy' => FTGR_DEROOT_ACCURACY, 'power' => FTGR_DEROOT_POWER, 'has_target' => FALSE), 'needlethorn' => array('accuracy' => FTGR_NEEDLETHORN_ACCURACY, 'power' => FTGR_NEEDLETHORN_POWER, 'has_target' => TRUE));
 
 	public function bite($args = NULL)
 	{

@@ -5,6 +5,7 @@ class plantsy extends fightmon
 
 // Allows Plantsy-specific functions to be implimented in later versions
 	public $energy = FTGR_PLANTSY_STARTING_ENERGY;
+	public $moves = array('metalpetal' => array('accuracy' => FTGR_METALPETAL_ACCURACY, 'power' => FTGR_METALPETAL_POWER));
 
 	public function metalpetal($args = NULL)
 	{

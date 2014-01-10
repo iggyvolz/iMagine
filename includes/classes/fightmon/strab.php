@@ -5,6 +5,7 @@ class strab extends fightmon
 
 // Allows Strab-specific functions to be implimented in later versions
 	public $energy = FTGR_STRAB_STARTING_ENERGY;
+	public $moves = array('fireflare' => array('accuracy' => FTGR_FIREFLARE_ACCURACY, 'power' => FTGR_FIREFLARE_POWER, 'has_target' => FALSE));
 
 	public function fireflare($args = NULL)
 	{
