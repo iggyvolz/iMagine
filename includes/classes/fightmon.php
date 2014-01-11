@@ -75,6 +75,17 @@ class fightmon
 		return array(_('Opened help.'));
 	}
 
+	public function lang($args = NULL)
+	{
+		$lang = $args[0];
+		if (!is_file(realpath(dirname(__DIR__) . str_replace(array('%1'), array($lang), '/translations/%1/LC_MESSAGES/ftgr.po'))))
+		{
+			return array(str_replace(array('%1'), array($lang), _('Language %1 not found.')));
+		}
+		$_SESSION['ftgr']['userlang'] = $lang;
+		return array(str_replace(array('%1'), array($lang), _('Changed to language %1.')));
+	}
+
 	public function mock_battle($args = NULL)
 	{
 		global $battle, $avaliable_battles;

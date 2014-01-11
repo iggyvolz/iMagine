@@ -42,6 +42,7 @@ function init_session()
 	$_SESSION['ftgr']['reemonenergy'] = FTGR_REEMON_STARTING_ENERGY;
 	$_SESSION['ftgr']['skelestormenergy'] = FTGR_SKELESTORM_STARTING_ENERGY;
 	$_SESSION['ftgr']['strabenergy'] = FTGR_STRAB_STARTING_ENERGY;
+	$_SESSION['ftgr']['userlang'] = 'en_US';
 	$_SESSION['ftgr']['version'] = FTGR_VERSION;
 	$_SESSION['ftgr']['valid_session'] = FTGR_ALLOW_ANY_UPDATE;
 }
