@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fightmon the Game: Reemon\n"
-"POT-Creation-Date: 2014-01-11 10:51-0500\n"
-"PO-Revision-Date: 2014-01-11 10:57-0500\n"
+"POT-Creation-Date: 2014-01-11 11:21-0500\n"
+"PO-Revision-Date: 2014-01-11 11:21-0500\n"
 "Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,37 +15,44 @@ msgstr ""
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-SearchPath-0: ../../../..\n"
 
-#: ../../../../help.php:15
+#: ../../../../help.php:16
 msgid "No documentation available for language %1."
 msgstr "Il n'y a aucune documentation pour la langue %1."
 
+#: ../../../../index.php:20
+msgid "Who is \"%1\"?"
+msgstr "Qui est \"%1\"?"
+
+#: ../../../../index.php:25
+msgid "%1: How do I \"%2\"?"
+msgstr "%1: Comment est-ce que je peux \"%2\"?"
+
 #: ../../../../includes/classes/battle.php:16
-#: ../../../../includes/classes/battle.php:21
 msgid "Cannot call battle class directly."
 msgstr "Il ne faut pas se référer à la class \"battle\" directement"
 
-#: ../../../../includes/classes/battle.php:27
+#: ../../../../includes/classes/battle.php:22
 msgid "Battle %1 already selected, tried to select %2."
 msgstr ""
 "La bataille %1 est déjà sélectionné, vous avez essayé de sélectionner %2."
 
-#: ../../../../includes/classes/battle.php:62
+#: ../../../../includes/classes/battle.php:57
 msgid "The opponent's %1 used %2 on %3 and it caused %4 damage!"
 msgstr "Le %1 de l'adversaire a utilisé %2 sur %3 et a causé %4 dommages!"
 
-#: ../../../../includes/classes/battle.php:70
+#: ../../../../includes/classes/battle.php:65
 msgid "%1 fainted!"
 msgstr "%1 s'évanoui!"
 
-#: ../../../../includes/classes/battle.php:75
+#: ../../../../includes/classes/battle.php:70
 msgid "The opponent's %1 used %2 on %3 and it missed!"
 msgstr "Le %1 de l'adversaire a utilisé %2 sur %3 et il ratera!"
 
-#: ../../../../includes/classes/battle.php:82
+#: ../../../../includes/classes/battle.php:77
 msgid "The opponent's %1 used %2!"
 msgstr "Le %1 de l'adversaire a utilisé %2!"
 
-#: ../../../../includes/classes/battle.php:86
+#: ../../../../includes/classes/battle.php:81
 msgid "The opponent's %1 used %2 and it missed!"
 msgstr "Le %1 de l'adversaire a utilisé %2 et il ratera!"
 

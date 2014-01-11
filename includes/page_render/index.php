@@ -94,7 +94,7 @@ function page_render_normal()
 		'<!-- NAME_STRAB -->' => _("Strab"),
 	);
 	$page = str_replace(array_keys($replacements), array_values($replacements), $page);
-	$page = utf8_decode($page); // Change ASCII code to actual letter
+	//$page = utf8_decode($page); // Change ASCII code to actual letter
 	echo $page;
 }
 

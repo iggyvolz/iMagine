@@ -6,16 +6,11 @@ class battle
 {
 
 	public $opponents = array(); // Defined in child class
-	public $opponents_count = 0; // Defined in _construct()
+	public $opponents_count = 0; // Defined in __construct()
 
-	public function _construct() // Must be called last from child class
+	public function __construct()
 	{
 		global $battle;
-		if (!isset($this->opponents))
-		{
-			throw new Exception(_('Cannot call battle class directly.'));
-			return;
-		}
 		if (get_class() === get_class($this))
 		{
 			throw new Exception(_('Cannot call battle class directly.'));
@@ -59,7 +54,7 @@ class battle
 				$targetobj = $GLOBALS[$target];
 				if ($targetobj->_move_internal($accuracy))
 				{
-					$returned[] = str_replace(array('%1', '%2', '%3', '%4'), array(get_class($this->opponents[$num]), $move, $target, $power), _('The opponent\'s %1 used %2 on %3 and it caused %4 damage!'));
+					$returned[] = str_replace(array('%1', '%2', '%3', '%4'), array(ucfirst(get_class($this->opponents[$num])), $move, ucfirst($target), $power), _('The opponent\'s %1 used %2 on %3 and it caused %4 damage!'));
 					if ($targetobj->energy > $power)
 					{
 						$targetobj->energy-=$power;
@@ -67,23 +62,23 @@ class battle
 					else
 					{
 						$targetobj->energy = 0;
-						$returned[] = str_replace(array('%1'), array($target), _('%1 fainted!'));
+						$returned[] = str_replace(array('%1'), array(ucfirst($target)), _('%1 fainted!'));
 					}
 				}
 				else
 				{
-					$returned[] = str_replace(array('%1', '%2', '%3'), array(get_class($this->opponents[$num]), $move, $target, $power), _('The opponent\'s %1 used %2 on %3 and it missed!'));
+					$returned[] = str_replace(array('%1', '%2', '%3'), array(ucfirst(get_class($this->opponents[$num])), $move, ucfirst($target), $power), _('The opponent\'s %1 used %2 on %3 and it missed!'));
 				}
 			}
 			else
 			{
 				if ($GLOBALS['fightmon'][0]->_move_internal($accuracy))
 				{
-					$returned[] = str_replace(array('%1', '%2', '%3', '%4'), array(get_class($this->opponents[$num]), $move), _('The opponent\'s %1 used %2!'));
+					$returned[] = str_replace(array('%1', '%2', '%3', '%4'), array(ucfirst(get_class($this->opponents[$num])), $move), _('The opponent\'s %1 used %2!'));
 				}
 				else
 				{
-					$returned[] = str_replace(array('%1', '%2'), array(get_class($this->opponents[$num]), $move), _('The opponent\'s %1 used %2 and it missed!'));
+					$returned[] = str_replace(array('%1', '%2'), array(ucfirst(get_class($this->opponents[$num])), $move), _('The opponent\'s %1 used %2 and it missed!'));
 				}
 			}
 		}

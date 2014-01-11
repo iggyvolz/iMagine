@@ -10,7 +10,7 @@ class example extends battle
 	{
 		$_SESSION['ftgr']['battle'] = get_class();
 		array_push($this->opponents, new feniixis, new feniixis, new feniixis);
-		$this->_construct();
+		parent::__construct();
 	}
 
 }

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fightmon the Game: Reemon\n"
-"POT-Creation-Date: 2014-01-11 10:44-0500\n"
-"PO-Revision-Date: 2014-01-11 10:44-0500\n"
+"POT-Creation-Date: 2014-01-11 11:22-0500\n"
+"PO-Revision-Date: 2014-01-11 11:23-0500\n"
 "Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,42 +15,49 @@ msgstr ""
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-SearchPath-0: ../../../..\n"
 
-#: ../../../../help.php:15
+#: ../../../../help.php:16
 msgid "No documentation available for language %1."
 msgstr "No documentation available for language %1."
 
+#: ../../../../index.php:20
+msgid "Who is \"%1\"?"
+msgstr "Who is \"%1\"?"
+
+#: ../../../../index.php:25
+msgid "%1: How do I \"%2\"?"
+msgstr "%1: How do I \"%2\"?"
+
 #: ../../../../includes/classes/battle.php:16
-#: ../../../../includes/classes/battle.php:21
 msgid "Cannot call battle class directly."
 msgstr "Cannot call battle class directly."
 
-#: ../../../../includes/classes/battle.php:27
+#: ../../../../includes/classes/battle.php:22
 msgid "Battle %1 already selected, tried to select %2."
 msgstr "Battle %1 already selected, tried to select %2."
 
-#: ../../../../includes/classes/battle.php:62
+#: ../../../../includes/classes/battle.php:57
 msgid "The opponent's %1 used %2 on %3 and it caused %4 damage!"
 msgstr "The opponent’s %1 used %2 on %3 and it caused %4 damage!"
 
-#: ../../../../includes/classes/battle.php:70
+#: ../../../../includes/classes/battle.php:65
 msgid "%1 fainted!"
 msgstr "%1 fainted!"
 
-#: ../../../../includes/classes/battle.php:75
+#: ../../../../includes/classes/battle.php:70
 msgid "The opponent's %1 used %2 on %3 and it missed!"
 msgstr "The opponent’s %1 used %2 on %3 and it missed!"
 
-#: ../../../../includes/classes/battle.php:82
+#: ../../../../includes/classes/battle.php:77
 msgid "The opponent's %1 used %2!"
 msgstr "The opponent’s %1 used %2!"
 
-#: ../../../../includes/classes/battle.php:86
+#: ../../../../includes/classes/battle.php:81
 msgid "The opponent's %1 used %2 and it missed!"
 msgstr "The opponent’s %1 used %2 and it missed!"
 
 #: ../../../../includes/classes/fightmon.php:25
-msgid "is now selected!"
-msgstr "is now selected!"
+msgid "%1 is now selected!"
+msgstr "%1 is now selected!"
 
 #: ../../../../includes/classes/fightmon.php:32
 msgid "Sorry, debug mode has been disabled by an administrator."
@@ -77,17 +84,8 @@ msgid "Changed to language %1."
 msgstr "Changed to language %1."
 
 #: ../../../../includes/classes/fightmon.php:95
-msgid "Battle"
-msgstr "Battle"
-
-#: ../../../../includes/classes/fightmon.php:95
-msgid "now loaded"
-msgstr "now loaded"
-
-#: ../../../../includes/classes/fightmon.php:95
-#: ../../../../includes/page_render/index.php:33
-msgid "!"
-msgstr "!"
+msgid "Battle %1 now loaded!"
+msgstr "Battle %1 now loaded!"
 
 #: ../../../../includes/classes/fightmon.php:97
 msgid "Error: Invalid battle"
@@ -325,6 +323,10 @@ msgstr "Fire Flare"
 msgid "Welcome to Fightmon the Game: Reemon v"
 msgstr "Welcome to Fightmon the Game: Reemon v"
 
+#: ../../../../includes/page_render/index.php:33
+msgid "!"
+msgstr "!"
+
 #: ../../../../includes/page_render/index.php:35
 #: ../../../../includes/page_render/index.php:128
 msgid "For help and credits, type help then press enter."
@@ -418,6 +420,9 @@ msgid ""
 "Errors have been hidden by an administrator, but they may have been logged."
 msgstr ""
 "Errors have been hidden by an administrator, but they may have been logged."
+
+#~ msgid "Battle"
+#~ msgstr "Battle"
 
 #~ msgid "already selected"
 #~ msgstr "already selected"

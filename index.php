@@ -17,12 +17,12 @@ $contents = strtolower($_POST['contents']);
 $_SESSION['ftgr']['returns'][] = '>' . $contents;
 if (parse_contents($contents)) // Set $action, $person, $pars
 {
-	$_SESSION['ftgr']['returns'][] = 'Who is ' . $person . '???';
+	$_SESSION['ftgr']['returns'][] = str_replace(array('%1'), array($person), _('Who is "%1"?'));
 	die;
 }
 if (!is_callable(array($$person, $action)) OR $action[0] === '_')
 {
-	$_SESSION['ftgr']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
+	$_SESSION['ftgr']['returns'][] = str_replace(array('%1', '%2'), array(ucfirst($person), $action), _('%1: How do I "%2"?'));
 	die;
 }
 $returned = call_user_func(array($$person, $action), $pars);
@@ -37,7 +37,7 @@ if (!is_null($battle))
 		$valid_fightmon = array();
 		foreach (array('blazer', 'curleaf', 'dragiri', 'feniixis', 'fireebee', 'flike', 'ghostslicer', 'hartvile', 'krabulous', 'nightwing', 'plantsy', 'pluff', 'reebee', 'reemon', 'skelestorm', 'strab') as $value)
 		{
-			if ($$value->energy !== 73291759828375)
+			if ($$value->energy !== 0)
 			{
 				$valid_fightmon[] = $value;
 			}
