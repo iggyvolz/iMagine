@@ -22,7 +22,7 @@ class fightmon
 	{
 		$_SESSION['ftgr']['me'] = get_class($this);
 		$GLOBALS['me'] = get_class($this);
-		return array(ucfirst(get_class($this)) . ' ' . _('is now selected!'));
+		return array(str_replace(array('%1'),array(ucfirst(get_class($this))),_('%1 is now selected!')));
 	}
 
 	public function debug($args = NULL)
@@ -92,7 +92,7 @@ class fightmon
 		if (isset($args[0]) && in_array($args[0], $avaliable_battles))
 		{
 			$_SESSION['ftgr']['battle'] = $args[0];
-			return array(_('Battle') . ' ' . $args[0] . ' ' . _('now loaded') . _('!'));
+			return array(str_replace(array('%1'),array($args[0]),_('Battle %1 now loaded!')));
 		}
 		return array(_('Error: Invalid battle'));
 	}

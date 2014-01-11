@@ -12,5 +12,5 @@ if (is_file(__DIR__ . FTGR_SLASH . 'includes' . FTGR_SLASH . 'help' . FTGR_SLASH
 }
 else
 {
-	echo str_replace(array('%1'), array(FTGR_LANG), _('No documentation avaliable for language %1.'));
+	echo str_replace(array('%1'), array(FTGR_LANG), _('No documentation available for language %1.'));
 }
