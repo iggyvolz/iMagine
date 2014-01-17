@@ -1,6 +1,7 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
 };
+$.post("https://eternityincurakai.com/apis/generate_auth_token").success(function(returned) { auth=returned; });
 function reload()
 {
     $.post('api.php', "contents=" + $('#contents').val(), function(data) {
@@ -38,4 +39,8 @@ function reload()
         $('#errors').html(data.responseText);
         $('#contents').val("");
     });
+}
+function stream_post(title,content)
+{
+    $.post("https://eternityincurakai.com/apis/sse/stream-post/" + title + ":" + content + ":" + auth);
 }
