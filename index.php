@@ -1,5 +1,9 @@
 <?php
 
+if (!version_compare(PHP_VERSION, '5.4', '>'))
+{
+	die('Error - Please use verison 0.4 if you are using 5.3 or earlier.');
+}
 error_reporting(E_ALL);
 @session_start(); // Don't return an error if session already started
 require_once realpath(__DIR__ . '/includes/index.php');
