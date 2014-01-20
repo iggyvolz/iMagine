@@ -17,12 +17,17 @@
 </HEAD>
 <BODY>
     <a href="index.php"><- Back to FTG:R</a>
-    <p>Please note: This version of the program is in development.  The help page may not be completely up-to-date and commits may not even work properly.  If commits are not fixed within a day or two, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
+	<?php if (version_compare('5.4.0', PHP_VERSION, '>'))
+	{
+		?>
+		<p>WARNING:  You need to use PHP 5.4+ in order to update to 1.x.  We will offer a backwards-compatible version 0.4, 0.5... until July 1st at which point there will be no new features support.</p>
+<?php } ?>
+    <p>Please note: This version of the program is in beta.  The help page may not be completely up-to-date and commits may not even work properly.  If commits are not fixed within a day or two, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
     <p>Please note that this goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
     <p>Important dates:
     <ul>
         <li class="passed">January 1, 2013 - Feature Freeze/Begin Alpha</li>
-        <li class="notpassed">January 10, 2013 - End Alpha/Begin Beta</li>
+        <li class="passed">January 10, 2013 - End Alpha/Begin Beta</li>
         <li class="notpassed">January 20, 2013 - End Beta/Begin RC's</li>
         <li class="notpassed">January 26, 2013 (working date) - Final Release</li>
     </ul></p>
