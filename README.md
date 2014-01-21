@@ -1,11 +1,11 @@
-	<p>Please note: This version of the program is in development.  The help page may not be completely up-to-date and commits may not even work properly.  If commits are not fixed within a day or two, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
+	<p>Please note: This version of the program is a release candidate.  The help page may not be completely up-to-date and commits may not even work properly.  If commits are not fixed within a day or two, please <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon/issues/new">add a new one</a>.</p>
 	<p>Please note that this goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
 	<p>Important dates:
 	<ul>
 		<li>January 1, 2013 - Feature Freeze/Begin Alpha</li>
 		<li>January 10, 2013 - End Alpha/Begin Beta</li>
 		<li>January 20, 2013 - End Beta/Begin RC's</li>
-		<li>January 26, 2013 (working date) - Final Release</li>
+		<li>January 31, 2013 - Final Release</li>
 	</ul></p>
 <h2>Setup</h2>
 <p>You need to set up a PHP server to play on.  I highly recommend <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.  Download the FTG:R files to (XAMPP install directory)/xamppfiles/htdocs/ftgr.  Open the XAMPP manager and start the Apache module (you can start mySQL and proFTPD, but they are not required).  Then go to http://localhost/ftgr to play (you can rename the folder too, I personally name mine ftgr-dev).  Some applications, like Skype, Internet Information Services, and many game development softwares use localhost, so you will need to quit these programs completely. </p>
