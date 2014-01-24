@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fightmon the Game: Reemon\n"
-"POT-Creation-Date: 2014-01-11 11:21-0500\n"
-"PO-Revision-Date: 2014-01-11 11:21-0500\n"
+"POT-Creation-Date: 2014-01-24 16:13-0500\n"
+"PO-Revision-Date: 2014-01-24 16:16-0500\n"
 "Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -196,7 +196,7 @@ msgid "Current version is %1."
 msgstr "La version maintenant est %1."
 
 #: ../../../../includes/classes/index.php:32
-#: ../../../../includes/page_render/index.php:92
+#: ../../../../includes/page_render/index.php:96
 #: ../../../../includes/parse_contents/index.php:35
 msgid "Reemon"
 msgstr "Reemon"
@@ -328,107 +328,117 @@ msgid "Fire Flare"
 msgstr "Flare Incendie"
 
 #: ../../../../includes/page_render/index.php:33
-msgid "Welcome to Fightmon the Game: Reemon v"
-msgstr "Bienvenue à Fightmon le Jeu: Reemon v"
-
-#: ../../../../includes/page_render/index.php:33
-msgid "!"
-msgstr "!"
+msgid "Welcome to Fightmon the Game: Reemon v%1 \"%2\"!"
+msgstr "Bienvenue à Fightmon le Jeu: Reemon v%1 \"%2\"!"
 
 #: ../../../../includes/page_render/index.php:35
-#: ../../../../includes/page_render/index.php:128
+#: ../../../../includes/page_render/index.php:132
 msgid "For help and credits, type help then press enter."
 msgstr "Pour l'aide et crédits, saisir help et appuyer entrer"
 
-#: ../../../../includes/page_render/index.php:79
+#: ../../../../includes/page_render/index.php:39
+msgid ""
+"WARNING:  Your PHP version has been depreciated and will not be supported "
+"after July 1st."
+msgstr ""
+"Avertissement: La version de PHP s'est dépréciée.  On ne la soutiens après "
+"que le premier juillet."
+
+#: ../../../../includes/page_render/index.php:83
 #: ../../../../includes/parse_contents/index.php:22
 msgid "Blazer"
 msgstr "Feumeur"
 
-#: ../../../../includes/page_render/index.php:80
+#: ../../../../includes/page_render/index.php:84
 #: ../../../../includes/parse_contents/index.php:23
 msgid "Curleaf"
 msgstr "frisée"
 
-#: ../../../../includes/page_render/index.php:81
+#: ../../../../includes/page_render/index.php:85
 #: ../../../../includes/parse_contents/index.php:24
 msgid "Dragiri"
 msgstr "Dragiri"
 
-#: ../../../../includes/page_render/index.php:82
+#: ../../../../includes/page_render/index.php:86
 #: ../../../../includes/parse_contents/index.php:25
 msgid "Feniixis"
 msgstr "Phénix"
 
-#: ../../../../includes/page_render/index.php:83
+#: ../../../../includes/page_render/index.php:87
 #: ../../../../includes/parse_contents/index.php:26
 msgid "FireeBee"
 msgstr "FeuBeille"
 
-#: ../../../../includes/page_render/index.php:84
+#: ../../../../includes/page_render/index.php:88
 #: ../../../../includes/parse_contents/index.php:27
 msgid "Flike"
 msgstr "Flike"
 
-#: ../../../../includes/page_render/index.php:85
+#: ../../../../includes/page_render/index.php:89
 #: ../../../../includes/parse_contents/index.php:28
 msgid "GhostSlicer"
 msgstr "FantômeTrancheuse"
 
-#: ../../../../includes/page_render/index.php:86
+#: ../../../../includes/page_render/index.php:90
 #: ../../../../includes/parse_contents/index.php:29
 msgid "Hartvile"
 msgstr "Coeureur"
 
-#: ../../../../includes/page_render/index.php:87
+#: ../../../../includes/page_render/index.php:91
 #: ../../../../includes/parse_contents/index.php:30
 msgid "Krabulous"
 msgstr "Crabébé"
 
-#: ../../../../includes/page_render/index.php:88
+#: ../../../../includes/page_render/index.php:92
 #: ../../../../includes/parse_contents/index.php:31
 msgid "Nightwing"
 msgstr "Nuitaile"
 
-#: ../../../../includes/page_render/index.php:89
+#: ../../../../includes/page_render/index.php:93
 #: ../../../../includes/parse_contents/index.php:32
 msgid "Plantsy"
 msgstr "Usiné"
 
-#: ../../../../includes/page_render/index.php:90
+#: ../../../../includes/page_render/index.php:94
 #: ../../../../includes/parse_contents/index.php:33
 msgid "Pluff"
 msgstr "Pluffe"
 
-#: ../../../../includes/page_render/index.php:91
+#: ../../../../includes/page_render/index.php:95
 #: ../../../../includes/parse_contents/index.php:34
 msgid "ReeBee"
 msgstr "ReuBeille"
 
-#: ../../../../includes/page_render/index.php:93
+#: ../../../../includes/page_render/index.php:97
 #: ../../../../includes/parse_contents/index.php:36
 msgid "Skelestorm"
 msgstr "Squeltempête"
 
-#: ../../../../includes/page_render/index.php:94
+#: ../../../../includes/page_render/index.php:98
 #: ../../../../includes/parse_contents/index.php:37
 msgid "Strab"
 msgstr "Crabeé"
 
-#: ../../../../includes/page_render/index.php:126
+#: ../../../../includes/page_render/index.php:130
 msgid "Welcome to Fightmon the Game: Reemon v%1!"
 msgstr "Bienvenue à Fightmon le Jeu: Reemon v%1!"
 
-#: ../../../../includes/page_render/index.php:157
+#: ../../../../includes/page_render/index.php:161
 msgid "Uh, oh!  There were errors!"
 msgstr "Ah non!  Il y avait des erreurs!"
 
-#: ../../../../includes/page_render/index.php:157
+#: ../../../../includes/page_render/index.php:161
 msgid ""
 "Errors have been hidden by an administrator, but they may have been logged."
 msgstr ""
 "Les erreurs sont caché par un administrateur, mais ils pouvait être "
 "tronçonné."
+
+#~ msgid "Welcome to Fightmon the Game: Reemon v"
+#~ msgstr "Bienvenue à Fightmon le Jeu: Reemon v"
+
+#~ msgid "!"
+#~ msgstr "!"
 
 #~ msgid "used"
 #~ msgstr "utilisait"

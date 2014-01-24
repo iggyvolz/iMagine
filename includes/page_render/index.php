@@ -30,7 +30,7 @@ function page_render_normal()
 	require_once __DIR__ . FTGR_SLASH . 'page.html';
 	$page = ob_get_contents();
 	ob_end_clean();
-	$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
+	$response = str_replace(array('%1', '%2'), array(FTGR_VERSION, FTGR_VERSION_NICKNAME), _('Welcome to Fightmon the Game: Reemon v%1 "%2"!'));
 	$response.=PHP_EOL;
 	$response.=_("For help and credits, type help then press enter.");
 	if (version_compare('5.4', PHP_VERSION, '>'))
