@@ -16,7 +16,7 @@
 	</style>
 </HEAD>
 <BODY>
-    <a href="index.php"><- Back to FTG:R</a>
+    <a href="index.php">&lt;- Back to FTG:R</a>
 	<?php
 	if (version_compare('5.4.0', PHP_VERSION, '>'))
 	{
@@ -69,6 +69,8 @@
 	<h3>Skelestorm</h3>
 	For more information about Skelestorm, see the <a href="http://fightmon.wikia.com/wiki/Dragiri">Fightmon Wiki</a>.
 	<h2>Functions</h2>
+	<h3>Moves</h3>
+	To use a move, use: Fightmon.movename(target).  The movename is the name of the move, with no spaces in it.
 	<h3>Changeto</h3>
 	<p class="italic">Note - Name is technically optional, but this function is pointless if the name is not included or "i" is used.  Name must be a valid fightmon if included.  Parameters are optional and will be ignored if included.</p>
 	This changes the value of the placeholder i (the default if nothing is included) to the fightmon in the name.
@@ -83,7 +85,7 @@
 	<p class="italic">Note - Name and parameter are optional and will be ignored if included.</p>
 	Resets the game without warning.
 	<h3>Update</h3>
-	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is required and must be a packaged version of Fightmon the Game: Reemon (see <a href="http://fightmon.eternityincurakai.com/fightmon/ftgr/">package list</a>).</p>
+	<p class="italic">Note - Name is optional and will be ignored if included.  Parameter is required and must be a packaged version of Fightmon the Game: Reemon (see <a href="http://fightmon.eternityincurakai.com/ftgr-vers/">package list</a>).</p>
 	<p class="italic">This feature is in development.  We recommend that you back up your game before using this command.  You can disable its use in /includes/constants.</p>
 	<p>Attempts to update the game to the version specified in parameter.  Note that this will reset the game after the next command you enter, and immediately for all other users.</p>
 	<p>The parameter is the version number in the form x-y-zextra.  Note that versions are usually in the form x.y.zextra, but the game will mistake the periods for a name.</p>
