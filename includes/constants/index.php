@@ -5,7 +5,7 @@ if (!defined('FTGR_MODE'))
 	define('FTGR_MODE', 'normal');
 }
 define('FTGR_PRODUCTION', TRUE); // Set to TRUE if on a production server to automatically set options below
-define('FTGR_VERSION', "0.3.0RC2");
+define('FTGR_VERSION', "0.3.0");
 define('FTGR_VERSION_NICKNAME', 'Lithium');
 define('FTGR_LANG', isset($_SESSION['ftgr']['userlang']) ? $_SESSION['ftgr']['userlang'] : 'en_US'); // en_US - English (US), en_GB - English (UK) [in progress], fr_FR - French (France) [in progress], es_ES - Spanish (Spain) [In progress]
 define('FTGR_DEBUG', !FTGR_PRODUCTION); // If TRUE, allow the debug command to run
