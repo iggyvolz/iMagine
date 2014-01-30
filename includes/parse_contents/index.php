@@ -18,7 +18,24 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	else
 	{
 		$person = itemOf(explode('.', $contents), 0);
-		if (!in_array($person, array(strtolower(FTGR_NECHKA_NAME), strtolower(FTGR_APPARITION_NAME), strtolower(FTGR_SHADE_NAME), strtolower(FTGR_REEMON_NAME), 'pluff', 'dragiri'))) // Prevent access of unwanted variables
+		if (!in_array($person, array(
+					strtolower(_("Blazer")),
+					strtolower(_("Curleaf")),
+					strtolower(_("Dragiri")),
+					strtolower(_("Feniixis")),
+					strtolower(_("FireeBee")),
+					strtolower(_("Flike")),
+					strtolower(_("GhostSlicer")),
+					strtolower(_("Hartvile")),
+					strtolower(_("Krabulous")),
+					strtolower(_("Nightwing")),
+					strtolower(_("Plantsy")),
+					strtolower(_("Pluff")),
+					strtolower(_("ReeBee")),
+					strtolower(_("Reemon")),
+					strtolower(_("Skelestorm")),
+					strtolower(_("Strab")),
+				))) // Prevent access of unwanted variables
 		{
 			return true;
 		}
