@@ -2,7 +2,7 @@
 
 namespace ftgr;
 
-register_shutdown_function('page_render_' . FTGR_MODE);
+register_shutdown_function('ftgr\page_render_' . FTGR_MODE);
 
 function page_render_normal()
 {
