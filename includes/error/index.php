@@ -6,14 +6,14 @@ if (defined('FTGR_MODE') && FTGR_MODE === 'api') // Only set error handler if we
 {
 	$errors = array();
 
-	function ftgr_error_handler($errno, $errstr, $errfile, $errline)
+	function error_handler($errno, $errstr, $errfile, $errline)
 	{
 		global $errors;
-		$errors[] = '<b>' . ftgr_name_to_error($errno) . '</b>:  ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b><br />';
+		$errors[] = '<b>' . name_to_error($errno) . '</b>:  ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b><br />';
 		return TRUE;
 	}
 
-	function ftgr_name_to_error($errno)
+	function name_to_error($errno)
 	{
 		switch ($errno)
 		{
@@ -65,5 +65,5 @@ if (defined('FTGR_MODE') && FTGR_MODE === 'api') // Only set error handler if we
 		}
 	}
 
-	set_error_handler('ftgr_error_handler');
+	set_error_handler('ftgr\error_handler');
 }
