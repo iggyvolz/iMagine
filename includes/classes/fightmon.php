@@ -8,23 +8,23 @@ class fightmon
 // public $moves=array(); // Defined in extended class
 	public function __construct()
 	{
-		if (isset($_SESSION['ftgr'][get_class($this) . 'energy']))
+		if (isset($_SESSION['ftgr'][explode('\\', get_class($this))[1] . 'energy']))
 		{
-			$this->energy = $_SESSION['ftgr'][get_class($this) . 'energy'];
+			$this->energy = $_SESSION['ftgr'][explode('\\', get_class($this))[1] . 'energy'];
 		}
-		$_SESSION['ftgr'][get_class($this) . 'energy'];
+		$_SESSION['ftgr'][explode('\\', get_class($this))[1] . 'energy'];
 	}
 
 	public function __destruct()
 	{
-		$_SESSION['ftgr'][get_class($this) . 'energy'] = $this->energy;
+		$_SESSION['ftgr'][explode('\\', get_class($this))[1] . 'energy'] = $this->energy;
 	}
 
 	public function changeto($args = NULL)
 	{
-		$_SESSION['ftgr']['me'] = get_class($this);
-		$GLOBALS['me'] = get_class($this);
-		return array(ucfirst(get_class($this)) . ' ' . _('is now selected!'));
+		$_SESSION['ftgr']['me'] = explode('\\', get_class($this))[1];
+		$GLOBALS['me'] = explode('\\', get_class($this))[1];
+		return array(ucfirst(explode('\\', get_class($this))[1]) . ' ' . _('is now selected!'));
 	}
 
 	public function cutscene($args = NULL) // Public wrapper for _cutscene, delete before production
@@ -106,20 +106,20 @@ class fightmon
 		{
 			if (rand(1, 100) <= $accuracy)
 			{
-				return array(str_replace(array('%1', '%2'), array(ucfirst(get_class($this)), $name), _('%1 used %2!')));
+				return array(str_replace(array('%1', '%2'), array(ucfirst(explode('\\', get_class($this))[1]), $name), _('%1 used %2!')));
 			}
 			else
 			{
-				return array(str_replace(array('%1', '%2'), array(ucfirst(get_class($this)), $name), _('%1 used %2 and it missed!')));
+				return array(str_replace(array('%1', '%2'), array(ucfirst(explode('\\', get_class($this))[1]), $name), _('%1 used %2 and it missed!')));
 			}
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(str_replace(array('%1', '%2', '%3', '%4'), array(ucfirst(get_class($this)), $name, $power, ucfirst($target)), _('%1 used %2 and caused %3 damage on %4')));
+			return array(str_replace(array('%1', '%2', '%3', '%4'), array(ucfirst(explode('\\', get_class($this))[1]), $name, $power, ucfirst($target)), _('%1 used %2 and caused %3 damage on %4')));
 		}
 		else
 		{
-			return array(str_replace(array('%1', '%2', '%3'), array(ucfirst(get_class($this)), $name, ucfirst($target)), _('%1 used %2 on %3 and it missed!')));
+			return array(str_replace(array('%1', '%2', '%3'), array(ucfirst(explode('\\', get_class($this))[1]), $name, ucfirst($target)), _('%1 used %2 on %3 and it missed!')));
 		}
 	}
 
