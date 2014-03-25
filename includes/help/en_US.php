@@ -79,7 +79,7 @@ Gives the current version of the project.  Using "local" in parameter or not inc
 <h2>Credit</h2>
 <p>To see all authors of this software, please see the <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon">GitHub repository</a></p>
 <p>Fightmon and its respective characters, names, creatures, etc. are property of <a href="http://fightmon.eternityincurakai.com">Fightmon</a>, a division of <a href="https://eternityincurakai.com">Eternity Incurakai</a>.  Fightmon are licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA license</a>.</p>
-p>Fightmon the Game: Reemon uses <a href="https://github.com/jquery/jquery">jQuery</a>, licensed under the MIT license.</p>
+<p>Fightmon the Game: Reemon uses <a href="https://github.com/jquery/jquery">jQuery</a>, licensed under the MIT license.</p>
 <p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
 <p>We offer no guarantee or warranty that this software will work as described, or even at all.  We reserve the right to discontinue this software at any time.  You use this software at your own risk, and the software is subject to change dramatically between versions.</p>
 </BODY>
