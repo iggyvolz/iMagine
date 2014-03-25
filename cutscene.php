@@ -1,6 +1,5 @@
 <?php
 
-// hello
 namespace ftgr;
 
 session_start();
