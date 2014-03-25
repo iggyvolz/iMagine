@@ -155,6 +155,6 @@ function page_render_api()
 		'skelestorm_energy' => $skelestorm->energy,
 		'strab_energy' => $strab->energy,
 		'response' => $response,
-		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? array_to_lines($errors) : _("Errors have been hidden by an administrator, but they may have been logged."))
+		'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (FTGR_DEBUG ? "<p>" . implode("</p><p>", $errors) . "</p>" : _("Errors have been hidden by an administrator, but they may have been logged."))
 	));
 }
