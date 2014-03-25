@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 class flike extends fightmon
 {
 

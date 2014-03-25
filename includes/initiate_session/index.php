@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 if (!isset($_SESSION['ftgr']['init']))
 {

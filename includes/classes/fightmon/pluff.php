@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 class pluff extends fightmon
 {
 

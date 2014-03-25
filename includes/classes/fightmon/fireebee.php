@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 class fireebee extends fightmon
 {
 

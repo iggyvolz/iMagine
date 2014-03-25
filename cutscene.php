@@ -1,6 +1,8 @@
 <?php
 
 // hello
+namespace ftgr;
+
 session_start();
 if (!isset($_SESSION['ftgr']))
 {

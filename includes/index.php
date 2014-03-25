@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 // Intentionally non-alphabetized.  In order of prerequisition.
 require_once realpath(__DIR__ . '/error/index.php');
 require_once realpath(__DIR__ . '/constants/index.php');

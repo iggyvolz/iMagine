@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_REPSTRIKE_POWER_MIN', 15);
 define('FTGR_REPSTRIKE_POWER_MAX', 25);

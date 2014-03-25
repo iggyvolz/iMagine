@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_AIRRAM_POWER_NIGHTWING', 10);
 define('FTGR_AIRRAM_POWER_BLAZER', 10);

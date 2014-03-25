@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 // Set language to user language
 putenv('LC_ALL=' . FTGR_LANG);
 setlocale(LC_ALL, FTGR_LANG);

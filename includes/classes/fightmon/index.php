@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 require_once realpath(__DIR__ . '/blazer.php');
 require_once realpath(__DIR__ . '/curleaf.php');
 require_once realpath(__DIR__ . '/dragiri.php');

@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 function parse_contents($contents) // Returns true if invalid person.  Invalid action is checked elsewhere
 {
 	global $me, $action, $person, $pars;

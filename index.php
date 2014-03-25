@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 if (!version_compare(PHP_VERSION, '5.4', '>'))
 {
 	die('Error - Please use verison 0.4 if you are using 5.3 or earlier.');

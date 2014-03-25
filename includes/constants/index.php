@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 if (!defined('FTGR_MODE'))
 {
 	define('FTGR_MODE', 'normal');

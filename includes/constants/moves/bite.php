@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_BITE_POWER_BLAZER', 5);
 define('FTGR_BITE_POWER_DRAGIRI_MIN', 30);

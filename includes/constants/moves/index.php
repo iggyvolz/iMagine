@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 require_once realpath(__DIR__ . '/airram.php');
 require_once realpath(__DIR__ . '/antennabeams.php');

@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 require_once realpath(__DIR__ . '/fightmon.php');
 require_once realpath(__DIR__ . '/fightmon/index.php');
 if (isset($_SESSION['ftgr']['battle']))

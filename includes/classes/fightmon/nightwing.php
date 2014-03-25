@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 class nightwing extends fightmon
 {
 

@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_TRAMPLE_POWER_LOW', 50);
 define('FTGR_TRAMPLE_POWER_HIGH', 60);

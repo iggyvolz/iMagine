@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 if (defined('FTGR_MODE') && FTGR_MODE === 'api') // Only set error handler if we are in API mode
 {
 	$errors = array();
