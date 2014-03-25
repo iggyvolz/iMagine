@@ -9,15 +9,15 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	}
 	else
 	{
-		$actionWithPars = itemOf(explode('.', $contents), 1);
+		$actionWithPars = explode('.', $contents)[1];
 	}
-	if (strpos($contents, '.') === false OR itemOf(explode('.', $contents), 0) == 'i')
+	if (strpos($contents, '.') === false OR explode('.', $contents)[0] == 'i')
 	{
 		$person = $me;
 	}
 	else
 	{
-		$person = itemOf(explode('.', $contents), 0);
+		$person = explode('.', $contents)[0];
 		if (!in_array($person, array(
 					strtolower(_("Blazer")),
 					strtolower(_("Curleaf")),
@@ -40,15 +40,15 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 			return true;
 		}
 	}
-	$action = itemOf(explode('(', $actionWithPars), 0);
+	$action = explode('(', $actionWithPars)[0];
 	if (strpos($contents, '(') === false)
 	{
 		$pars = null;
 	}
 	else
 	{
-		$pars = itemOf(explode('(', $actionWithPars), 1);
-		$pars = itemOf(explode(')', $pars), 0);
+		$pars = explode('(', $actionWithPars)[1];
+		$pars = explode(')', $pars)[0];
 		$pars = explode(',', $pars);
 	}
 	return false;

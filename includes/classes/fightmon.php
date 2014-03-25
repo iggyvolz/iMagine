@@ -171,7 +171,7 @@ class fightmon
 		{
 			return array(FTGR_UNZIP_FAIL . $res);
 		}
-		$folder = realpath(__DIR__ . '/ftgr/') . itemOf(scandir(realpath(__DIR__ . '/ftgr')), 2);
+		$folder = realpath(__DIR__ . '/ftgr/') . scandir(realpath(__DIR__ . '/ftgr'))[2];
 		$scan = $this->update_recursive_scandir($folder);
 		$return = array();
 		foreach ($scan as $value)
