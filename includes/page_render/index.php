@@ -128,7 +128,7 @@ if (FTGR_MODE === 'api')
 			echo json_encode('help');
 			return;
 		}
-		$response = str_replace(array('%1'), array(FTGR_VERSION), _("Welcome to Fightmon the Game: Reemon v%1!"));
+		$response = sprintf(_("Welcome to Fightmon the Game: Reemon v%s!"),FTGR_VERSION);
 		$response.=PHP_EOL;
 		$response.=_("For help and credits, type help then press enter.");
 		$response = trim($response);
