@@ -145,6 +145,7 @@ class fightmon
 
 	public function update($args = NULL)
 	{
+		return array(_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
 		if (!$_SESSION['ftgr']['valid_session'])
 		{
 			return array(_('You cannot update.  Please enter the update code with update_code()'));
