@@ -37,7 +37,11 @@ if ($_SESSION['ftgr']['version'] !== FTGR_VERSION)
 	// We've updated since the user has last visited.  Reset!
 	if (FTGR_MODE === 'api')
 	{
-		die('refresh');
+		if (!defined('FTGR_NO_OUTPUT'))
+		{
+			echo 'refresh';
+		}
+		define('FTGR_DIE', true);
 	}
 	else
 	{
