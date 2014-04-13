@@ -9,5 +9,5 @@ if (is_file(realpath(__DIR__ . '/includes/help/' . FTGR_LANG . '.php')))
 }
 else
 {
-	echo str_replace(array('%1'), array(FTGR_LANG), _('No documentation avaliable for language %1.'));
+	printf(_("No documentation available for language %s."),FTGR_LANG);
 }
