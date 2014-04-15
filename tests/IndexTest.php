@@ -7,7 +7,7 @@ class IndexTest extends PHPUnit_Framework_TestCase
 	public $totalTests = 0;
 	private $description = "";
 	private $method = "";
-	private $testsFailed = false;
+	private $testsFailed = 0;
 
 	public function __construct()
 	{
@@ -23,9 +23,9 @@ class IndexTest extends PHPUnit_Framework_TestCase
 
 	public function __destruct()
 	{
-		if ($this->testsFailed)
+		if ($this->testsFailed > 0)
 		{
-			echo "Tests have failed."; // In future email test results to us
+			echo strval($this->testsFailed) . " tests have failed."; // In future email test results to us
 		}
 	}
 
@@ -51,7 +51,7 @@ class IndexTest extends PHPUnit_Framework_TestCase
 		}
 		else
 		{
-			$this->testsFailed = true;
+			$this->testsFailed++;
 			printf('[FAIL] %d/%d %s - %s', $this->testNum, $this->totalTests, $method, $description);
 			echo PHP_EOL;
 		}
