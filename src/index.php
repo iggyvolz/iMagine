@@ -4,7 +4,7 @@ namespace ftgr;
 
 if (!version_compare(PHP_VERSION, '5.4', '>'))
 {
-	echo 'Error - Please use verison 0.4 if you are using 5.3 or earlier.';
+	echo 'Error - Please use verison 0.3 LTS if you are using 5.3 or earlier.';
 	goto end;
 }
 error_reporting(E_ALL);
