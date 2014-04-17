@@ -11,14 +11,14 @@ ob_end_clean();
 class testHandler
 {
 
-	public static $totalTests = 1;
+	public static $totalTests = 0;
 	public static $testNum = 0;
-	public static $firstTest = true;
 
 	public static function setup()
 	{
-		foreach (scandir(__DIR__) as $class)
+		foreach (scandir(__DIR__) as $file)
 		{
+			$class = explode('.', $file)[0];
 			if (!class_exists($class))
 			{
 				continue;
@@ -27,7 +27,7 @@ class testHandler
 			{
 				if (strpos($test, 'test') === 0)
 				{
-					$this->totalTests++;
+					self::$totalTests++;
 				}
 			}
 		}
@@ -43,17 +43,15 @@ class PHPUnitTest
 	public $method;
 	public $description;
 	public $object;
+	public $parts;
+	public $thisPart = 0;
 
-	public function __construct($object, $description, $method)
+	public function __construct($object, $description, $method, $parts = 1)
 	{
-		if (testHandler::$firstTest)
-		{
-			echo PHP_EOL . PHP_EOL . PHP_EOL; // Go a few lines down before first test
-			testHandler::$firstTest = false;
-		}
 		$this->object = $object;
 		$this->method = $method;
 		$this->description = $description;
+		$this->parts = $parts;
 		testHandler::$testNum++;
 		printf('[TEST] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
 		echo PHP_EOL;
@@ -61,18 +59,64 @@ class PHPUnitTest
 
 	public function assertEquals($first, $second)
 	{
-		list($method, $description) = [$this->method, $this->description];
+		$alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		list($object, $method, $description, $parts) = [$this->object, $this->method, $this->description, $this->parts];
 		if ($first === $second)
 		{
-			printf('[PASS] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			if ($parts === 1)
+			{
+				printf('[PASS] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			}
+			else
+			{
+				printf('[PASS] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				$this->thisPart++;
+			}
 			echo PHP_EOL;
 		}
 		else
 		{
-			printf('[FAIL] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			if ($parts === 1)
+			{
+				printf('[FAIL] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			}
+			else
+			{
+				printf('[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				$this->thisPart++;
+			}echo PHP_EOL;
+		}
+		$object->assertEquals($first, $second);
+	}
+
+	public function assertTrue($first)
+	{
+		$alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		list($object, $method, $description, $parts) = [$this->object, $this->method, $this->description, $this->parts];
+		if ($first)
+		{
+			if ($parts === 1)
+			{
+				printf('[PASS] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			}
+			else
+			{
+				printf('[PASS] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+			}
 			echo PHP_EOL;
 		}
-		$this->object->assertEquals($first, $second);
+		else
+		{
+			if ($parts === 1)
+			{
+				printf('[FAIL] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+			}
+			else
+			{
+				printf('[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+			}echo PHP_EOL;
+		}
+		$object->assertTrue($first);
 	}
 
 }
