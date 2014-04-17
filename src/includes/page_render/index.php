@@ -77,6 +77,8 @@ if (!defined("FTGR_NO_OUTPUT"))
 				'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_SKELESTORM -->' => FTGR_SKELESTORM_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_STRAB -->' => FTGR_STRAB_STARTING_ENERGY,
+				'<!-- JQUERY_1X_VERSION -->' => FTGR_JQUERY_1X_VERSION,
+				'<!-- JQUERY_2X_VERSION -->' => FTGR_JQUERY_2X_VERSION,
 				'<!-- NAME_BLAZER -->' => _("Blazer"),
 				'<!-- NAME_CURLEAF -->' => _("Curleaf"),
 				'<!-- NAME_DRAGIRI -->' => _("Dragiri"),
