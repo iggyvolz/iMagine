@@ -121,4 +121,11 @@ class PHPUnitTest
 		$object->assertTrue($first);
 	}
 
+	public function skipTest($reason)
+	{
+		list($object, $method, $description, $parts) = [$this->object, $this->method, $this->description, $this->parts];
+		printf('--[SKIP] %d/%d %s - %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description, $reason);
+		echo PHP_EOL;
+	}
+
 }
