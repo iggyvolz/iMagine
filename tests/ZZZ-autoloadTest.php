@@ -98,11 +98,11 @@ class PHPUnitTest
 		{
 			if ($parts === 1)
 			{
-				printf('[PASS] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+				printf('--[PASS] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
 			}
 			else
 			{
-				printf('[PASS] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				printf('--[PASS] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
 			}
 			echo PHP_EOL;
 		}
@@ -110,11 +110,11 @@ class PHPUnitTest
 		{
 			if ($parts === 1)
 			{
-				printf('[FAIL] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
+				printf('--[FAIL] %d/%d %s - %s', testHandler::$testNum, testHandler::$totalTests, $method, $description);
 			}
 			else
 			{
-				printf('[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				printf('--[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
 			}
 			echo PHP_EOL;
 		}
