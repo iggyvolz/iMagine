@@ -22,4 +22,15 @@ class APITest extends PHPUnit_Framework_TestCase
 		$test->assertEquals($output, ['Calling cutscene "&quot;bar&quot;"']);
 	}
 
+	public function testDebug()
+	{
+		global $blazer;
+		$test = new PHPUnitTest($this, "Testing debug()", __METHOD__, 2);
+		if (!FTGR_DEBUG)
+		{
+			$test->skipTest("Please turn on debug mode to accurately test this function.");
+			return;
+		}
+	}
+
 }
