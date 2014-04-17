@@ -115,6 +115,7 @@ class PHPUnitTest
 			else
 			{
 				printf('[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+			}
 			echo PHP_EOL;
 		}
 		$object->assertTrue($first);
