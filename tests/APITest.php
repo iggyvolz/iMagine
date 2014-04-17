@@ -1,0 +1,25 @@
+<?php
+
+class APITest extends PHPUnit_Framework_TestCase
+{
+
+	public function testChangeto()
+	{
+		global $blazer, $me;
+		$test = new PHPUnitTest($this, "Testing changeto()", __METHOD__, 2);
+		$output = $blazer->changeto([]);
+		$test->assertEquals($me, 'blazer');
+		$test->assertEquals($output, ["Blazer is now selected!"]);
+	}
+
+	public function testCutscene()
+	{
+		global $blazer;
+		$test = new PHPUnitTest($this, "Testing cutscene()", __METHOD__, 2);
+		$output = $blazer->cutscene(['foo']);
+		$test->assertEquals($output, ['Calling cutscene "foo"']);
+		$output = $blazer->cutscene(['"bar"']);
+		$test->assertEquals($output, ['Calling cutscene "&quot;bar&quot;"']);
+	}
+
+}

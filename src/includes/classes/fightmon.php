@@ -24,19 +24,19 @@ class fightmon
 	{
 		$_SESSION['ftgr']['me'] = explode('\\', get_class($this))[1];
 		$GLOBALS['me'] = explode('\\', get_class($this))[1];
-		return array(sprintf(_('%s is now selected!'),ucfirst(explode('\\', get_class($this))[1])));
+		return array(sprintf(_('%s is now selected!'), ucfirst(explode('\\', get_class($this))[1])));
 	}
 
 	public function cutscene($args = NULL) // Public wrapper for _cutscene, delete before production
 	{
 		call_user_func(array($this, '_cutscene'), $args);
-		return array(sprintf(_('Calling cutscene "%s"'),htmlentities($args[0], ENT_QUOTES)));
+		return array(sprintf(_('Calling cutscene "%s"'), htmlentities($args[0], ENT_QUOTES)));
 	}
 
 	public function _cutscene($args = NULL)
 	{
 		$_SESSION['ftgr']['cutscene'] = $args[0];
-		define('FTGR_SHOW_CUTSCENE', TRUE);
+		@define('FTGR_SHOW_CUTSCENE', TRUE);
 	}
 
 	public function debug($args = NULL)
@@ -106,20 +106,20 @@ class fightmon
 		{
 			if (rand(1, 100) <= $accuracy)
 			{
-				return array(sprintf(_("%s used %s!"),ucfirst(explode('\\', get_class($this))[1]), $name));
+				return array(sprintf(_("%s used %s!"), ucfirst(explode('\\', get_class($this))[1]), $name));
 			}
 			else
 			{
-				return array(sprintf(_("%s used %s and it missed!"),ucfirst(explode('\\', get_class($this))[1]), $name));
+				return array(sprintf(_("%s used %s and it missed!"), ucfirst(explode('\\', get_class($this))[1]), $name));
 			}
 		}
 		if (rand(1, 100) <= $accuracy)
 		{
-			return array(sprintf(_("%1 used %2 and caused %3 damage on %4!"),ucfirst(explode('\\', get_class($this))[1]), $name, $power, ucfirst($target)));
+			return array(sprintf(_("%1 used %2 and caused %3 damage on %4!"), ucfirst(explode('\\', get_class($this))[1]), $name, $power, ucfirst($target)));
 		}
 		else
 		{
-			return array(sprintf(_("%1 used %2 on %3 and it missed!"),ucfirst(explode('\\', get_class($this))[1]), $name, ucfirst($target)));
+			return array(sprintf(_("%1 used %2 on %3 and it missed!"), ucfirst(explode('\\', get_class($this))[1]), $name, ucfirst($target)));
 		}
 	}
 
@@ -183,7 +183,7 @@ class fightmon
 		}
 		unlink(realpath(__DIR__ . '/ftgr.zip'));
 		$this->update_remove_folder(realpath(__DIR__ . '/ftgr'));
-		return array(sprintf(_("Successfully upgraded to version %s."),str_replace('-', '.', $args[0])));
+		return array(sprintf(_("Successfully upgraded to version %s."), str_replace('-', '.', $args[0])));
 	}
 
 	public function update_code($args = NULL)
@@ -238,7 +238,7 @@ class fightmon
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(sprintf(_('Current version is %s.'),FTGR_VERSION));
+			return array(sprintf(_('Current version is %s.'), FTGR_VERSION));
 		}
 		$opts = array(
 			'http' => array(
