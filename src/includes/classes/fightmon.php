@@ -130,8 +130,9 @@ class fightmon
 
 	public function reset($args = NULL)
 	{
+		global $initial_session;
 		session_destroy();
-		init_session();
+		$_SESSION['ftgr'] = $initial_session;
 		define('FTGR_REFRESH', TRUE);
 		return array('');
 	}
