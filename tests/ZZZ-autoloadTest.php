@@ -103,6 +103,7 @@ class PHPUnitTest
 			else
 			{
 				printf('--[PASS] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				$this->thisPart++;
 			}
 			echo PHP_EOL;
 		}
@@ -115,6 +116,7 @@ class PHPUnitTest
 			else
 			{
 				printf('--[FAIL] %d%s/%d %s - %s', testHandler::$testNum, $alphabet[$this->thisPart], testHandler::$totalTests, $method, $description);
+				$this->thisPart++;
 			}
 			echo PHP_EOL;
 		}
