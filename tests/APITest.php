@@ -57,4 +57,14 @@ class APITest extends PHPUnit_Framework_TestCase
 		$test->assertEquals($output, ['Opened help.']);
 	}
 
+	public function testReset()
+	{
+		global $blazer, $initial_session;
+		$test = new PHPUnitTest($this, "Testing reset()", __METHOD__, 3);
+		$output = $blazer->reset();
+		$test->assertEquals($_SESSION['ftgr'], $initial_session);
+		$test->assertEquals([''], $output);
+		$test->assertTrue(defined('FTGR_REFRESH'));
+	}
+
 }
