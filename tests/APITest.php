@@ -54,7 +54,7 @@ class APITest extends PHPUnit_Framework_TestCase
 		$test = new PHPUnitTest($this, "Testing help()", __METHOD__, 2);
 		$output = $blazer->help();
 		$test->assertTrue(defined('FTGR_HELP'));
-		$test->assertEquals($output, 'Opened help.');
+		$test->assertEquals($output, ['Opened help.']);
 	}
 
 }
