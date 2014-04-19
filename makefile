@@ -1,7 +1,7 @@
 all: minifycss minifyjs
 minifycss:
-	yuicompressor css/init.css -o css/init.min.css
+	yuicompressor src/css/init.css -o src/css/init.min.css
 minifyjs:
-	yuicompressor js/init.js -o js/init.min.js
+	yuicompressor src/js/init.js -o src/js/init.min.js
 test:
 	phpunit tests
