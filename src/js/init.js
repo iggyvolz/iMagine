@@ -49,13 +49,10 @@ function reload()
         $('#reemon_energy').val(data.reemon_energy);
         $('#skelestorm_energy').val(data.skelestorm_energy);
         $('#strab_energy').val(data.strab_energy);
-        $('#dump').html(data.dump);
+	console.log(data.dump);
         $('#errors').html(data.errors);
-        if (data.dump !== "")
-        {
-            window.scrollTo(0, document.body.scrollHeight);
-        }
     }, "json").fail(function(data) {
+	console.log(data);
         $('#errors').html(data.responseText);
         $('#contents').val("");
     });

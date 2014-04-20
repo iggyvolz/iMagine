@@ -139,8 +139,10 @@ if (!defined("FTGR_NO_OUTPUT"))
 					$response.=$value;
 				}
 			}
+			$globals_dump = $GLOBALS;
+			unset($globals_dump['GLOBALS']);
 			echo json_encode(array(
-				'dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '',
+				'dump' => ($_SESSION['ftgr']['debug'] || FTGR_DEBUG) ? $globals_dump : '',
 				'cutscene' => defined('FTGR_SHOW_CUTSCENE'),
 				'blazer_energy' => $blazer->energy,
 				'curleaf_energy' => $curleaf->energy,
