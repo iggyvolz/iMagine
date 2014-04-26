@@ -12,7 +12,7 @@ if (function_exists("textdomain")) // Run only if gettext is enabled
 	textdomain("ftgr_".FTGR_VERSION);
 
 
-	bind_textdomain_codeset('ftgr', 'UTF-8'); // Use UTF-8
+	bind_textdomain_codeset("ftgr_".FTGR_VERSION, 'UTF-8'); // Use UTF-8
 }
 else
 {
