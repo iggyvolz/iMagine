@@ -7,9 +7,9 @@ if (function_exists("textdomain")) // Run only if gettext is enabled
 	putenv('LC_ALL=' . FTGR_LANG);
 	setlocale(LC_ALL, FTGR_LANG);
 
-	bindtextdomain("ftgr", __DIR__);
+	bindtextdomain("ftgr_".FTGR_VERSION, __DIR__);
 
-	textdomain("ftgr");
+	textdomain("ftgr_".FTGR_VERSION);
 
 
 	bind_textdomain_codeset('ftgr', 'UTF-8'); // Use UTF-8
