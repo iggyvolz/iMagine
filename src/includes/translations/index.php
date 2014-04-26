@@ -14,13 +14,10 @@ if (function_exists("textdomain")) // Run only if gettext is enabled
 
 	bind_textdomain_codeset("ftgr_".FTGR_VERSION, 'UTF-8'); // Use UTF-8
 }
-else
+if(!function_exists("_"))
 {
-
-	// Define default return values for gettext functions
-	function _($return)
-	{
-		return $return;
-	}
-
+function _($return)
+{
+	return $return;
+}
 }
