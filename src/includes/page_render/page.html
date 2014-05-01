@@ -5,134 +5,135 @@
         <title>Fightmon the Game: Reemon</title>
 
         <!-- dependencies -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!--[if lt IE 9]><script src="//ajax.googleapis.com/ajax/libs/jquery/<!-- JQUERY_1X_VERSION -->/jquery.min.js"></script><![endif]-->
+    <!--[if IE 9]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/<!-- JQUERY_2X_VERSION -->/jquery.min.js"></script><!--<![endif]-->
 
-        <!-- initialize -->
-        <script src="js/init.min.js"></script>
 
-        <link rel="stylesheet" href="css/init.min.css" />
-    </head>
-    <body>
-        <div id="overlay" style="display:none"><div id="flashobject" style="display:none"><object width="640" height="480"
-                                                                                                  id="flash"
-                                                                                                  classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
-                                                                                                  codebase="http://fpdownload.macromedia.com/
-                                                                                                  pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
-                    <param name="SRC" value="cutscene.php">
-                    <embed src="cutscene.php" width="640" height="480">
-                    </embed>
-                </object></div></div>
+    <!-- initialize -->
+    <script src="js/init.min.js"></script>
 
-        <pre id="dump"></pre>
-        <p id="errors"></p>
+    <link rel="stylesheet" href="css/init.min.css" />
+</head>
+<body>
+    <div id="overlay" style="display:none"><div id="flashobject" style="display:none"><object width="640" height="480"
+											      id="flash"
+											      classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+											      codebase="http://fpdownload.macromedia.com/
+											      pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0">
+		<param name="SRC" value="cutscene.php">
+		<embed src="cutscene.php" width="640" height="480">
+		</embed>
+	    </object></div></div>
 
-	      <form onsubmit="reload();
+    <p id="errors"></p>
+
+    <form onsubmit="reload();
 		return false">
-            <p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
-        </form>
+	<p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" /></p>
+    </form>
 
-        <p><textarea id="results" readonly rows="4" cols="60"><!-- RESPONSE --></textarea></p>
-
-
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_REEMON -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_REEMON --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_REEMON -->" id="reemon_energy" disabled value="<!-- ENERGY_REEMON -->">
-        </aside>
+    <p><textarea id="results" readonly rows="4" cols="60"><!-- RESPONSE --></textarea></p>
 
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_PLUFF -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_PLUFF --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_PLUFF -->" id="pluff_energy" disabled value="<!-- ENERGY_PLUFF -->">
-        </aside>
-
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="dragiri_energy" disabled value="<!-- ENERGY_DRAGIRI -->">
-        </aside>
-
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_GHOSTSLICER -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_GHOSTSLICER --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_GHOSTSLICER -->" id="ghostslicer_energy" disabled value="<!-- ENERGY_GHOSTSLICER -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_REEMON -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_REEMON --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_REEMON -->" id="reemon_energy" disabled value="<!-- ENERGY_REEMON -->">
+    </aside>
 
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_NIGHTWING -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_NIGHTWING --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_NIGHTWING -->" id="nightwing_energy" disabled value="<!-- ENERGY_NIGHTWING -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_PLUFF -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_PLUFF --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_PLUFF -->" id="pluff_energy" disabled value="<!-- ENERGY_PLUFF -->">
+    </aside>
+
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_DRAGIRI -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_DRAGIRI --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_DRAGIRI -->" id="dragiri_energy" disabled value="<!-- ENERGY_DRAGIRI -->">
+    </aside>
+
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_GHOSTSLICER -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_GHOSTSLICER --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_GHOSTSLICER -->" id="ghostslicer_energy" disabled value="<!-- ENERGY_GHOSTSLICER -->">
+    </aside>
 
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_REEBEE -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_REEBEE --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_REEBEE -->" id="reebee_energy" disabled value="<!-- ENERGY_REEBEE -->">
-        </aside>
-
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_HARTVILE -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_HARTVILE --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_HARTVILE -->" id="hartvile_energy" disabled value="<!-- ENERGY_HARTVILE -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_NIGHTWING -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_NIGHTWING --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_NIGHTWING -->" id="nightwing_energy" disabled value="<!-- ENERGY_NIGHTWING -->">
+    </aside>
 
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_PLANTSY -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_PLANTSY --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_PLANTSY -->" id="plantsy_energy" disabled value="<!-- ENERGY_PLANTSY -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_REEBEE -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_REEBEE --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_REEBEE -->" id="reebee_energy" disabled value="<!-- ENERGY_REEBEE -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_FIREEBEE -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_FIREEBEE --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_FIREEBEE -->" id="fireebee_energy" disabled value="<!-- ENERGY_FIREEBEE -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_HARTVILE -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_HARTVILE --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_HARTVILE -->" id="hartvile_energy" disabled value="<!-- ENERGY_HARTVILE -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_STRAB -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_STRAB --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_STRAB -->" id="strab_energy" disabled value="<!-- ENERGY_STRAB -->">
-        </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_KRABULOUS -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_KRABULOUS --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_KRABULOUS -->" id="krabulous_energy" disabled value="<!-- ENERGY_KRABULOUS -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_PLANTSY -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_PLANTSY --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_PLANTSY -->" id="plantsy_energy" disabled value="<!-- ENERGY_PLANTSY -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_BLAZER -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_BLAZER --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_BLAZER -->" id="blazer_energy" disabled value="<!-- ENERGY_BLAZER -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_FIREEBEE -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_FIREEBEE --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_FIREEBEE -->" id="fireebee_energy" disabled value="<!-- ENERGY_FIREEBEE -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_FLIKE -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_FLIKE --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_FLIKE -->" id="flike_energy" disabled value="<!-- ENERGY_FLIKE -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_STRAB -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_STRAB --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_STRAB -->" id="strab_energy" disabled value="<!-- ENERGY_STRAB -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_FENIIXIS -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_FENIIXIS --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_FENIIXIS -->" id="feniixis_energy" disabled value="<!-- ENERGY_FENIIXIS -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_KRABULOUS -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_KRABULOUS --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_KRABULOUS -->" id="krabulous_energy" disabled value="<!-- ENERGY_KRABULOUS -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_CURLEAF -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_CURLEAF --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_CURLEAF -->" id="curleaf_energy" disabled value="<!-- ENERGY_CURLEAF -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_BLAZER -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_BLAZER --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_BLAZER -->" id="blazer_energy" disabled value="<!-- ENERGY_BLAZER -->">
+    </aside>
 
-        <aside style="float:left;">
-            <p style="text-align:center;"><!-- NAME_SKELESTORM -->'s energy</p>
-            <p style="text-align:center;"><!-- ENERGY_SKELESTORM --></p>
-            <input type="range" min="0" max="<!-- STARTING_ENERGY_SKELESTORM -->" id="skelestorm_energy" disabled value="<!-- ENERGY_SKELESTORM -->">
-        </aside>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_FLIKE -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_FLIKE --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_FLIKE -->" id="flike_energy" disabled value="<!-- ENERGY_FLIKE -->">
+    </aside>
 
-    </body>
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_FENIIXIS -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_FENIIXIS --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_FENIIXIS -->" id="feniixis_energy" disabled value="<!-- ENERGY_FENIIXIS -->">
+    </aside>
+
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_CURLEAF -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_CURLEAF --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_CURLEAF -->" id="curleaf_energy" disabled value="<!-- ENERGY_CURLEAF -->">
+    </aside>
+
+    <aside style="float:left;">
+	<p style="text-align:center;"><!-- NAME_SKELESTORM -->'s energy</p>
+	<p style="text-align:center;"><!-- ENERGY_SKELESTORM --></p>
+	<input type="range" min="0" max="<!-- STARTING_ENERGY_SKELESTORM -->" id="skelestorm_energy" disabled value="<!-- ENERGY_SKELESTORM -->">
+    </aside>
+
+</body>
 </html>

@@ -13,3 +13,4 @@ define('FTGR_ALLOW_ANY_UPDATE', TRUE); // Allow anyone to run the update command
 define('FTGR_UPDATE_CODE', NULL); // Put the update code in place of NULL to validate your session for update.
 require_once realpath(__DIR__ . '/fightmon/index.php');
 require_once realpath(__DIR__ . '/moves/index.php');
+require_once realpath(__DIR__ . '/dependencies/index.php');

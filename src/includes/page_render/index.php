@@ -77,6 +77,8 @@ if (!defined("FTGR_NO_OUTPUT"))
 				'<!-- STARTING_ENERGY_REEMON -->' => FTGR_REEMON_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_SKELESTORM -->' => FTGR_SKELESTORM_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_STRAB -->' => FTGR_STRAB_STARTING_ENERGY,
+				'<!-- JQUERY_1X_VERSION -->' => FTGR_JQUERY_1X_VERSION,
+				'<!-- JQUERY_2X_VERSION -->' => FTGR_JQUERY_2X_VERSION,
 				'<!-- NAME_BLAZER -->' => _("Blazer"),
 				'<!-- NAME_CURLEAF -->' => _("Curleaf"),
 				'<!-- NAME_DRAGIRI -->' => _("Dragiri"),
@@ -139,8 +141,10 @@ if (!defined("FTGR_NO_OUTPUT"))
 					$response.=$value;
 				}
 			}
+			$globals_dump = $GLOBALS;
+			unset($globals_dump['GLOBALS']);
 			echo json_encode(array(
-				'dump' => ($_SESSION['ftgr']['debug'] AND FTGR_DEBUG) ? print_r($GLOBALS, TRUE) : '',
+				'dump' => ($_SESSION['ftgr']['debug'] || FTGR_DEBUG) ? $globals_dump : '',
 				'cutscene' => defined('FTGR_SHOW_CUTSCENE'),
 				'blazer_energy' => $blazer->energy,
 				'curleaf_energy' => $curleaf->energy,
