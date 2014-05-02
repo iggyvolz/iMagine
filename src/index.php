@@ -8,6 +8,15 @@ if (version_compare(PHP_VERSION, '5.4', '<'))
 	goto end;
 }
 error_reporting(E_ALL);
+if (is_file(realpath(__DIR__ . '/config.php')))
+{
+	require_once realpath(__DIR__ . '/config.php');
+}
+else
+{
+	echo 'Error - No configuration file present.';
+	goto end;
+}
 @session_start(); // Don't return an error if session already started
 require_once realpath(__DIR__ . '/includes/index.php');
 if (!isset($_POST['contents']))

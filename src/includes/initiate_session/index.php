@@ -50,3 +50,7 @@ if ($_SESSION['ftgr']['version'] !== FTGR_VERSION)
 		$_SESSION['ftgr'] = $initial_session;
 	}
 }
+register_shutdown_function(function()
+{
+	$db = new \PDO('mysql:dbname=' . FTGR_DB_NAME . ';host=' . FTGR_DB_HOST, FTGR_DB_USER, FTGR_DB_PASS);
+});
