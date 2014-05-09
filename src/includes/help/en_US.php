@@ -68,14 +68,14 @@ Shows this help page.
 Resets the game without warning.
 <h3>Update</h3>
 <p class="italic">Note - Name is optional and will be ignored if included.  Parameter is required and must be a packaged version of Fightmon the Game: Reemon (see <a href="http://fightmon.eternityincurakai.com/fightmon/ftgr/">package list</a>).</p>
-<p class="italic">This feature is in development.  We recommend that you back up your game before using this command.  You can disable its use in /includes/constants.</p>
+<p class="italic">Note that this function has broken between 0.3 and 1.0 and is being fixed in 1.1.  The documentation is provided only as a reference, and the function has been disabled for security purposes.</p>
 <p>Attempts to update the game to the version specified in parameter.  Note that this will reset the game after the next command you enter, and immediately for all other users.</p>
 <p>The parameter is the version number in the form x-y-zextra.  Note that versions are usually in the form x.y.zextra, but the game will mistake the periods for a name.</p>
 <p>A full list of packages is avaliable above (take off the .zip).  Pre-release versions may be out-of-date if they are not updated on the site before you update.</p>
 <p>We reserve the right to take down packages after they go out of date, and we do not guarantee that the site will be up at any given time.</p>
 <h3>Version</h3>
 <p class="italic">Note - Name is optional and will be ignored if included.  Parameter is optional and defaults to local.  If included, it must be one of the following: local, remote, server, any, alpha, beta, dev, stable.</p>
-<p class="italic">Note that this function is under development and may not work properly until completed.</p>
+<p class="italic">Note that this function has broken between 0.3 and 1.0 and is being fixed in 1.1.  The documentation is provided only as a reference, and the function may not work as intended if at all.</p>
 Gives the current version of the project.  Using "local" in parameter or not including it will return the current version, stored under (Fightmon the Game: Reemon root)/includes/constants/index.php as FTGR_VERSION.  Using "remote", "server", or "any" will return the latest GitHub release of any kind.  Using "alpha" returns the latest alpha release, "beta" the latest beta release, and so on with "dev" and "stable".
 <h2>Credit</h2>
 <p>To see all authors of this software, please see the <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon">GitHub repository</a></p>
