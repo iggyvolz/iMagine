@@ -21,7 +21,8 @@
     <p>Please note that this goes through some major overhaul, including changing the main characters to Fightmon.  Any new features should go on that version, do not add new features here.</p>
     <p>Important dates:
     <ul>
-        <li class="notpassed">May 1, 2014 - Feature Freeze/Begin Alpha</li>
+        <li class="passed">May 1, 2014 (delayed to May 8) - Feature Freeze/Begin Alpha</li>
+        <li class="notpassed">May 15, 2014 - Alpha 2</li>
         <li class="notpassed">May 20, 2014 (tentative) - End Alpha/Begin Beta</li>
         <li class="notpassed">June 1, 2014 (tentative) - End Beta/Begin RC's</li>
         <li class="notpassed">June 15, 2014 (tentative) - Final Release</li>
