@@ -4,9 +4,13 @@ namespace ftgr_functions;
 
 trait update
 {
+
 	public function update($args = NULL)
 	{
-		return array(\ftgr\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
+		if (!FTGR_UPDATE_ON)
+		{
+			return array(\ftgr\_("WARNING - The Update function is marked as experimentally due to changes in FTG:R's structure.  Please use with caution and be sure to save your changes outside of the project directory before running this command so that your changes are not overwritten by the update."));
+		}
 		if (!$_SESSION['ftgr']['valid_session'])
 		{
 			return array(\ftgr\_('You cannot update.  Please enter the update code with update_code()'));
@@ -46,4 +50,5 @@ trait update
 		$this->update_remove_folder(realpath(__DIR__ . '/ftgr'));
 		return array(sprintf(\ftgr\_("Successfully upgraded to version %s."), str_replace('-', '.', $args[0])));
 	}
+
 }
