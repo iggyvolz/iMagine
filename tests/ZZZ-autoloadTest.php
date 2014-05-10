@@ -5,7 +5,7 @@
  */
 ob_start();
 define("FTGR_NO_OUTPUT", true);
-require_once realpath(dirname(__DIR__) . '/src/index.php');
+require_once realpath(dirname(__DIR__) . '/index.php');
 ob_end_clean();
 
 class testHandler
