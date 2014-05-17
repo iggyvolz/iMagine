@@ -129,7 +129,7 @@ if (!defined("FTGR_NO_OUTPUT"))
 				echo json_encode('help');
 				return;
 			}
-			$response = sprintf("Welcome to Fightmon the Game: Reemon v%1!", "%s");
+			$response = sprintf("Welcome to Fightmon the Game: Reemon v%s!", FTGR_VERSION);
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);
