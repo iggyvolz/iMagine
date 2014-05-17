@@ -31,7 +31,7 @@ if (!defined("FTGR_NO_OUTPUT"))
 			$skelestorm,
 			$strab;
 			$page = file_get_contents(__DIR__ . '/page.html');
-			$response = _("Welcome to Fightmon the Game: Reemon v") . FTGR_VERSION . _("!");
+			$response = _(sprintf("Welcome to Fightmon the Game: Reemon v%s!", FTGR_VERSION));
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
