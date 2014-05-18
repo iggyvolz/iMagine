@@ -61,3 +61,8 @@ $(document).click(function(){
     $('#flashobject').css('display','none');
     $('#overlay').css('display','none');
 })
+function ftgr(command)
+{
+    $('#contents').val(command);
+    reload();
+}
