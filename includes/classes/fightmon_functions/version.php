@@ -4,8 +4,10 @@ namespace ftgr_functions;
 
 trait version
 {
+
 	public function version($args = NULL)
 	{
+		return array(\ftgr\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
@@ -31,7 +33,7 @@ trait version
 				}
 				if ($location === 'stable')
 				{
-					if ((strpos($value["tag_name"], 'alpha') === FALSE) AND (strpos($value["tag_name"], 'beta') === FALSE) AND (strpos($value["tag_name"], 'dev') === FALSE))
+					if ((strpos($value["tag_name"], 'alpha') === FALSE) AND ( strpos($value["tag_name"], 'beta') === FALSE) AND ( strpos($value["tag_name"], 'dev') === FALSE))
 					{
 						$latest_of_version = $value["tag_name"];
 						continue;
@@ -46,4 +48,5 @@ trait version
 		}
 		return array($latest_of_version);
 	}
+
 }

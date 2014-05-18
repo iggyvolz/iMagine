@@ -75,7 +75,7 @@ Resets the game without warning.
 <p>We reserve the right to take down packages after they go out of date, and we do not guarantee that the site will be up at any given time.</p>
 <h3>Version</h3>
 <p class="italic">Note - Name is optional and will be ignored if included.  Parameter is optional and defaults to local.  If included, it must be one of the following: local, remote, server, any, alpha, beta, dev, stable.</p>
-<p class="italic">Note that this function has broken between 0.3 and 1.0 and is being fixed in 1.1.  The documentation is provided only as a reference, and the function may not work as intended if at all.</p>
+<p class="italic">Note that this function has broken between 0.3 and 1.0 and is being fixed in 1.1.  The documentation is provided only as a reference, and the function has been disabled for security purposes.</p>
 Gives the current version of the project.  Using "local" in parameter or not including it will return the current version, stored under (Fightmon the Game: Reemon root)/includes/constants/index.php as FTGR_VERSION.  Using "remote", "server", or "any" will return the latest GitHub release of any kind.  Using "alpha" returns the latest alpha release, "beta" the latest beta release, and so on with "dev" and "stable".
 <h2>Credit</h2>
 <p>To see all authors of this software, please see the <a href="https://github.com/iggyvolz/Fightmon-the-Game--Reemon">GitHub repository</a></p>
