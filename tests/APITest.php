@@ -70,9 +70,9 @@ class APITest extends PHPUnit_Framework_TestCase
 	public function testVersion()
 	{
 		global $blazer;
+		$test = new PHPUnitTest($this, "Testing version()", __METHOD__, 3);
 		$test->skipTest("Version function disabled.");
-		/* $test = new PHPUnitTest($this, "Testing version()", __METHOD__, 3);
-		  $output = $blazer->version();
+		/* $output = $blazer->version();
 		  $test->assertEquals($output, ['Current version is ' . FTGR_VERSION . '.']); */
 	}
 
