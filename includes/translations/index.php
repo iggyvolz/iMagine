@@ -1,15 +1,25 @@
 <?php
 
-// Set language to user language
-putenv('LC_ALL=' . FTGR_LANG);
-setlocale(LC_ALL, FTGR_LANG);
+namespace ftgr;
 
-// Specify location of translation tables
-bindtextdomain("ftgr", __DIR__);
+if (function_exists("textdomain")) // Run only if gettext is enabled
+{
+	putenv('LC_ALL=' . FTGR_LANG);
+	setlocale(LC_ALL, FTGR_LANG);
 
-// Choose domain
-textdomain("ftgr");
+	bindtextdomain("ftgr_" . FTGR_VERSION, __DIR__);
 
-// Translation is looking for in ./[FTGR_LANG]/LC_MESSAGES/ftgr.mo now
+	textdomain("ftgr_" . FTGR_VERSION);
 
-bind_textdomain_codeset('ftgr', 'UTF-8'); // Use UTF-8
+
+	bind_textdomain_codeset("ftgr_" . FTGR_VERSION, 'UTF-8'); // Use UTF-8
+}
+if (!function_exists("ftgr\_"))
+{
+
+	function _($return)
+	{
+		return $return;
+	}
+
+}

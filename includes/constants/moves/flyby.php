@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_FLYBY_POWER_REE_BEE', 2);
 define('FTGR_FLYBY_POWER_FIREE_BEE', 5);

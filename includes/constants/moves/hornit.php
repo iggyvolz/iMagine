@@ -1,4 +1,4 @@
-<?php
+<?php  namespace ftgr;
 
 define('FTGR_HORNIT_POWER_MIN', 5);
 define('FTGR_HORNIT_POWER_MAX', 20);

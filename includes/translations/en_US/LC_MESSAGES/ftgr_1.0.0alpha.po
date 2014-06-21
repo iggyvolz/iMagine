@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fightmon the Game: Reemon\n"
+"POT-Creation-Date: 2014-05-17 10:58-0500\n"
+"PO-Revision-Date: 2014-05-17 11:00-0500\n"
+"Last-Translator: iggyvolz <iggyvolz@aim.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: _\n"
+"X-Poedit-SearchPath-0: ../../../..\n"
+
+#: ../../../../help.php:12
+#, php-format
+msgid "No documentation available for language %s."
+msgstr "No documentation available for language %s."
+
+#: ../../../../includes/classes/fightmon/blazer.php:15
+#: ../../../../includes/classes/fightmon/blazer.php:24
+#: ../../../../includes/classes/fightmon/blazer.php:33
+#: ../../../../includes/classes/fightmon/dragiri.php:15
+#: ../../../../includes/classes/fightmon/dragiri.php:24
+#: ../../../../includes/classes/fightmon/dragiri.php:33
+#: ../../../../includes/classes/fightmon/dragiri.php:42
+#: ../../../../includes/classes/fightmon/feniixis.php:16
+#: ../../../../includes/classes/fightmon/feniixis.php:25
+#: ../../../../includes/classes/fightmon/feniixis.php:34
+#: ../../../../includes/classes/fightmon/fireebee.php:15
+#: ../../../../includes/classes/fightmon/fireebee.php:24
+#: ../../../../includes/classes/fightmon/fireebee.php:33
+#: ../../../../includes/classes/fightmon/fireebee.php:42
+#: ../../../../includes/classes/fightmon/fireebee.php:51
+#: ../../../../includes/classes/fightmon/flike.php:15
+#: ../../../../includes/classes/fightmon/flike.php:24
+#: ../../../../includes/classes/fightmon/flike.php:33
+#: ../../../../includes/classes/fightmon/ghostslicer.php:15
+#: ../../../../includes/classes/fightmon/hartvile.php:15
+#: ../../../../includes/classes/fightmon/hartvile.php:24
+#: ../../../../includes/classes/fightmon/hartvile.php:34
+#: ../../../../includes/classes/fightmon/hartvile.php:43
+#: ../../../../includes/classes/fightmon/nightwing.php:15
+#: ../../../../includes/classes/fightmon/nightwing.php:24
+#: ../../../../includes/classes/fightmon/nightwing.php:33
+#: ../../../../includes/classes/fightmon/plantsy.php:15
+#: ../../../../includes/classes/fightmon/plantsy.php:24
+#: ../../../../includes/classes/fightmon/pluff.php:15
+#: ../../../../includes/classes/fightmon/pluff.php:24
+#: ../../../../includes/classes/fightmon/reebee.php:15
+#: ../../../../includes/classes/fightmon/reebee.php:24
+#: ../../../../includes/classes/fightmon/reebee.php:34
+#: ../../../../includes/classes/fightmon/reebee.php:43
+#: ../../../../includes/classes/fightmon/reebee.php:53
+#: ../../../../includes/classes/fightmon/reemon.php:15
+#: ../../../../includes/classes/fightmon/reemon.php:30
+#: ../../../../includes/classes/fightmon/skelestorm.php:15
+#: ../../../../includes/classes/fightmon/skelestorm.php:24
+#: ../../../../includes/classes/fightmon/skelestorm.php:33
+#: ../../../../includes/classes/fightmon/skelestorm.php:42
+#: ../../../../includes/classes/fightmon_functions/update.php:16
+#: ../../../../includes/classes/fightmon_functions/update_code.php:12
+msgid "This function requires a parameter.  Please see the documentation."
+msgstr "This function requires a parameter.  Please see the documentation."
+
+#: ../../../../includes/classes/fightmon/blazer.php:17
+#: ../../../../includes/classes/fightmon/nightwing.php:17
+msgid "Air Ram"
+msgstr "Air Ram"
+
+#: ../../../../includes/classes/fightmon/blazer.php:26
+#: ../../../../includes/classes/fightmon/dragiri.php:17
+#: ../../../../includes/classes/fightmon/feniixis.php:18
+#: ../../../../includes/classes/fightmon/fireebee.php:17
+#: ../../../../includes/classes/fightmon/flike.php:17
+#: ../../../../includes/classes/fightmon/hartvile.php:17
+#: ../../../../includes/classes/fightmon/reebee.php:26
+#: ../../../../includes/classes/fightmon/reemon.php:17
+#: ../../../../includes/classes/fightmon/skelestorm.php:17
+msgid "Bite"
+msgstr "Bite"
+
+#: ../../../../includes/classes/fightmon/blazer.php:35
+#: ../../../../includes/classes/fightmon/feniixis.php:36
+#: ../../../../includes/classes/fightmon/fireebee.php:44
+#: ../../../../includes/classes/fightmon/flike.php:35
+#: ../../../../includes/classes/fightmon/hartvile.php:45
+#: ../../../../includes/classes/fightmon/nightwing.php:35
+#: ../../../../includes/classes/fightmon/reebee.php:45
+msgid "Scratch"
+msgstr "Scratch"
+
+#: ../../../../includes/classes/fightmon/dragiri.php:26
+msgid "Stomp"
+msgstr "Stomp"
+
+#: ../../../../includes/classes/fightmon/dragiri.php:35
+#: ../../../../includes/classes/fightmon/pluff.php:26
+msgid "Trample"
+msgstr "Trample"
+
+#: ../../../../includes/classes/fightmon/dragiri.php:44
+msgid "Wind Whap"
+msgstr "Wind Whap"
+
+#: ../../../../includes/classes/fightmon/feniixis.php:27
+msgid "Burn"
+msgstr "Burn"
+
+#: ../../../../includes/classes/fightmon/fireebee.php:26
+#: ../../../../includes/classes/fightmon/reebee.php:36
+msgid "Fly By"
+msgstr "Fly By"
+
+#: ../../../../includes/classes/fightmon/fireebee.php:35
+msgid "Hornit"
+msgstr "Hornit"
+
+#: ../../../../includes/classes/fightmon/fireebee.php:53
+#: ../../../../includes/classes/fightmon/reebee.php:55
+msgid "Sting"
+msgstr "Sting"
+
+#: ../../../../includes/classes/fightmon/flike.php:26
+msgid "Kick"
+msgstr "Kick"
+
+#: ../../../../includes/classes/fightmon/ghostslicer.php:17
+msgid "Blade Burst"
+msgstr "Blade Burst"
+
+#: ../../../../includes/classes/fightmon/hartvile.php:26
+msgid "Daze"
+msgstr "Daze"
+
+#: ../../../../includes/classes/fightmon/hartvile.php:36
+msgid "Love's Fall"
+msgstr "Love's Fall"
+
+#: ../../../../includes/classes/fightmon/krabulous.php:14
+msgid "Projectiles"
+msgstr "Projectiles"
+
+#: ../../../../includes/classes/fightmon/nightwing.php:26
+msgid "Echo Locate"
+msgstr "Echo Locate"
+
+#: ../../../../includes/classes/fightmon/plantsy.php:17
+msgid "Metal Petal"
+msgstr "Metal Petal"
+
+#: ../../../../includes/classes/fightmon/plantsy.php:26
+msgid "Tail Whip"
+msgstr "Tail Whip"
+
+#: ../../../../includes/classes/fightmon/pluff.php:17
+msgid "Static Shock"
+msgstr "Static Shock"
+
+#: ../../../../includes/classes/fightmon/reebee.php:17
+msgid "Antenna beams"
+msgstr "Antenna beams"
+
+#: ../../../../includes/classes/fightmon/reemon.php:23
+msgid "De-root"
+msgstr "De-root"
+
+#: ../../../../includes/classes/fightmon/reemon.php:32
+msgid "Needle Thorn"
+msgstr "Needle Thorn"
+
+#: ../../../../includes/classes/fightmon/skelestorm.php:26
+msgid "Electro-shade"
+msgstr "Electro-shade"
+
+#: ../../../../includes/classes/fightmon/skelestorm.php:35
+msgid "Lightning Strike"
+msgstr "Lightning Strike"
+
+#: ../../../../includes/classes/fightmon/skelestorm.php:44
+msgid "Rep Strike"
+msgstr "Rep Strike"
+
+#: ../../../../includes/classes/fightmon/strab.php:14
+msgid "Fire Flare"
+msgstr "Fire Flare"
+
+#: ../../../../includes/classes/fightmon_functions/_debug_off.php:10
+msgid "Debug mode is now off."
+msgstr "Debug mode is now off."
+
+#: ../../../../includes/classes/fightmon_functions/_debug_on.php:10
+msgid "Debug mode is now on."
+msgstr "Debug mode is now on."
+
+#: ../../../../includes/classes/fightmon_functions/_move.php:14
+#, php-format
+msgid "%s used %s!"
+msgstr "%s used %s!"
+
+#: ../../../../includes/classes/fightmon_functions/_move.php:18
+#, php-format
+msgid "%s used %s and it missed!"
+msgstr "%s used %s and it missed!"
+
+#: ../../../../includes/classes/fightmon_functions/_move.php:23
+#, php-format
+msgid "%s used %s and caused %d damage on %s!"
+msgstr "%s used %s and caused %d damage on %s!"
+
+#: ../../../../includes/classes/fightmon_functions/_move.php:27
+#, php-format
+msgid "%s used %s on %s and it missed!"
+msgstr "%s used %s on %s and it missed!"
+
+#: ../../../../includes/classes/fightmon_functions/changeto.php:11
+#, php-format
+msgid "%s is now selected!"
+msgstr "%s is now selected!"
+
+#: ../../../../includes/classes/fightmon_functions/cutscene.php:10
+#, php-format
+msgid "Calling cutscene \"%s\""
+msgstr "Calling cutscene \"%s\""
+
+#: ../../../../includes/classes/fightmon_functions/debug.php:11
+msgid "Sorry, debug mode has been disabled by an administrator."
+msgstr "Sorry, debug mode has been disabled by an administrator."
+
+#: ../../../../includes/classes/fightmon_functions/help.php:10
+msgid "Opened help."
+msgstr "Opened help."
+
+#: ../../../../includes/classes/fightmon_functions/mock_battle.php:16
+msgid "Error: Invalid battle"
+msgstr "Error: Invalid battle"
+
+#: ../../../../includes/classes/fightmon_functions/reset_battle.php:11
+msgid "Successfully reset battle!"
+msgstr "Successfully reset battle!"
+
+#: ../../../../includes/classes/fightmon_functions/update.php:9
+#: ../../../../includes/classes/fightmon_functions/update_code.php:9
+msgid ""
+"WARNING - The Update function has been removed until further notice due to "
+"changes in FTG:R's structure.  Please check the dev-update branch for "
+"development of this feature."
+msgstr ""
+"WARNING - The Update function has been removed until further notice due to "
+"changes in FTG:R's structure.  Please check the dev-update branch for "
+"development of this feature."
+
+#: ../../../../includes/classes/fightmon_functions/update.php:12
+msgid "You cannot update.  Please enter the update code with update_code()"
+msgstr "You cannot update.  Please enter the update code with update_code()"
+
+#: ../../../../includes/classes/fightmon_functions/update.php:24
+msgid ""
+"Either you are not connected to wi-fi, the Fightmon site is down, or you "
+"specified an incorrect version."
+msgstr ""
+"Either you are not connected to wi-fi, the Fightmon site is down, or you "
+"specified an incorrect version."
+
+#: ../../../../includes/classes/fightmon_functions/update.php:47
+#, php-format
+msgid "Successfully upgraded to version %s."
+msgstr "Successfully upgraded to version %s."
+
+#: ../../../../includes/classes/fightmon_functions/update_code.php:16
+msgid "Your update code has been accepted.  Please proceed with update."
+msgstr "Your update code has been accepted.  Please proceed with update."
+
+#: ../../../../includes/classes/fightmon_functions/update_code.php:19
+msgid ""
+"Your update code has been denied.  Please ensure you typed it correctly."
+msgstr ""
+"Your update code has been denied.  Please ensure you typed it correctly."
+
+#: ../../../../includes/classes/fightmon_functions/version.php:12
+#, php-format
+msgid "Current version is %s."
+msgstr "Current version is %s."
+
+#: ../../../../includes/classes/index.php:31
+#: ../../../../includes/page_render/index.php:95
+#: ../../../../includes/parse_contents/index.php:37
+msgid "Reemon"
+msgstr "Reemon"
+
+#: ../../../../includes/page_render/index.php:36
+#: ../../../../includes/page_render/index.php:134
+msgid "For help and credits, type help then press enter."
+msgstr "For help and credits, type help then press enter."
+
+#: ../../../../includes/page_render/index.php:82
+#: ../../../../includes/parse_contents/index.php:24
+msgid "Blazer"
+msgstr "Blazer"
+
+#: ../../../../includes/page_render/index.php:83
+#: ../../../../includes/parse_contents/index.php:25
+msgid "Curleaf"
+msgstr "Curleaf"
+
+#: ../../../../includes/page_render/index.php:84
+#: ../../../../includes/parse_contents/index.php:26
+msgid "Dragiri"
+msgstr "Dragiri"
+
+#: ../../../../includes/page_render/index.php:85
+#: ../../../../includes/parse_contents/index.php:27
+msgid "Feniixis"
+msgstr "Feniixis"
+
+#: ../../../../includes/page_render/index.php:86
+#: ../../../../includes/parse_contents/index.php:28
+msgid "FireeBee"
+msgstr "FireeBee"
+
+#: ../../../../includes/page_render/index.php:87
+#: ../../../../includes/parse_contents/index.php:29
+msgid "Flike"
+msgstr "Flike"
+
+#: ../../../../includes/page_render/index.php:88
+#: ../../../../includes/parse_contents/index.php:30
+msgid "GhostSlicer"
+msgstr "GhostSlicer"
+
+#: ../../../../includes/page_render/index.php:89
+#: ../../../../includes/parse_contents/index.php:31
+msgid "Hartvile"
+msgstr "Hartvile"
+
+#: ../../../../includes/page_render/index.php:90
+#: ../../../../includes/parse_contents/index.php:32
+msgid "Krabulous"
+msgstr "Krabulous"
+
+#: ../../../../includes/page_render/index.php:91
+#: ../../../../includes/parse_contents/index.php:33
+msgid "Nightwing"
+msgstr "Nightwing"
+
+#: ../../../../includes/page_render/index.php:92
+#: ../../../../includes/parse_contents/index.php:34
+msgid "Plantsy"
+msgstr "Plantsy"
+
+#: ../../../../includes/page_render/index.php:93
+#: ../../../../includes/parse_contents/index.php:35
+msgid "Pluff"
+msgstr "Pluff"
+
+#: ../../../../includes/page_render/index.php:94
+#: ../../../../includes/parse_contents/index.php:36
+msgid "ReeBee"
+msgstr "ReeBee"
+
+#: ../../../../includes/page_render/index.php:96
+#: ../../../../includes/parse_contents/index.php:38
+msgid "Skelestorm"
+msgstr "Skelestorm"
+
+#: ../../../../includes/page_render/index.php:97
+#: ../../../../includes/parse_contents/index.php:39
+msgid "Strab"
+msgstr "Strab"
+
+#: ../../../../includes/page_render/index.php:166
+msgid "Uh, oh!  There were errors!"
+msgstr "Uh, oh!  There were errors!"
+
+#: ../../../../includes/page_render/index.php:166
+msgid ""
+"Errors have been hidden by an administrator, but they may have been logged."
+msgstr ""
+"Errors have been hidden by an administrator, but they may have been logged."
+
+#~ msgid "Battle"
+#~ msgstr "Battle"
+
+#~ msgid "used"
+#~ msgstr "used"
+
+#~ msgid "and caused"
+#~ msgstr "and caused"
+
+#~ msgid "damage on"
+#~ msgstr "damage on"
+
+#~ msgid "on"
+#~ msgstr "on"

@@ -1,9 +1,9 @@
 <?php
 
-require_once __DIR__ . FTGR_SLASH . 'fightmon.php';
-require_once __DIR__ . FTGR_SLASH . 'fightmon' . FTGR_SLASH . 'index.php';
-require_once __DIR__ . FTGR_SLASH . 'battle.php';
-require_once __DIR__ . FTGR_SLASH . 'battles' . FTGR_SLASH . 'index.php';
+namespace ftgr;
+
+require_once realpath(__DIR__ . '/fightmon.php');
+require_once realpath(__DIR__ . '/fightmon/index.php');
 if (isset($_SESSION['ftgr']['battle']))
 {
 	$battle = new $_SESSION['ftgr']['battle'];

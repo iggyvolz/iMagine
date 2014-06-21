@@ -1,18 +1,20 @@
 <?php
 
-require_once __DIR__ . FTGR_SLASH . 'blazer.php';
-require_once __DIR__ . FTGR_SLASH . 'curleaf.php';
-require_once __DIR__ . FTGR_SLASH . 'dragiri.php';
-require_once __DIR__ . FTGR_SLASH . 'feniixis.php';
-require_once __DIR__ . FTGR_SLASH . 'fireebee.php';
-require_once __DIR__ . FTGR_SLASH . 'flike.php';
-require_once __DIR__ . FTGR_SLASH . 'ghostslicer.php';
-require_once __DIR__ . FTGR_SLASH . 'hartvile.php';
-require_once __DIR__ . FTGR_SLASH . 'krabulous.php';
-require_once __DIR__ . FTGR_SLASH . 'nightwing.php';
-require_once __DIR__ . FTGR_SLASH . 'plantsy.php';
-require_once __DIR__ . FTGR_SLASH . 'pluff.php';
-require_once __DIR__ . FTGR_SLASH . 'reebee.php';
-require_once __DIR__ . FTGR_SLASH . 'reemon.php';
-require_once __DIR__ . FTGR_SLASH . 'skelestorm.php';
-require_once __DIR__ . FTGR_SLASH . 'strab.php';
+namespace ftgr;
+
+require_once realpath(__DIR__ . '/blazer.php');
+require_once realpath(__DIR__ . '/curleaf.php');
+require_once realpath(__DIR__ . '/dragiri.php');
+require_once realpath(__DIR__ . '/feniixis.php');
+require_once realpath(__DIR__ . '/fireebee.php');
+require_once realpath(__DIR__ . '/flike.php');
+require_once realpath(__DIR__ . '/ghostslicer.php');
+require_once realpath(__DIR__ . '/hartvile.php');
+require_once realpath(__DIR__ . '/krabulous.php');
+require_once realpath(__DIR__ . '/nightwing.php');
+require_once realpath(__DIR__ . '/plantsy.php');
+require_once realpath(__DIR__ . '/pluff.php');
+require_once realpath(__DIR__ . '/reebee.php');
+require_once realpath(__DIR__ . '/reemon.php');
+require_once realpath(__DIR__ . '/skelestorm.php');
+require_once realpath(__DIR__ . '/strab.php');

@@ -1,5 +1,7 @@
 <?php
 
+namespace ftgr;
+
 class blazer extends fightmon
 {
 

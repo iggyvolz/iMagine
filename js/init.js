@@ -1,15 +1,35 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
 };
-$.post("https://eternityincurakai.com/apis/generate_auth_token").success(function(returned) { auth=returned; });
 function reload()
 {
+    cssbackground=0;
     $.post('api.php', "contents=" + $('#contents').val(), function(data) {
         if (data === 'help')
         {
             window.location.replace("help.php");
         }
-        console.log(data);
+        if(data.cutscene)
+        {
+            $('#overlay').css('display','inline');
+            interval=setInterval(function() {
+            $('#overlay').css('backgroundColor','rgba(' + ['0','0','0',(cssbackground/500).toString()].join(',') + ')');
+            cssbackground++;
+            if(cssbackground>500)
+            {
+                clearInterval(interval);
+            }
+        },1);
+            $('#flashobject').css('display','inline');
+            var obj = $("object#flash");
+            var orig = obj.html();
+            obj.html(orig);
+        }
+        else
+        {
+            $('#flashobject').css('display','none');
+            $('#overlay').css('display','none');
+        }
         $('#contents').val("");
         $('#results').val(data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
@@ -29,18 +49,20 @@ function reload()
         $('#reemon_energy').val(data.reemon_energy);
         $('#skelestorm_energy').val(data.skelestorm_energy);
         $('#strab_energy').val(data.strab_energy);
-        $('#dump').html(data.dump);
+	console.log(data.dump);
         $('#errors').html(data.errors);
-        if (data.dump !== "")
-        {
-            window.scrollTo(0, document.body.scrollHeight);
-        }
     }, "json").fail(function(data) {
+	console.log(data);
         $('#errors').html(data.responseText);
         $('#contents').val("");
     });
 }
-function stream_post(title,content)
+$(document).click(function(){
+    $('#flashobject').css('display','none');
+    $('#overlay').css('display','none');
+})
+function ftgr(command)
 {
-    $.post("https://eternityincurakai.com/apis/sse/stream-post/" + title + ":" + content + ":" + auth);
+    $('#contents').val(command);
+    reload();
 }
