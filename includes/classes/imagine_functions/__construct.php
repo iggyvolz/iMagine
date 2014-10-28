@@ -6,10 +6,10 @@ trait __construct
 {
 	public function __construct()
 	{
-		if (isset($_SESSION['iMagine'][explode('\\', get_class($this))[1] . 'energy']))
+		if (isset($_SESSION['iMagine'][lcfirst(explode('\\', get_class($this))[1] . 'energy')]))
 		{
-			$this->energy = $_SESSION['iMagine'][explode('\\', get_class($this))[1] . 'energy'];
+			$this->energy = $_SESSION['iMagine'][lcfirst(explode('\\', get_class($this))[1] . 'energy')];
 		}
-		$_SESSION['iMagine'][explode('\\', get_class($this))[1] . 'energy'];
+		$_SESSION['iMagine'][lcfirst(explode('\\', get_class($this))[1] . 'energy')];
 	}
 }
