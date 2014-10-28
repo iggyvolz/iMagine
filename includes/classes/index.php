@@ -12,23 +12,11 @@ else
 {
 	$battle = NULL;
 }
-$fightmon = array('blazer', 'curleaf', 'dragiri', 'feniixis', 'fireebee', 'flike', 'ghostslicer', 'hartvile', 'krabulous', 'nightwing', 'plantsy', 'pluff', 'reemon', 'reebee', 'skelestorm', 'strab');
-$blazer = new blazer;
-$curleaf = new curleaf;
-$dragiri = new dragiri;
-$feniixis = new feniixis;
-$fireebee = new fireebee;
-$flike = new flike;
-$ghostslicer = new ghostslicer;
-$hartvile = new hartvile;
-$krabulous = new krabulous;
-$nightwing = new nightwing;
-$plantsy = new plantsy;
-$pluff = new pluff;
-$reemon = new reemon;
-$reebee = new reebee;
-$skelestorm = new skelestorm;
-$strab = new strab;
+$fightmon = array('tony','edyn','strag');
+
+$reebee = new tony;
+$skelestorm = new edyn;
+$strab = new strag;
 $me = isset($_SESSION['iMagine']['me']) ? $_SESSION['iMagine']['me'] : _('Reemon');
 
 /*

@@ -1,7 +1,7 @@
 <?php
 
 namespace iMagine;
-require realpath(__DIR__.'/fightmon_functions/index.php');
+require realpath(__DIR__.'/imagine_functions/index.php');
 class fightmon
 {
 	use \iMagine_functions\__construct;
