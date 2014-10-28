@@ -1,4 +1,4 @@
 <?php  namespace iMagine;
 
-define('FTGR_ANTENNABEAMS_POWER', 10);
-define('FTGR_ANTENNABEAMS_ACCURACY', 100); // Not yet listed
+define('IMAGINE_ANTENNABEAMS_POWER', 10);
+define('IMAGINE_ANTENNABEAMS_ACCURACY', 100); // Not yet listed

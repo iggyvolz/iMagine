@@ -2,5 +2,5 @@
 
 namespace iMagine;
 
-define('FTGR_MODE', 'api');
+define('IMAGINE_MODE', 'api');
 require_once realpath(__DIR__ . '/index.php');

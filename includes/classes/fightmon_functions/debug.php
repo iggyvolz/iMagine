@@ -6,7 +6,7 @@ trait debug
 {
 	public function debug($args = NULL)
 	{
-		if (!FTGR_DEBUG)
+		if (!IMAGINE_DEBUG)
 		{
 			return array(\ftgr\_('Sorry, debug mode has been disabled by an administrator.'));
 		}

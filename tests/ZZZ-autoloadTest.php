@@ -4,7 +4,7 @@
  * Do NOT rename - this file must be included last so that we can access other classes
  */
 ob_start();
-define("FTGR_NO_OUTPUT", true);
+define("IMAGINE_NO_OUTPUT", true);
 require_once realpath(dirname(__DIR__) . '/index.php');
 ob_end_clean();
 

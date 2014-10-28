@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_HARTVILE_STARTING_ENERGY', 60);
+define('IMAGINE_HARTVILE_STARTING_ENERGY', 60);

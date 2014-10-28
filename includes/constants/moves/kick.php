@@ -1,4 +1,4 @@
 <?php  namespace iMagine;
 
-define('FTGR_KICK_POWER', 4);
-define('FTGR_KICK_ACCURACY', 100); // Not yet listed
+define('IMAGINE_KICK_POWER', 4);
+define('IMAGINE_KICK_ACCURACY', 100); // Not yet listed

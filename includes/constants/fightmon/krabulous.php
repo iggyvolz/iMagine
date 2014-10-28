@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_KRABULOUS_STARTING_ENERGY', 60);
+define('IMAGINE_KRABULOUS_STARTING_ENERGY', 60);

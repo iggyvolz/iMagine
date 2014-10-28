@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_DRAGIRI_STARTING_ENERGY', 90);
+define('IMAGINE_DRAGIRI_STARTING_ENERGY', 90);

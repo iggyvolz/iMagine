@@ -8,40 +8,40 @@ $initial_session = array(
 	'init' => TRUE,
 	'returns' => array(),
 	'cutscene' => NULL,
-	'blazerenergy' => FTGR_BLAZER_STARTING_ENERGY,
-	'curleafenergy' => FTGR_CURLEAF_STARTING_ENERGY,
-	'dragirienergy' => FTGR_DRAGIRI_STARTING_ENERGY,
-	'feniixisenergy' => FTGR_FENIIXIS_STARTING_ENERGY,
-	'fireebeeenergy' => FTGR_FIREE_BEE_STARTING_ENERGY,
-	'flikeenergy' => FTGR_FLIKE_STARTING_ENERGY,
-	'ghostslicerenergy' => FTGR_GHOST_SLICER_STARTING_ENERGY,
-	'hartvileenergy' => FTGR_HARTVILE_STARTING_ENERGY,
-	'krabulousenergy' => FTGR_KRABULOUS_STARTING_ENERGY,
-	'nightwingenergy' => FTGR_NIGHTWING_STARTING_ENERGY,
-	'plantsyenergy' => FTGR_PLANTSY_STARTING_ENERGY,
-	'pluffenergy' => FTGR_PLUFF_STARTING_ENERGY,
-	'reebeeenergy' => FTGR_REE_BEE_STARTING_ENERGY,
-	'reemonenergy' => FTGR_REEMON_STARTING_ENERGY,
-	'skelestormenergy' => FTGR_SKELESTORM_STARTING_ENERGY,
-	'strabenergy' => FTGR_STRAB_STARTING_ENERGY,
-	'version' => FTGR_VERSION,
-	'valid_session' => FTGR_ALLOW_ANY_UPDATE,
+	'blazerenergy' => IMAGINE_BLAZER_STARTING_ENERGY,
+	'curleafenergy' => IMAGINE_CURLEAF_STARTING_ENERGY,
+	'dragirienergy' => IMAGINE_DRAGIRI_STARTING_ENERGY,
+	'feniixisenergy' => IMAGINE_FENIIXIS_STARTING_ENERGY,
+	'fireebeeenergy' => IMAGINE_FIREE_BEE_STARTING_ENERGY,
+	'flikeenergy' => IMAGINE_FLIKE_STARTING_ENERGY,
+	'ghostslicerenergy' => IMAGINE_GHOST_SLICER_STARTING_ENERGY,
+	'hartvileenergy' => IMAGINE_HARTVILE_STARTING_ENERGY,
+	'krabulousenergy' => IMAGINE_KRABULOUS_STARTING_ENERGY,
+	'nightwingenergy' => IMAGINE_NIGHTWING_STARTING_ENERGY,
+	'plantsyenergy' => IMAGINE_PLANTSY_STARTING_ENERGY,
+	'pluffenergy' => IMAGINE_PLUFF_STARTING_ENERGY,
+	'reebeeenergy' => IMAGINE_REE_BEE_STARTING_ENERGY,
+	'reemonenergy' => IMAGINE_REEMON_STARTING_ENERGY,
+	'skelestormenergy' => IMAGINE_SKELESTORM_STARTING_ENERGY,
+	'strabenergy' => IMAGINE_STRAB_STARTING_ENERGY,
+	'version' => IMAGINE_VERSION,
+	'valid_session' => IMAGINE_ALLOW_ANY_UPDATE,
 );
 if (!isset($_SESSION['ftgr']['init']))
 {
 	$_SESSION['ftgr'] = $initial_session;
 }
 
-if ($_SESSION['ftgr']['version'] !== FTGR_VERSION)
+if ($_SESSION['ftgr']['version'] !== IMAGINE_VERSION)
 {
 	// We've updated since the user has last visited.  Reset!
-	if (FTGR_MODE === 'api')
+	if (IMAGINE_MODE === 'api')
 	{
-		if (!defined('FTGR_NO_OUTPUT'))
+		if (!defined('IMAGINE_NO_OUTPUT'))
 		{
 			echo 'refresh';
 		}
-		define('FTGR_DIE', true);
+		define('IMAGINE_DIE', true);
 	}
 	else
 	{

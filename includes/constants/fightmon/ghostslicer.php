@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_GHOST_SLICER_STARTING_ENERGY', 80);
+define('IMAGINE_GHOST_SLICER_STARTING_ENERGY', 80);

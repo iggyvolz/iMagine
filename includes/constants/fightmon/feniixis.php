@@ -2,5 +2,5 @@
 
 namespace iMagine;
 
-define('FTGR_FENIIXIS_STARTING_ENERGY', 80);
+define('IMAGINE_FENIIXIS_STARTING_ENERGY', 80);
 

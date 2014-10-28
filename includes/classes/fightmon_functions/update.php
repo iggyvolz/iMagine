@@ -33,7 +33,7 @@ trait update
 		}
 		else
 		{
-			return array(FTGR_UNZIP_FAIL . $res);
+			return array(IMAGINE_UNZIP_FAIL . $res);
 		}
 		$folder = realpath(__DIR__ . '/ftgr/') . scandir(realpath(__DIR__ . '/ftgr'))[2];
 		$scan = $this->update_recursive_scandir($folder);

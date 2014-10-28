@@ -11,12 +11,12 @@ trait version
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(sprintf(\ftgr\_('Current version is %s.'), FTGR_VERSION));
+			return array(sprintf(\ftgr\_('Current version is %s.'), IMAGINE_VERSION));
 		}
 		$opts = array(
 			'http' => array(
 				'method' => "GET",
-				'header' => "User-Agent: Fightmon-The-Game-Reemon-" . FTGR_VERSION
+				'header' => "User-Agent: Fightmon-The-Game-Reemon-" . IMAGINE_VERSION
 			)
 		);
 		$context = stream_context_create($opts);

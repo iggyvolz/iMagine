@@ -9,7 +9,7 @@ trait reset
 		global $initial_session;
 		session_destroy();
 		$_SESSION['ftgr'] = $initial_session;
-		define('FTGR_REFRESH', TRUE);
+		define('IMAGINE_REFRESH', TRUE);
 		return array('');
 	}
 }

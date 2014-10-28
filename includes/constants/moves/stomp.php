@@ -1,4 +1,4 @@
 <?php  namespace iMagine;
 
-define('FTGR_STOMP_POWER', 10);
-define('FTGR_STOMP_ACCURACY', 100);
+define('IMAGINE_STOMP_POWER', 10);
+define('IMAGINE_STOMP_ACCURACY', 100);

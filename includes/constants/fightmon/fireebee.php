@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_FIREE_BEE_STARTING_ENERGY', 80);
+define('IMAGINE_FIREE_BEE_STARTING_ENERGY', 80);

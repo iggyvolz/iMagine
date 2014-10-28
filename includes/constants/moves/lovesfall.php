@@ -1,4 +1,4 @@
 <?php  namespace iMagine;
 
-define('FTGR_LOVESFALL_POWER', 0);
-define('FTGR_LOVESFALL_ACCURACY', 100); // Not yet listed
+define('IMAGINE_LOVESFALL_POWER', 0);
+define('IMAGINE_LOVESFALL_ACCURACY', 100); // Not yet listed

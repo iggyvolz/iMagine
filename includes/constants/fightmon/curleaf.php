@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_CURLEAF_STARTING_ENERGY', 4);
+define('IMAGINE_CURLEAF_STARTING_ENERGY', 4);

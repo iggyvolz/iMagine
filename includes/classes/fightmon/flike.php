@@ -6,8 +6,8 @@ class flike extends fightmon
 {
 
 // Allows Flike-specific functions to be implimented in later versions
-	public $energy = FTGR_FLIKE_STARTING_ENERGY;
-	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_FLIKE, 'has_target' => TRUE), 'kick' => array('accuracy' => FTGR_KICK_ACCURACY, 'power' => FTGR_KICK_POWER, 'has_target' => TRUE), 'scratch' => array('accuracy' => FTGR_SCRATCH_ACCURACY, 'power' => FTGR_SCRATCH_POWER_FLIKE, 'has_target' => TRUE));
+	public $energy = IMAGINE_FLIKE_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => IMAGINE_BITE_ACCURACY, 'power' => IMAGINE_BITE_POWER_FLIKE, 'has_target' => TRUE), 'kick' => array('accuracy' => IMAGINE_KICK_ACCURACY, 'power' => IMAGINE_KICK_POWER, 'has_target' => TRUE), 'scratch' => array('accuracy' => IMAGINE_SCRATCH_ACCURACY, 'power' => IMAGINE_SCRATCH_POWER_FLIKE, 'has_target' => TRUE));
 
 	public function bite($args = NULL)
 	{
@@ -15,7 +15,7 @@ class flike extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Bite"), FTGR_BITE_POWER_FLIKE, FTGR_BITE_ACCURACY, $args[0]);
+		return $this->_move(_("Bite"), IMAGINE_BITE_POWER_FLIKE, IMAGINE_BITE_ACCURACY, $args[0]);
 	}
 
 	public function kick($args = NULL)
@@ -24,7 +24,7 @@ class flike extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Kick"), FTGR_KICK_POWER, FTGR_KICK_ACCURACY, $args[0]);
+		return $this->_move(_("Kick"), IMAGINE_KICK_POWER, IMAGINE_KICK_ACCURACY, $args[0]);
 	}
 
 	public function scratch($args = NULL)
@@ -33,7 +33,7 @@ class flike extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Scratch"), FTGR_SCRATCH_POWER_FLIKE, FTGR_SCRATCH_ACCURACY, $args[0]);
+		return $this->_move(_("Scratch"), IMAGINE_SCRATCH_POWER_FLIKE, IMAGINE_SCRATCH_ACCURACY, $args[0]);
 	}
 
 }

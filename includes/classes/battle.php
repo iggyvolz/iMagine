@@ -17,12 +17,12 @@ class battle
 			return;
 		}
 		$this->opponents_count = count($this->opponents);
-		if (defined('FTGR_BATTLE_CHOSEN'))
+		if (defined('IMAGINE_BATTLE_CHOSEN'))
 		{
 			throw new Exception(str_replace(array('%1', '%2'), array(get_class($GLOBALS['battle']), _(get_class($this))), _('Battle %1 already selected, tried to select %2.')));
 			return;
 		}
-		define('FTGR_BATTLE_CHOSEN', TRUE);
+		define('IMAGINE_BATTLE_CHOSEN', TRUE);
 		$battle = $this;
 	}
 

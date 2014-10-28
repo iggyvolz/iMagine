@@ -26,7 +26,7 @@ class APITest extends PHPUnit_Framework_TestCase
 	{
 		global $blazer;
 		$test = new PHPUnitTest($this, "Testing debug()", __METHOD__, 10);
-		if (!FTGR_DEBUG)
+		if (!IMAGINE_DEBUG)
 		{
 			$test->skipTest("Please turn on debug mode to accurately test this function.");
 			return;
@@ -53,7 +53,7 @@ class APITest extends PHPUnit_Framework_TestCase
 		global $blazer;
 		$test = new PHPUnitTest($this, "Testing help()", __METHOD__, 2);
 		$output = $blazer->help();
-		$test->assertTrue(defined('FTGR_HELP'));
+		$test->assertTrue(defined('IMAGINE_HELP'));
 		$test->assertEquals($output, ['Opened help.']);
 	}
 
@@ -64,7 +64,7 @@ class APITest extends PHPUnit_Framework_TestCase
 		$output = $blazer->reset();
 		$test->assertEquals($_SESSION['ftgr'], $initial_session);
 		$test->assertEquals([''], $output);
-		$test->assertTrue(defined('FTGR_REFRESH'));
+		$test->assertTrue(defined('IMAGINE_REFRESH'));
 	}
 
 	public function testVersion()
@@ -73,7 +73,7 @@ class APITest extends PHPUnit_Framework_TestCase
 		$test = new PHPUnitTest($this, "Testing version()", __METHOD__, 3);
 		$test->skipTest("Version function disabled.");
 		/* $output = $blazer->version();
-		  $test->assertEquals($output, ['Current version is ' . FTGR_VERSION . '.']); */
+		  $test->assertEquals($output, ['Current version is ' . IMAGINE_VERSION . '.']); */
 	}
 
 }

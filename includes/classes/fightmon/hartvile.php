@@ -6,8 +6,8 @@ class hartvile extends fightmon
 {
 
 // Allows Hartvile-specific functions to be implimented in later versions
-	public $energy = FTGR_HARTVILE_STARTING_ENERGY;
-	public $moves = array('bite' => array('accuracy' => FTGR_BITE_ACCURACY, 'power' => FTGR_BITE_POWER_HARTVILE, 'has_target' => TRUE), 'daze' => array('accuracy' => FTGR_DAZE_ACCURACY, 'power' => FTGR_DAZE_POWER, 'has_target' => TRUE), 'lovesfall' => array('accuracy' => FTGR_LOVESFALL_ACCURACY, 'power' => FTGR_LOVESFALL_POWER, 'has_target' => TRUE), 'scratch' => array('accuracy' => FTGR_SCRATCH_ACCURACY, 'power' => FTGR_SCRATCH_POWER_HARTVILE, 'has_target' => TRUE));
+	public $energy = IMAGINE_HARTVILE_STARTING_ENERGY;
+	public $moves = array('bite' => array('accuracy' => IMAGINE_BITE_ACCURACY, 'power' => IMAGINE_BITE_POWER_HARTVILE, 'has_target' => TRUE), 'daze' => array('accuracy' => IMAGINE_DAZE_ACCURACY, 'power' => IMAGINE_DAZE_POWER, 'has_target' => TRUE), 'lovesfall' => array('accuracy' => IMAGINE_LOVESFALL_ACCURACY, 'power' => IMAGINE_LOVESFALL_POWER, 'has_target' => TRUE), 'scratch' => array('accuracy' => IMAGINE_SCRATCH_ACCURACY, 'power' => IMAGINE_SCRATCH_POWER_HARTVILE, 'has_target' => TRUE));
 
 	public function bite($args = NULL)
 	{
@@ -15,7 +15,7 @@ class hartvile extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Bite"), FTGR_BITE_POWER_HARTVILE, FTGR_BITE_ACCURACY, $args[0]);
+		return $this->_move(_("Bite"), IMAGINE_BITE_POWER_HARTVILE, IMAGINE_BITE_ACCURACY, $args[0]);
 	}
 
 	public function daze($args = NULL)
@@ -24,7 +24,7 @@ class hartvile extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Daze"), FTGR_DAZE_POWER, FTGR_DAZE_ACCURACY, $args[0]);
+		return $this->_move(_("Daze"), IMAGINE_DAZE_POWER, IMAGINE_DAZE_ACCURACY, $args[0]);
 	}
 
 	public function lovesfall($args = NULL)
@@ -34,7 +34,7 @@ class hartvile extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Love's Fall"), FTGR_LOVESFALL_POWER, FTGR_LOVESFALL_ACCURACY, $args[0]);
+		return $this->_move(_("Love's Fall"), IMAGINE_LOVESFALL_POWER, IMAGINE_LOVESFALL_ACCURACY, $args[0]);
 	}
 
 	public function scratch($args = NULL)
@@ -43,7 +43,7 @@ class hartvile extends fightmon
 		{
 			return array(_("This function requires a parameter.  Please see the documentation."));
 		}
-		return $this->_move(_("Scratch"), FTGR_SCRATCH_POWER_HARTVILE, FTGR_SCRATCH_ACCURACY, $args[0]);
+		return $this->_move(_("Scratch"), IMAGINE_SCRATCH_POWER_HARTVILE, IMAGINE_SCRATCH_ACCURACY, $args[0]);
 	}
 
 }

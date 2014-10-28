@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_PLANTSY_STARTING_ENERGY', 40);
+define('IMAGINE_PLANTSY_STARTING_ENERGY', 40);

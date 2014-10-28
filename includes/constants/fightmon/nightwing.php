@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_NIGHTWING_STARTING_ENERGY', 20);
+define('IMAGINE_NIGHTWING_STARTING_ENERGY', 20);

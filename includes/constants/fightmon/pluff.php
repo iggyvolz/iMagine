@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_PLUFF_STARTING_ENERGY', 50);
+define('IMAGINE_PLUFF_STARTING_ENERGY', 50);

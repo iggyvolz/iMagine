@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_FLIKE_STARTING_ENERGY', 5);
+define('IMAGINE_FLIKE_STARTING_ENERGY', 5);

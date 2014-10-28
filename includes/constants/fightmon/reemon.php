@@ -2,4 +2,4 @@
 
 namespace iMagine;
 
-define('FTGR_REEMON_STARTING_ENERGY', 70);
+define('IMAGINE_REEMON_STARTING_ENERGY', 70);

@@ -2,7 +2,7 @@
 
 namespace iMagine;
 
-if (defined('FTGR_MODE') && FTGR_MODE === 'api') // Only set error handler if we are in API mode
+if (defined('IMAGINE_MODE') && IMAGINE_MODE === 'api') // Only set error handler if we are in API mode
 {
 	$errors = array();
 
