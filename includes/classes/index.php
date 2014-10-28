@@ -2,8 +2,8 @@
 
 namespace iMagine;
 
-require_once realpath(__DIR__ . '/fightmon.php');
-require_once realpath(__DIR__ . '/fightmon/index.php');
+require_once realpath(__DIR__ . '/Person.php');
+require_once realpath(__DIR__ . '/people/index.php');
 if (isset($_SESSION['iMagine']['battle']))
 {
 	$battle = new $_SESSION['iMagine']['battle'];

@@ -2,7 +2,7 @@
 
 namespace iMagine;
 require realpath(__DIR__.'/imagine_functions/index.php');
-class fightmon
+class Person
 {
 	use \iMagine_functions\__construct;
 	use \iMagine_functions\__destruct;
