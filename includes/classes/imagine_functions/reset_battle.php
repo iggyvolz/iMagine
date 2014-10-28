@@ -8,6 +8,6 @@ trait reset_battle
 	{
 		$GLOBALS['battle'] = NULL;
 		$_SESSION['iMagine']['battle'] = NULL;
-		return array(\ftgr\_('Successfully reset battle!'));
+		return array(\iMagine\_('Successfully reset battle!'));
 	}
 }

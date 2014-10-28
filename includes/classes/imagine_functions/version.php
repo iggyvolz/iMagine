@@ -7,11 +7,11 @@ trait version
 
 	public function version($args = NULL)
 	{
-		return array(\ftgr\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
+		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
 		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
-			return array(sprintf(\ftgr\_('Current version is %s.'), IMAGINE_VERSION));
+			return array(sprintf(\iMagine\_('Current version is %s.'), IMAGINE_VERSION));
 		}
 		$opts = array(
 			'http' => array(

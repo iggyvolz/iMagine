@@ -8,6 +8,6 @@ trait changeto
 	{
 		$_SESSION['iMagine']['me'] = explode('\\', get_class($this))[1];
 		$GLOBALS['me'] = explode('\\', get_class($this))[1];
-		return array(sprintf(\ftgr\_('%s is now selected!'), ucfirst(explode('\\', get_class($this))[1])));
+		return array(sprintf(\iMagine\_('%s is now selected!'), ucfirst(explode('\\', get_class($this))[1])));
 	}
 }

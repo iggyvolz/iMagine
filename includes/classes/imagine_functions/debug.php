@@ -8,7 +8,7 @@ trait debug
 	{
 		if (!IMAGINE_DEBUG)
 		{
-			return array(\ftgr\_('Sorry, debug mode has been disabled by an administrator.'));
+			return array(\iMagine\_('Sorry, debug mode has been disabled by an administrator.'));
 		}
 		if (func_num_args() == 0 AND $_SESSION['iMagine']['debug'])
 		{

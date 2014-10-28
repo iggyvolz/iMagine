@@ -6,14 +6,14 @@ trait update
 {
 	public function update($args = NULL)
 	{
-		return array(\ftgr\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
+		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
 		if (!$_SESSION['iMagine']['valid_session'])
 		{
-			return array(\ftgr\_('You cannot update.  Please enter the update code with update_code()'));
+			return array(\iMagine\_('You cannot update.  Please enter the update code with update_code()'));
 		}
 		if ($args === 'NULL')
 		{
-			return array(\ftgr\_('This function requires a parameter.  Please see the documentation.'));
+			return array(\iMagine\_('This function requires a parameter.  Please see the documentation.'));
 		}
 		$url = trim('http://fightmon.eternityincurakai.com/ftgr/' . $args[0] . '.zip');
 		$err = isset($php_errormsg) ? $php_errormsg : NULL;
@@ -21,7 +21,7 @@ trait update
 		$latesterr = isset($php_errormsg) ? $php_errormsg : NULL;
 		if ($err !== $latesterr)
 		{
-			return array(\ftgr\_('Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'));
+			return array(\iMagine\_('Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'));
 		}
 		file_put_contents(realpath(__DIR__ . '/ftgr.zip'), $contents);
 		$zip = new ZipArchive;
@@ -44,6 +44,6 @@ trait update
 		}
 		unlink(realpath(__DIR__ . '/ftgr.zip'));
 		$this->update_remove_folder(realpath(__DIR__ . '/ftgr'));
-		return array(sprintf(\ftgr\_("Successfully upgraded to version %s."), str_replace('-', '.', $args[0])));
+		return array(sprintf(\iMagine\_("Successfully upgraded to version %s."), str_replace('-', '.', $args[0])));
 	}
 }
