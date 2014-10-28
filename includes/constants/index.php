@@ -16,5 +16,4 @@ foreach(["tony","edyn","strag"] as $subject)
     $subject=strtoupper($subject);
     define('IMAGINE_$subject_STARTING_ENERGY', 40);
 }
-require_once realpath(__DIR__ . '/moves/index.php');
 require_once realpath(__DIR__ . '/dependencies/index.php');

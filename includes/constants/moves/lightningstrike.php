@@ -1,5 +1,0 @@
-<?php  namespace iMagine;
-
-define('IMAGINE_LIGHTNINGSTRIKE_POWER_MIN', 30);
-define('IMAGINE_LIGHTNINGSTRIKE_POWER_MAX', 50);
-define('IMAGINE_LIGHTNINGSTRIKE_ACCURACY', 100); // Not yet listed
