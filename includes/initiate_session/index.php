@@ -3,7 +3,7 @@
 namespace iMagine;
 
 $initial_session = array(
-	'me' => 'reemon',
+	'me' => 'tony',
 	'debug' => FALSE,
 	'init' => TRUE,
 	'returns' => array(),

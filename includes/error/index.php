@@ -65,5 +65,5 @@ if (defined('IMAGINE_MODE') && IMAGINE_MODE === 'api') // Only set error handler
 		}
 	}
 
-	set_error_handler('ftgr\error_handler');
+	set_error_handler('iMagine\error_handler');
 }

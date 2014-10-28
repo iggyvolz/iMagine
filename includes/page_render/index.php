@@ -14,26 +14,14 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 				die;
 			}
 			global $debug,
-			$blazer,
-			$curleaf,
-			$dragiri,
-			$feniixis,
-			$fireebee,
-			$flike,
-			$ghostslicer,
-			$hartvile,
-			$krabulous,
-			$nightwing,
-			$plantsy,
-			$pluff,
-			$reebee,
-			$reemon,
-			$skelestorm,
-			$strab;
+			$tony,
+			$edyn,
+			$strag;
 			$page = file_get_contents(__DIR__ . '/page.html');
-			$response = _(sprintf("Welcome to iMagine v%s!", IMAGINE_VERSION));
+			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
 			$response.=PHP_EOL;
 			$response.=_("Please be patient, we are under a major code rewrite at the moment.");
+			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
 			if (!empty($_SESSION['iMagine']['returns']))
@@ -70,28 +58,17 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 		{
 			global $debug,
 			$errors,
-			$blazer,
-			$curleaf,
-			$dragiri,
-			$feniixis,
-			$fireebee,
-			$flike,
-			$ghostslicer,
-			$hartvile,
-			$krabulous,
-			$nightwing,
-			$plantsy,
-			$pluff,
-			$reebee,
-			$reemon,
-			$skelestorm,
-			$strab;
+			$tony,
+			$edyn,
+			$strag;
 			if (defined('IMAGINE_HELP'))
 			{
 				echo json_encode('help');
 				return;
 			}
-			$response = sprintf("Welcome to Fightmon the Game: Reemon v%s!", IMAGINE_VERSION);
+			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
+			$response.=PHP_EOL;
+			$response.=_("Please be patient, we are under a major code rewrite at the moment.");
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);
@@ -108,22 +85,9 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			echo json_encode(array(
 				'dump' => ($_SESSION['iMagine']['debug'] || IMAGINE_DEBUG) ? $globals_dump : '',
 				'cutscene' => defined('IMAGINE_SHOW_CUTSCENE'),
-				'blazer_energy' => $blazer->energy,
-				'curleaf_energy' => $curleaf->energy,
-				'dragiri_energy' => $dragiri->energy,
-				'feniixis_energy' => $feniixis->energy,
-				'fireebee_energy' => $fireebee->energy,
-				'flike_energy' => $flike->energy,
-				'ghostslicer_energy' => $ghostslicer->energy,
-				'hartvile_energy' => $hartvile->energy,
-				'krabulous_energy' => $krabulous->energy,
-				'nightwing_energy' => $nightwing->energy,
-				'plantsy_energy' => $plantsy->energy,
-				'pluff_energy' => $pluff->energy,
-				'reebee_energy' => $reebee->energy,
-				'reemon_energy' => $reemon->energy,
-				'skelestorm_energy' => $skelestorm->energy,
-				'strab_energy' => $strab->energy,
+				'tony_energy' => $tony->energy,
+				'edyn_energy' => $edyn->energy,
+				'strag_energy' => $strag->energy,
 				'response' => $response,
 				'errors' => ($errors === array()) ? '' : _("Uh, oh!  There were errors!") . PHP_EOL . (IMAGINE_DEBUG ? "<p>" . implode("</p><p>", $errors) . "</p>" : _("Errors have been hidden by an administrator, but they may have been logged."))
 			));

@@ -33,12 +33,12 @@ foreach ($returned as $value)
 {
 	$_SESSION['iMagine']['returns'][] = $value;
 }
-if (!is_null($battle))
+if (!is_null($battle)) // IN DEVELOPMENT
 {
 	for ($i = 0; $i < count($battle->opponents); $i++)
 	{
 		$valid_fightmon = array();
-		foreach (array('blazer', 'curleaf', 'dragiri', 'feniixis', 'fireebee', 'flike', 'ghostslicer', 'hartvile', 'krabulous', 'nightwing', 'plantsy', 'pluff', 'reebee', 'reemon', 'skelestorm', 'strab') as $value)
+		foreach (array('tony','edyn','strag') as $value)
 		{
 			if ($$value->energy !== 73291759828375)
 			{
