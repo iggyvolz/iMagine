@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr_functions;
+namespace iMagine_functions;
 
 trait _debug_on
 {

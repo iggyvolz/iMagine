@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 if (version_compare(PHP_VERSION, '5.4', '<'))
 {

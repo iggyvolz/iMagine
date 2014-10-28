@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 if (!defined('FTGR_MODE'))
 {

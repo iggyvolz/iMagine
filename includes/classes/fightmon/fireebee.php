@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 class fireebee extends fightmon
 {

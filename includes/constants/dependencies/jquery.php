@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 define('FTGR_JQUERY_1X_VERSION', '1.11.0');
 define('FTGR_JQUERY_2X_VERSION', '2.1.0');

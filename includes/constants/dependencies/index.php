@@ -1,5 +1,5 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 require_once realpath(__DIR__ . '/jquery.php');

@@ -1,4 +1,4 @@
-<?php  namespace ftgr;
+<?php  namespace iMagine;
 
 define('FTGR_SCRATCH_POWER_FLIKE', 3);
 define('FTGR_SCRATCH_POWER_NIGHTWING', 4);

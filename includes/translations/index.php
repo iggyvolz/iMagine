@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 if (function_exists("textdomain")) // Run only if gettext is enabled
 {

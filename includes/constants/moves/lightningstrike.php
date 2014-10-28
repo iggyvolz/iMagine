@@ -1,4 +1,4 @@
-<?php  namespace ftgr;
+<?php  namespace iMagine;
 
 define('FTGR_LIGHTNINGSTRIKE_POWER_MIN', 30);
 define('FTGR_LIGHTNINGSTRIKE_POWER_MAX', 50);

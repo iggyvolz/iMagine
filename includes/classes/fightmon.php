@@ -1,25 +1,25 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 require realpath(__DIR__.'/fightmon_functions/index.php');
 class fightmon
 {
-	use \ftgr_functions\__construct;
-	use \ftgr_functions\__destruct;
-	use \ftgr_functions\_cutscene;
-	use \ftgr_functions\_debug_off;
-	use \ftgr_functions\_debug_on;
-	use \ftgr_functions\_move;
-	use \ftgr_functions\_register;
-	use \ftgr_functions\_update_recursive_scandir;
-	use \ftgr_functions\_update_remove_folder;
-	use \ftgr_functions\changeto;
-	use \ftgr_functions\cutscene;
-	use \ftgr_functions\debug;
-	use \ftgr_functions\help;
-	use \ftgr_functions\mock_battle;
-	use \ftgr_functions\reset;
-	use \ftgr_functions\reset_battle;
-	use \ftgr_functions\update_code;
-	use \ftgr_functions\version;
+	use \iMagine_functions\__construct;
+	use \iMagine_functions\__destruct;
+	use \iMagine_functions\_cutscene;
+	use \iMagine_functions\_debug_off;
+	use \iMagine_functions\_debug_on;
+	use \iMagine_functions\_move;
+	use \iMagine_functions\_register;
+	use \iMagine_functions\_update_recursive_scandir;
+	use \iMagine_functions\_update_remove_folder;
+	use \iMagine_functions\changeto;
+	use \iMagine_functions\cutscene;
+	use \iMagine_functions\debug;
+	use \iMagine_functions\help;
+	use \iMagine_functions\mock_battle;
+	use \iMagine_functions\reset;
+	use \iMagine_functions\reset_battle;
+	use \iMagine_functions\update_code;
+	use \iMagine_functions\version;
 }

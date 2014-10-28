@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 // Intentionally non-alphabetized.  In order of prerequisition.
 require_once realpath(__DIR__ . '/error/index.php');

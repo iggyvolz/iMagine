@@ -1,4 +1,4 @@
-<?php  namespace ftgr;
+<?php  namespace iMagine;
 
 define('FTGR_REPSTRIKE_POWER_MIN', 15);
 define('FTGR_REPSTRIKE_POWER_MAX', 25);

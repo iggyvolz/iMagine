@@ -1,4 +1,4 @@
-<?php  namespace ftgr;
+<?php  namespace iMagine;
 
 define('FTGR_METALPETAL_POWER', 20);
 define('FTGR_METALPETAL_ACCURACY', 100); // Not yet listed

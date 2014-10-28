@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 require_once realpath(__DIR__ . '/blazer.php');
 require_once realpath(__DIR__ . '/curleaf.php');

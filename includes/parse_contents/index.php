@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 function parse_contents($contents) // Returns true if invalid person.  Invalid action is checked elsewhere
 {

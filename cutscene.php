@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 session_start();
 if (!isset($_SESSION['ftgr']))

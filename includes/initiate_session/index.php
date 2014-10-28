@@ -1,6 +1,6 @@
 <?php
 
-namespace ftgr;
+namespace iMagine;
 
 $initial_session = array(
 	'me' => 'reemon',
