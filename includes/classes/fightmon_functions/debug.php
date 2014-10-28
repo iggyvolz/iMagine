@@ -10,11 +10,11 @@ trait debug
 		{
 			return array(\ftgr\_('Sorry, debug mode has been disabled by an administrator.'));
 		}
-		if (func_num_args() == 0 AND $_SESSION['ftgr']['debug'])
+		if (func_num_args() == 0 AND $_SESSION['iMagine']['debug'])
 		{
 			return $this->_debug_off();
 		}
-		if (func_num_args() == 0 AND !$_SESSION['ftgr']['debug'])
+		if (func_num_args() == 0 AND !$_SESSION['iMagine']['debug'])
 		{
 			return $this->_debug_on();
 		}
@@ -26,11 +26,11 @@ trait debug
 		{
 			return $this->_debug_off();
 		}
-		if ($_SESSION['ftgr']['debug'])
+		if ($_SESSION['iMagine']['debug'])
 		{
 			return $this->_debug_off();
 		}
-		if (!$_SESSION['ftgr']['debug'])
+		if (!$_SESSION['iMagine']['debug'])
 		{
 			return $this->_debug_on();
 		}

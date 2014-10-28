@@ -14,7 +14,7 @@ trait update_code
 		if ($args[0] === strtolower(IMAGINE_UPDATE_CODE))
 		{
 			return array(\ftgr\_('Your update code has been accepted.  Please proceed with update.'));
-			$_SESSION['ftgr']['valid_session'] = TRUE;
+			$_SESSION['iMagine']['valid_session'] = TRUE;
 		}
 		return array(\ftgr\_('Your update code has been denied.  Please ensure you typed it correctly.'));
 	}

@@ -36,9 +36,9 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$response.=_("Please be patient, we are under a major code rewrite at the moment.");
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
-			if (!empty($_SESSION['ftgr']['returns']))
+			if (!empty($_SESSION['iMagine']['returns']))
 			{
-				foreach ($_SESSION['ftgr']['returns'] as $value)
+				foreach ($_SESSION['iMagine']['returns'] as $value)
 				{
 					$response.=PHP_EOL;
 					$response.=$value;
@@ -134,9 +134,9 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);
-			if (!empty($_SESSION['ftgr']['returns']))
+			if (!empty($_SESSION['iMagine']['returns']))
 			{
-				foreach ($_SESSION['ftgr']['returns'] as $value)
+				foreach ($_SESSION['iMagine']['returns'] as $value)
 				{
 					$response.=PHP_EOL;
 					$response.=$value;
@@ -145,7 +145,7 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$globals_dump = $GLOBALS;
 			unset($globals_dump['GLOBALS']);
 			echo json_encode(array(
-				'dump' => ($_SESSION['ftgr']['debug'] || IMAGINE_DEBUG) ? $globals_dump : '',
+				'dump' => ($_SESSION['iMagine']['debug'] || IMAGINE_DEBUG) ? $globals_dump : '',
 				'cutscene' => defined('IMAGINE_SHOW_CUTSCENE'),
 				'blazer_energy' => $blazer->energy,
 				'curleaf_energy' => $curleaf->energy,

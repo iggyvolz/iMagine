@@ -4,9 +4,9 @@ namespace iMagine;
 
 require_once realpath(__DIR__ . '/fightmon.php');
 require_once realpath(__DIR__ . '/fightmon/index.php');
-if (isset($_SESSION['ftgr']['battle']))
+if (isset($_SESSION['iMagine']['battle']))
 {
-	$battle = new $_SESSION['ftgr']['battle'];
+	$battle = new $_SESSION['iMagine']['battle'];
 }
 else
 {
@@ -29,7 +29,7 @@ $reemon = new reemon;
 $reebee = new reebee;
 $skelestorm = new skelestorm;
 $strab = new strab;
-$me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : _('Reemon');
+$me = isset($_SESSION['iMagine']['me']) ? $_SESSION['iMagine']['me'] : _('Reemon');
 
 /*
  * Notes for developers:
@@ -47,9 +47,9 @@ $me = isset($_SESSION['ftgr']['me']) ? $_SESSION['ftgr']['me'] : _('Reemon');
  *
  * All input is in lowercase, regardless of original case.
  *
- * If you need $_SESSION storage, pick a shortcode under $_SESSION['ftgr'].
- * First, initialize it by calling if(!isset($_SESSION['ftgr']['myshortcode']) { (code to initialize) }
- * Then, you can read and write to $_SESSION['ftgr']['myshortcode'].
+ * If you need $_SESSION storage, pick a shortcode under $_SESSION['iMagine'].
+ * First, initialize it by calling if(!isset($_SESSION['iMagine']['myshortcode']) { (code to initialize) }
+ * Then, you can read and write to $_SESSION['iMagine']['myshortcode'].
  * Be sure you don't conflict with anyone else's short code.
  *
  * Naming conventions:

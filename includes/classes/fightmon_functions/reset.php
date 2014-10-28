@@ -8,7 +8,7 @@ trait reset
 	{
 		global $initial_session;
 		session_destroy();
-		$_SESSION['ftgr'] = $initial_session;
+		$_SESSION['iMagine'] = $initial_session;
 		define('IMAGINE_REFRESH', TRUE);
 		return array('');
 	}

@@ -27,12 +27,12 @@ $initial_session = array(
 	'version' => IMAGINE_VERSION,
 	'valid_session' => IMAGINE_ALLOW_ANY_UPDATE,
 );
-if (!isset($_SESSION['ftgr']['init']))
+if (!isset($_SESSION['iMagine']['init']))
 {
-	$_SESSION['ftgr'] = $initial_session;
+	$_SESSION['iMagine'] = $initial_session;
 }
 
-if ($_SESSION['ftgr']['version'] !== IMAGINE_VERSION)
+if ($_SESSION['iMagine']['version'] !== IMAGINE_VERSION)
 {
 	// We've updated since the user has last visited.  Reset!
 	if (IMAGINE_MODE === 'api')
@@ -47,6 +47,6 @@ if ($_SESSION['ftgr']['version'] !== IMAGINE_VERSION)
 	{
 		session_destroy();
 		session_start();
-		$_SESSION['ftgr'] = $initial_session;
+		$_SESSION['iMagine'] = $initial_session;
 	}
 }

@@ -33,19 +33,19 @@ class APITest extends PHPUnit_Framework_TestCase
 		}
 		$output = $blazer->debug(['on']);
 		$test->assertEquals($output, ['Debug mode is now on.']);
-		$test->assertTrue($_SESSION['ftgr']['debug']);
+		$test->assertTrue($_SESSION['iMagine']['debug']);
 		$output = $blazer->debug(['']);
 		$test->assertEquals($output, ['Debug mode is now off.']);
-		$test->assertFalse($_SESSION['ftgr']['debug']);
+		$test->assertFalse($_SESSION['iMagine']['debug']);
 		$output = $blazer->debug(['']);
 		$test->assertEquals($output, ['Debug mode is now on.']);
-		$test->assertTrue($_SESSION['ftgr']['debug']);
+		$test->assertTrue($_SESSION['iMagine']['debug']);
 		$output = $blazer->debug(['on']);
 		$test->assertEquals($output, ['Debug mode is now on.']);
-		$test->assertTrue($_SESSION['ftgr']['debug']);
+		$test->assertTrue($_SESSION['iMagine']['debug']);
 		$output = $blazer->debug(['']);
 		$test->assertEquals($output, ['Debug mode is now off.']);
-		$test->assertFalse($_SESSION['ftgr']['debug']);
+		$test->assertFalse($_SESSION['iMagine']['debug']);
 	}
 
 	public function testHelp()
@@ -62,7 +62,7 @@ class APITest extends PHPUnit_Framework_TestCase
 		global $blazer, $initial_session;
 		$test = new PHPUnitTest($this, "Testing reset()", __METHOD__, 3);
 		$output = $blazer->reset();
-		$test->assertEquals($_SESSION['ftgr'], $initial_session);
+		$test->assertEquals($_SESSION['iMagine'], $initial_session);
 		$test->assertEquals([''], $output);
 		$test->assertTrue(defined('IMAGINE_REFRESH'));
 	}

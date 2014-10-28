@@ -6,7 +6,7 @@ trait _cutscene
 {
 	public function _cutscene($args = NULL)
 	{
-		$_SESSION['ftgr']['cutscene'] = $args[0];
+		$_SESSION['iMagine']['cutscene'] = $args[0];
 		@define('IMAGINE_SHOW_CUTSCENE', TRUE);
 	}
 }

@@ -16,21 +16,21 @@ if (!isset($_POST['contents']))
 }
 $_POST['contents'] = htmlspecialchars($_POST['contents']); // Sanitize input
 $contents = strtolower($_POST['contents']);
-$_SESSION['ftgr']['returns'][] = '>' . $contents;
+$_SESSION['iMagine']['returns'][] = '>' . $contents;
 if (parse_contents($contents)) // Set $action, $person, $pars
 {
-	$_SESSION['ftgr']['returns'][] = 'Who is ' . $person . '???';
+	$_SESSION['iMagine']['returns'][] = 'Who is ' . $person . '???';
 	goto end;
 }
 if (!is_callable(array($$person, $action)) OR $action[0] === '_')
 {
-	$_SESSION['ftgr']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
+	$_SESSION['iMagine']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
 	goto end;
 }
 $returned = call_user_func(array($$person, $action), $pars);
 foreach ($returned as $value)
 {
-	$_SESSION['ftgr']['returns'][] = $value;
+	$_SESSION['iMagine']['returns'][] = $value;
 }
 if (!is_null($battle))
 {
@@ -47,7 +47,7 @@ if (!is_null($battle))
 		$returned = call_user_func(array($battle->opponents [$i], $battle->pick_move($i)), array($valid_fightmon[rand(0, count($valid_fightmon) - 1)]));
 		foreach ($returned as $value)
 		{
-			$_SESSION['ftgr']['returns'][] = $value;
+			$_SESSION['iMagine']['returns'][] = $value;
 		}
 	}
 }

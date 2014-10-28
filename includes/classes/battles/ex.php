@@ -8,7 +8,7 @@ class example extends battle
 
 	public function __construct()
 	{
-		$_SESSION['ftgr']['battle'] = get_class();
+		$_SESSION['iMagine']['battle'] = get_class();
 		array_push($this->opponents, new feniixis, new feniixis, new feniixis);
 		parent::__construct();
 	}

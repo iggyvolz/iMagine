@@ -6,6 +6,6 @@ trait __destruct
 {
 	public function __destruct()
 	{
-		$_SESSION['ftgr'][explode('\\', get_class($this))[1] . 'energy'] = $this->energy;
+		$_SESSION['iMagine'][explode('\\', get_class($this))[1] . 'energy'] = $this->energy;
 	}
 }
