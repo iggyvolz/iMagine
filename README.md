@@ -1,2 +1,1 @@
-[![Build Status](https://drone.io/github.com/iggyvolz/Fightmon-the-Game--Reemon/status.png)](https://drone.io/github.com/iggyvolz/Fightmon-the-Game--Reemon/latest)
-Please see includes/help for full documentation.
+Under a partial rewrite from Fightmon the Game: Reemon to iMagine implimented in PHP.
