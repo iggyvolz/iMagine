@@ -13,6 +13,7 @@ class Person
 	use \iMagine_functions\_register;
 	use \iMagine_functions\_update_recursive_scandir;
 	use \iMagine_functions\_update_remove_folder;
+	use \iMagine_functions\auth_code;
 	use \iMagine_functions\changeto;
 	use \iMagine_functions\cutscene;
 	use \iMagine_functions\debug;
@@ -20,6 +21,7 @@ class Person
 	use \iMagine_functions\mock_battle;
 	use \iMagine_functions\reset;
 	use \iMagine_functions\reset_battle;
-	use \iMagine_functions\update_code;
+	use \iMagine_functions\test;
+	use \iMagine_functions\update;
 	use \iMagine_functions\version;
 }
