@@ -2,9 +2,9 @@
 
 namespace iMagine_functions;
 
-trait update
+trait test
 {
-	public function update($args = NULL)
+	public function test($args = NULL)
 	{
 		if (!$_SESSION['iMagine']['valid_session'])
 		{
