@@ -6,10 +6,10 @@ trait update
 {
 	public function update($args = NULL)
 	{
-		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
+		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to the iMagine move."));
 		if (!$_SESSION['iMagine']['valid_session'])
 		{
-			return array(\iMagine\_('You cannot update.  Please enter the update code with update_code()'));
+			return array(\iMagine\_('You cannot update.  Please enter the update code with auth_code()'));
 		}
 		if ($args === 'NULL')
 		{
