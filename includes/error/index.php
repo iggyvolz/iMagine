@@ -27,7 +27,7 @@ if (defined('IMAGINE_MODE') && IMAGINE_MODE === 'api') // Only set error handler
 				return 'Parse error';
 				break;
 			case E_NOTICE:
-				return 'Notics';
+				return 'Notice';
 				break;
 			case E_CORE_ERROR:
 				return 'Fatal core error';
