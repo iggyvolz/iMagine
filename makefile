@@ -4,4 +4,4 @@ minifycss:
 minifyjs:
 	@yuicompressor js/init.js -o js/init.min.js
 test:
-	@phpunit tests
+	@php test.php
