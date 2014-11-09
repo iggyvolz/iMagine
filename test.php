@@ -18,6 +18,8 @@ $failures=0;
 foreach($tests as $test)
 {
 	list($description,$code,$result,$state)=[$test->description,$test->code,$test->result,$test->state];
+	$replacements=["_v_"=>"development"];
+	$result=str_replace(array_keys($replacements),array_values($replacements),$result);
 	$testNum++;
 	printf('TEST %d/%d - %s... ', $testNum, TOTAL_TESTS, $description);
 	$output=req($code);
@@ -35,7 +37,7 @@ foreach($tests as $test)
 }
 switch($failures):
 	case 0:
-		printf("There were no failures.  Enjoy iMagine!");
+		printf("There were no failures.  Enjoy iMagine!\n");
 		break;
 	case 1:
 		trigger_error("There was 1 failure.",E_USER_ERROR);

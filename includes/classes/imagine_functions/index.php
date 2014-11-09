@@ -14,6 +14,7 @@ require realpath(__DIR__.'/changeto.php');
 require realpath(__DIR__.'/cutscene.php');
 require realpath(__DIR__.'/debug.php');
 require realpath(__DIR__.'/help.php');
+require realpath(__DIR__.'/magine.php');
 require realpath(__DIR__.'/mock_battle.php');
 require realpath(__DIR__.'/reset.php');
 require realpath(__DIR__.'/reset_battle.php');

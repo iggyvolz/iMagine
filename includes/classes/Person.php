@@ -18,6 +18,7 @@ class Person
 	use \iMagine_functions\cutscene;
 	use \iMagine_functions\debug;
 	use \iMagine_functions\help;
+	use \iMagine_functions\magine;
 	use \iMagine_functions\mock_battle;
 	use \iMagine_functions\reset;
 	use \iMagine_functions\reset_battle;

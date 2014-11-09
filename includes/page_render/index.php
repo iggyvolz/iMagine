@@ -20,8 +20,6 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$page = file_get_contents(__DIR__ . '/page.html');
 			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
 			$response.=PHP_EOL;
-			$response.=_("Please be patient, we are under a major code rewrite at the moment.");
-			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
 			if (!empty($_SESSION['iMagine']['returns']))
@@ -67,8 +65,6 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 				return;
 			}
 			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
-			$response.=PHP_EOL;
-			$response.=_("Please be patient, we are under a major code rewrite at the moment.");
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);

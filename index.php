@@ -26,7 +26,7 @@ if (!is_callable(array($$person, $action)) OR $action[0] === '_')
 	$_SESSION['iMagine']['returns'][] = ucfirst($person) . ': How do I "' . $action . '"?';
 	goto end;
 }
-$returned = call_user_func(array($$person, $action), $pars);
+$returned = call_user_func(array($$person, $action), $person, ...$pars);
 foreach ($returned as $value)
 {
 	$_SESSION['iMagine']['returns'][] = $value;

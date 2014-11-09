@@ -5,10 +5,8 @@ namespace iMagine_functions;
 trait version
 {
 
-	public function version($args = NULL)
+	public function version($location=NULL,...$excess)
 	{
-		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
-		$location = $args[0];
 		if ($location === NULL || $location == 'local')
 		{
 			return array(sprintf(\iMagine\_('Current version is %s.'), IMAGINE_VERSION));
@@ -16,11 +14,11 @@ trait version
 		$opts = array(
 			'http' => array(
 				'method' => "GET",
-				'header' => "User-Agent: Fightmon-The-Game-Reemon-" . IMAGINE_VERSION
+				'header' => "User-Agent: iMagine-PHP-version-" . IMAGINE_VERSION
 			)
 		);
 		$context = stream_context_create($opts);
-		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/Fightmon-the-Game--Reemon/releases', false, $context), TRUE);
+		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/iMagine-PHP/releases', false, $context), TRUE);
 		$latest_of_version = "0.0.0";
 		foreach ($version as $value)
 		{

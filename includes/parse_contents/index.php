@@ -45,7 +45,7 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	$action = explode('(', $actionWithPars)[0];
 	if (strpos($contents, '(') === false)
 	{
-		$pars = null;
+		$pars = [];
 	}
 	else
 	{
