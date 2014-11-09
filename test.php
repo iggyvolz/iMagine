@@ -38,9 +38,9 @@ switch($failures):
 		printf("There were no failures.  Enjoy iMagine!");
 		break;
 	case 1:
-		trigger_error("There was 1 failure.",E_USER_WARNING);
+		trigger_error("There was 1 failure.",E_USER_ERROR);
 		break;
 	case 2:
-		trigger_error("There were $failures failures.",E_USER_WARNING);
+		trigger_error("There were $failures failures.",E_USER_ERROR);
 		break;
 endswitch;
