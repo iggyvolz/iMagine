@@ -18,7 +18,7 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$edyn,
 			$strag;
 			$page = file_get_contents(__DIR__ . '/page.html');
-			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
+			$response = sprintf(_("Welcome to iMagine %s!"), IMAGINE_VERSION);
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
@@ -64,7 +64,7 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 				echo json_encode('help');
 				return;
 			}
-			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
+			$response = sprintf(_("Welcome to iMagine %s!"), IMAGINE_VERSION);
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);
