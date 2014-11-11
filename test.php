@@ -18,7 +18,7 @@ $failures=0;
 foreach($tests as $test)
 {
 	list($description,$code,$result,$state)=[$test->description,$test->code,$test->result,$test->state];
-	$replacements=["_v_"=>explode("-",`git describe --tags`)[0],"_c_"=>`git log -1 --pretty=%H|tr -d '\n'`,"_m_"=>`git log -1 --pretty=%B|tr -d '\n'`,"_nc_"=>explode("-",`git describe --tags`)[1]];
+	$replacements=["_v_"=>explode("-",`git describe --tags|tr -d '\n'`)[0],"_c_"=>`git log -1 --pretty=%H|tr -d '\n'`,"_m_"=>`git log -1 --pretty=%B|tr -d '\n'`,"_nc_"=>((strpos("-",`git describe --tags|tr -d '\n'`)!==FALSE)?(explode("-",`git describe --tags|tr -d '\n'`)[1]):NULL)];
 	$testNum++;
 	printf('TEST %d/%d - %s... ', $testNum, TOTAL_TESTS, $description);
 	$pass=false;
