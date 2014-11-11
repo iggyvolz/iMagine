@@ -18,20 +18,34 @@ $failures=0;
 foreach($tests as $test)
 {
 	list($description,$code,$result,$state)=[$test->description,$test->code,$test->result,$test->state];
-	$replacements=["_v_"=>"development"];
-	$result=str_replace(array_keys($replacements),array_values($replacements),$result);
+	$replacements=["_v_"=>explode("-",`git describe --tags`)[0],"_c_"=>`git log -1 --pretty=%H|tr -d '\n'`,"_m_"=>`git log -1 --pretty=%B|tr -d '\n'`,"_nc_"=>explode("-",`git describe --tags`)[1]];
 	$testNum++;
 	printf('TEST %d/%d - %s... ', $testNum, TOTAL_TESTS, $description);
-	$output=req($code);
-	$pass=$output->response==$result;
+	$pass=false;
+	foreach((array)$result as $xresult)
+	{
+		$xresult=str_replace(array_keys($replacements),array_values($replacements),$xresult);
+		$output=req($code);
+		$pass=(($output->response==$xresult)||$pass);
+	}
 	printf($pass?"PASS".PHP_EOL:"FAIL".PHP_EOL);
 	if(!$pass)
 	{
 		$failures++;
 		printf(">Failed asserting that:".PHP_EOL.">> ");
 		printf(str_replace(PHP_EOL,PHP_EOL.">> ",$output->response));
-		printf(PHP_EOL.">equals ".PHP_EOL.">> ");
-		printf(str_replace(PHP_EOL,PHP_EOL.">> ",$result));
+		printf(PHP_EOL.(count((array)$result)>1?">matches any of:":"equals:").PHP_EOL.">> ");
+		$i=0;
+		foreach((array)$result as $xresult)
+		{
+			$xresult=str_replace(array_keys($replacements),array_values($replacements),$xresult);
+			$i++;
+			printf(str_replace(PHP_EOL,PHP_EOL.">> ",$xresult));
+			if(count((array)$result)!==$i)
+			{
+				printf(PHP_EOL.">or:".PHP_EOL.">> ");
+			}
+		}
 		printf(PHP_EOL);
 	}
 }
