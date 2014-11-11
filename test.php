@@ -12,7 +12,7 @@ function req($contents)
 printf("Downloading test suite... ");
 $tests=json_decode(file_get_contents("https://raw.githubusercontent.com/iggyvolz/iMagine-Tests/master/tests.json"));
 printf("Done.".PHP_EOL);
-define("TOTAL_TESTS",count($tests));
+define("TOTAL_TESTS",count((array)$tests));
 $testNum=0;
 $failures=0;
 foreach($tests as $test)
