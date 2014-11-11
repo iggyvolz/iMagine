@@ -5,46 +5,23 @@ namespace iMagine_functions;
 trait version
 {
 
-	public function version($location=NULL,...$excess)
+	public function version($person=NULL,...$excess)
 	{
-		if ($location === NULL || $location == 'local')
+		if(!is_dir(__DIR__."/../../../.git"))
 		{
-			return array(sprintf(\iMagine\_('Current version is %s.'), IMAGINE_VERSION));
+			return array(sprintf(\iMagine\_("On version %s."),IMAGINE_VERSION));
 		}
-		$opts = array(
-			'http' => array(
-				'method' => "GET",
-				'header' => "User-Agent: iMagine-PHP-version-" . IMAGINE_VERSION
-			)
-		);
-		$context = stream_context_create($opts);
-		$version = json_decode(file_get_contents('https://api.github.com/repos/iggyvolz/iMagine-PHP/releases', false, $context), TRUE);
-		$latest_of_version = "0.0.0";
-		foreach ($version as $value)
+		if(`git 2>&1|grep "command not found"`!==NULL)
 		{
-			if (version_compare($latest_of_version, $value["tag_name"], '<'))
-			{
-				if ($location === 'any' OR $location === 'server' OR $location === 'remote')
-				{
-					$latest_of_version = $value["tag_name"];
-					continue;
-				}
-				if ($location === 'stable')
-				{
-					if ((strpos($value["tag_name"], 'alpha') === FALSE) AND ( strpos($value["tag_name"], 'beta') === FALSE) AND ( strpos($value["tag_name"], 'dev') === FALSE))
-					{
-						$latest_of_version = $value["tag_name"];
-						continue;
-					}
-				}
-				if ((strpos($value["tag_name"], $location) !== FALSE) AND in_array($location, array('alpha', 'beta', 'dev')))
-				{
-					$latest_of_version = $value["tag_name"];
-					continue;
-				}
-			}
+			return array(sprintf(\iMagine\_("On version %s."),IMAGINE_VERSION));
 		}
-		return array($latest_of_version);
+		$describe=`git describe --tags|tr -d '\n'`;
+		if(strpos($describe,"-")===FALSE)
+		{
+			return array(sprintf(\iMagine\_("On version %s."),$describe));
+		}
+		//list($version,$plusminus)=explode("-",$describe);
+		//return [Texts.AHEAD_OF.replace("%1",version).replace("%2",plusminus),Texts.LAST_COMMIT.replace("%1",iMagineVersion.COMMIT_HASH).replace("%2",iMagineVersion.COMMIT_MSG)];
+		return [sprintf(\iMagine\_("Ahead of %s by %u commits."),...explode("-",$describe)),sprintf(\iMagine\_("Last commit: %s, message \"%s\""),`git log -1 --pretty=%H|tr -d '\n'`,`git log -1 --pretty=%B|tr -d '\n'`)];
 	}
-
 }
