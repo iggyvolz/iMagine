@@ -17,7 +17,7 @@ $fightmon = array('tony','edyn','strag');
 $reebee = new tony;
 $skelestorm = new edyn;
 $strab = new strag;
-$me = isset($_SESSION['iMagine']['me']) ? $_SESSION['iMagine']['me'] : _('Reemon');
+$me = isset($_SESSION['iMagine']['me']) ? $_SESSION['iMagine']['me'] : _('Tony');
 
 /*
  * Notes for developers:
