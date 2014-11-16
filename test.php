@@ -1,7 +1,7 @@
 <?php
 define("IN_IMAGINE",true);
 define("ALPHABET","ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-define("IMAGINE_API_URL","http://imagine-php.local/api.php");
+define("IMAGINE_API_URL",$argv[1]);
 define("IMAGINE_ACCESS","TEST");
 printf("Checking environment... ");
 require "envtest.php";
