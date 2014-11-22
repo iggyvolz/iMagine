@@ -1,5 +1,5 @@
 <?php
-require __DIR__."config.php";
+require __DIR__."/config.php";
 define("IN_IMAGINE",true);
 define("ALPHABET","ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 define("IMAGINE_ACCESS","TEST");
