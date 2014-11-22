@@ -1,7 +1,7 @@
 <?php
+require __DIR__."config.php";
 define("IN_IMAGINE",true);
 define("ALPHABET","ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-define("IMAGINE_API_URL",$argv[1]);
 define("IMAGINE_ACCESS","TEST");
 if(!defined("IMAGINE_MODE"))
 {
