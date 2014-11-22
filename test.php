@@ -8,6 +8,7 @@ if(!defined("IMAGINE_MODE"))
 	define("IMAGINE_MODE","test");
 	echo "<pre>";
 	register_shutdown_function(function(){echo "</pre>";});
+}
 printf("Checking environment... ");
 require "envtest.php";
 function req($contents)
