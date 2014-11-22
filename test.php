@@ -6,8 +6,11 @@ define("IMAGINE_ACCESS","TEST");
 if(!defined("IMAGINE_MODE"))
 {
 	define("IMAGINE_MODE","test");
-	echo "<pre>";
-	register_shutdown_function(function(){echo "</pre>";});
+	if($_GET["pre"]!==false)
+	{
+		echo "<pre>";
+		register_shutdown_function(function(){echo "</pre>";});
+	}
 }
 printf("Checking environment... ");
 require "envtest.php";

@@ -6,6 +6,6 @@ trait test
 {
 	public function test($args = NULL)
 	{
-		return explode("\n",`make test`);
+		return file_get_contents(str_replace("api","test",IMAGINE_API_URL)."?pre=false");
 	}
 }
