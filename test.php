@@ -3,6 +3,11 @@ define("IN_IMAGINE",true);
 define("ALPHABET","ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 define("IMAGINE_API_URL",$argv[1]);
 define("IMAGINE_ACCESS","TEST");
+if(!defined("IMAGINE_MODE"))
+{
+	define("IMAGINE_MODE","test");
+	echo "<pre>";
+	register_shutdown_function(function(){echo "</pre>";});
 printf("Checking environment... ");
 require "envtest.php";
 function req($contents)
