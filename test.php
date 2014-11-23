@@ -6,7 +6,7 @@ define("IMAGINE_ACCESS","TEST");
 if(!defined("IMAGINE_MODE"))
 {
 	define("IMAGINE_MODE","test");
-	if($_GET["pre"]!==false)
+	if(!isset($_GET["pre"])&&!isset($argv))
 	{
 		echo "<pre>";
 		register_shutdown_function(function(){echo "</pre>";});
