@@ -21,22 +21,9 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	{
 		$person = explode('.', $contents)[0];
 		if (!in_array($person, array(
-					strtolower(_("Blazer")),
-					strtolower(_("Curleaf")),
-					strtolower(_("Dragiri")),
-					strtolower(_("Feniixis")),
-					strtolower(_("FireeBee")),
-					strtolower(_("Flike")),
-					strtolower(_("GhostSlicer")),
-					strtolower(_("Hartvile")),
-					strtolower(_("Krabulous")),
-					strtolower(_("Nightwing")),
-					strtolower(_("Plantsy")),
-					strtolower(_("Pluff")),
-					strtolower(_("ReeBee")),
-					strtolower(_("Reemon")),
-					strtolower(_("Skelestorm")),
-					strtolower(_("Strab")),
+					strtolower(_("Tony")),
+					strtolower(_("Edyn")),
+					strtolower(_("Strag"))
 				))) // Prevent access of unwanted variables
 		{
 			return true;

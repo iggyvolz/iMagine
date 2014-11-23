@@ -18,7 +18,8 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$edyn,
 			$strag;
 			$page = file_get_contents(__DIR__ . '/page.html');
-			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
+			$DIR=__DIR__;
+			$response = sprintf(_("Welcome to iMagine %s!"), ((is_dir(__DIR__."/../../.git")&&`git 2>&1|grep "command not found"`===NULL)?(explode("-",`cd $DIR;git describe --tags|tr -d '\n'`)[0]):(IMAGINE_VERSION)));
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
@@ -64,7 +65,8 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 				echo json_encode('help');
 				return;
 			}
-			$response = sprintf(_("Welcome to iMagine v%s!"), IMAGINE_VERSION);
+			$DIR=__DIR__;
+			$response = sprintf(_("Welcome to iMagine %s!"), ((is_dir(__DIR__."/../../.git")&&`git 2>&1|grep "command not found"`===NULL)?(explode("-",`cd $DIR;git describe --tags|tr -d '\n'`)[0]):(IMAGINE_VERSION)));
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);

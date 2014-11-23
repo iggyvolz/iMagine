@@ -1,5 +1,5 @@
 <?php
-define("REQUIRED_VERSION","5.4");
+define("REQUIRED_VERSION","5.6");
 if(!defined("IMAGINE_ACCESS"))
 {
 	define("IMAGINE_ACCESS","RAW");

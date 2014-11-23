@@ -5,6 +5,7 @@ namespace iMagine;
 define("IN_IMAGINE",true);
 define("IMAGINE_ACCESS","GAME");
 require "envtest.php";
+require "config.php";
 error_reporting(E_ALL);
 ini_set("display_errors",1);
 @session_start(); // Don't return an error if session already started
