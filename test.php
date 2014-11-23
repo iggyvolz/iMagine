@@ -12,6 +12,10 @@ if(!defined("IMAGINE_MODE"))
 		register_shutdown_function(function(){echo "</pre>";});
 	}
 }
+if(!defined("IMAGINE_API_URL"))
+{
+	define("IMAGINE_API_URL",$argv[1]);
+}
 printf("Checking environment... ");
 require "envtest.php";
 function req($contents)
