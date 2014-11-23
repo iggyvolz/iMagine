@@ -23,6 +23,6 @@ trait version
 		}
 		//list($version,$plusminus)=explode("-",$describe);
 		//return [Texts.AHEAD_OF.replace("%1",version).replace("%2",plusminus),Texts.LAST_COMMIT.replace("%1",iMagineVersion.COMMIT_HASH).replace("%2",iMagineVersion.COMMIT_MSG)];
-		return [sprintf(\iMagine\_("Ahead of %s by %u commits."),...explode("-",$describe)),sprintf(\iMagine\_("Last commit: %s, message \"%s\""),`git log -1 --pretty=%H|tr -d '\n'`,`git log -1 --pretty=%B|tr -d '\n'`)];
+		return [sprintf(\iMagine\_("Ahead of %s by %u commits."),...explode("-",$describe)),sprintf(\iMagine\_("Last commit: %s, message \"%s\""),`cd "$DIR";git log -1 --pretty=%H|tr -d '\n'`,`cd "$DIR";git log -1 --pretty=%B|tr -d '\n'`)];
 	}
 }
