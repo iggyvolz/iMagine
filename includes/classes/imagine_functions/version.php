@@ -15,7 +15,8 @@ trait version
 		{
 			return array(sprintf(\iMagine\_("On version %s."),IMAGINE_VERSION));
 		}
-		$describe=`git describe --tags|tr -d '\n'`;
+		$DIR=__DIR__;
+		$describe=`cd "$DIR";git describe --tags|tr -d '\n'`;
 		if(strpos($describe,"-")===FALSE)
 		{
 			return array(sprintf(\iMagine\_("On version %s."),$describe));
