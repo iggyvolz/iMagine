@@ -19,7 +19,7 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$strag;
 			$page = file_get_contents(__DIR__ . '/page.html');
 			$DIR=__DIR__;
-			$response = sprintf(_("Welcome to iMagine %s!"), ((is_dir(__DIR__."/../../.git")&&`git 2>&1|grep "command not found"`===NULL)?(explode("-",`cd $DIR;git describe --tags|tr -d '\n'`)[0]):(IMAGINE_VERSION)));
+			$response = sprintf(_("Welcome to iMagine %s!"), explode("-",`cd $DIR;git describe --tags|tr -d '\n'`)[0]);
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
