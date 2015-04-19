@@ -39,8 +39,6 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 				'<!-- STARTING_ENERGY_TONY -->' => IMAGINE_TONY_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_EDYN -->' => IMAGINE_EDYN_STARTING_ENERGY,
 				'<!-- STARTING_ENERGY_STRAG -->' => IMAGINE_STRAG_STARTING_ENERGY,
-				'<!-- JQUERY_1X_VERSION -->' => IMAGINE_JQUERY_1X_VERSION,
-				'<!-- JQUERY_2X_VERSION -->' => IMAGINE_JQUERY_2X_VERSION,
 				'<!-- NAME_TONY -->' => _("Tony"),
 				'<!-- NAME_EDYN -->' => _("Edyn"),
 				'<!-- NAME_STRAG -->' => _("Strag"),
