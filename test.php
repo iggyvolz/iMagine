@@ -70,7 +70,7 @@ switch($failures):
 	case 1:
 		trigger_error("There was 1 failure.",E_USER_ERROR);
 		break;
-	case 2:
+	default:
 		trigger_error("There were $failures failures.",E_USER_ERROR);
 		break;
 endswitch;
