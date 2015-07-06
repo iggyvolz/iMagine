@@ -36,6 +36,9 @@ function reload()
         $('#tony_energy').val(data.tony_energy);
         $('#edyn_energy').val(data.edyn_energy);
         $('#strag_energy').val(data.strag_energy);
+        $('#tony_energy_disp').html(data.tony_energy);
+        $('#edyn_energy_disp').html(data.edyn_energy);
+        $('#strag_energy_disp').html(data.strag_energy);
 	console.log(data.dump);
         $('#errors').html(data.errors);
     }, "json").fail(function(data) {
@@ -48,7 +51,7 @@ $(document).click(function(){
     $('#flashobject').css('display','none');
     $('#overlay').css('display','none');
 })
-function ftgr(command)
+function iMagine(command)
 {
     $('#contents').val(command);
     reload();
