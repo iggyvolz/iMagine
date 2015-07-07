@@ -14,7 +14,6 @@ class Person
 	use \iMagine_functions\changeto;
 	use \iMagine_functions\cutscene;
 	use \iMagine_functions\debug;
-	use \iMagine_functions\help;
 	use \iMagine_functions\magine;
 	use \iMagine_functions\test;
 	use \iMagine_functions\update;

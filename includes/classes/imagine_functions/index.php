@@ -10,7 +10,6 @@ require 'includes/classes/imagine_functions/auth_code.php';
 require 'includes/classes/imagine_functions/changeto.php';
 require 'includes/classes/imagine_functions/cutscene.php';
 require 'includes/classes/imagine_functions/debug.php';
-require 'includes/classes/imagine_functions/help.php';
 require 'includes/classes/imagine_functions/magine.php';
 require 'includes/classes/imagine_functions/test.php';
 require 'includes/classes/imagine_functions/update.php';
