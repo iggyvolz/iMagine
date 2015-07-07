@@ -14,13 +14,13 @@ if (parse_contents($contents)) // Set $action, $person, $pars
 	$iMagine->returns[] = 'Who is ' . $person . '???';
 	goto end;
 }
-if (!is_callable(array($$person, $action)) OR $action[0] === '_')
+if (!is_callable(array($iMagine->people[$person], $action)) OR $action[0] === '_')
 {
 	$iMagine->returns[] = ucfirst($person) . ': How do I "' . $action . '"?';
 }
 else
 {
-	$returned = call_user_func(array($$person, $action), $person, ...$pars);
+	$returned = call_user_func(array($iMagine->people[$person], $action), ...$pars);
 	foreach ($returned as $value)
 	{
 		$iMagine->returns[] = $value;
