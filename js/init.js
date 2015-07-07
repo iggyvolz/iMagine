@@ -1,14 +1,13 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
-    uid=Math.floor(Math.random()*100000);
+    uid = Math.floor(Math.random() * 100000);
 };
 
 function reload() {
-    cssbackground = 0;
+    if ($('#contents').val() === "help") {
+        window.location.replace("help.html");
+    }
     $.get('http://i.magine.tk/head.php', "command=" + $('#contents').val() + "&uid=" + uid, function(data) {
-        if (data === 'help') {
-            window.location.replace("help.php");
-        }
         $('#contents').val("");
         $('#results').val(data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
@@ -25,9 +24,4 @@ function reload() {
         $('#errors').html(data.responseText);
         $('#contents').val("");
     });
-}
-
-function iMagine(command) {
-    $('#contents').val(command);
-    reload();
 }
