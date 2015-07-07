@@ -4,7 +4,7 @@ namespace people_functions;
 
 trait debug
 {
-	public function debug($arg=null...$excess)
+	public function debug($arg=null,...$excess)
 	{
 		global $iMagine;
 		if (!IMAGINE_DEBUG)
