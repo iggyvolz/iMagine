@@ -7,8 +7,7 @@ trait magine
 	public function magine($person=NULL,$dreamcreature=NULL,...$excess)
 	{
 		global $iMagine;
-		$personenergy=$person."energy";
-		$iMagine->$personenergy-=100;
+		$iMagine->people[$person]->energy-=100;
 		return [sprintf(\_("%s: With this animite, I magine %s!"),ucfirst($person),ucfirst($dreamcreature)),ucfirst($dreamcreature).": ".["furok"=>_("Let the fur fly!")][$dreamcreature]];
 	}
 }

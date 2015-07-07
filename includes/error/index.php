@@ -4,12 +4,11 @@ namespace iMagine;
 
 if (defined('IMAGINE_MODE') && IMAGINE_MODE === 'api') // Only set error handler if we are in API mode
 {
-	$errors = array();
 
 	function error_handler($errno, $errstr, $errfile, $errline)
 	{
-		global $errors;
-		$errors[] = '<b>' . name_to_error($errno) . '</b>:  ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b><br />';
+		global $iMagine;
+		$iMagine->errors[] = '<b>' . name_to_error($errno) . '</b>:  ' . $errstr . ' in <b>' . $errfile . '</b> on line <b>' . $errline . '</b><br />';
 		return TRUE;
 	}
 

@@ -8,6 +8,7 @@ class iMagine
 {
 	public $me="tony";
 	public $debug=false;
+	public $errors=[];
 	public $init=true;
 	public $returns=[];
 	public $cutscene=null;
@@ -16,7 +17,7 @@ class iMagine
 	public $valid_session=IMAGINE_ALLOW_ANY_UPDATE;
 	public function __construct()
 	{
-		$people=[new Tony,new Edyn,new Strag];
+		$this->people=["tony"=>new Tony,"edyn"=>new Edyn,"strag"=>new Strag];
 	}
 }
 
