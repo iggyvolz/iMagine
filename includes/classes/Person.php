@@ -8,7 +8,6 @@ class Person
 	use \iMagine_functions\_debug_off;
 	use \iMagine_functions\_debug_on;
 	use \iMagine_functions\_move;
-	use \iMagine_functions\_register;
 	use \iMagine_functions\_update_recursive_scandir;
 	use \iMagine_functions\_update_remove_folder;
 	use \iMagine_functions\auth_code;
