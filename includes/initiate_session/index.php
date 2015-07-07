@@ -22,18 +22,9 @@ if (!isset($_SESSION['iMagine']['init']))
 if ($_SESSION['iMagine']['version'] !== IMAGINE_VERSION)
 {
 	// We've updated since the user has last visited.  Reset!
-	if (IMAGINE_MODE === 'api')
+	if (!defined('IMAGINE_NO_OUTPUT'))
 	{
-		if (!defined('IMAGINE_NO_OUTPUT'))
-		{
-			echo 'refresh';
-		}
-		define('IMAGINE_DIE', true);
+		echo 'refresh';
 	}
-	else
-	{
-		session_destroy();
-		session_start();
-		$_SESSION['iMagine'] = $initial_session;
-	}
+	define('IMAGINE_DIE', true);
 }

@@ -9,12 +9,8 @@ require "config.php";
 error_reporting(E_ALL);
 ini_set("display_errors",1);
 require_once realpath(__DIR__ . '/includes/index.php');
-if (!isset($_POST['contents']))
-{
-	goto end;
-}
-$_POST['contents'] = htmlspecialchars($_POST['contents']); // Sanitize input
-$contents = strtolower($_POST['contents']);
+$iMagine=unserialize(file_get_contents($argv[1]));
+$contents=$argv[2];
 $iMagine->returns[] = '>' . $contents;
 if (parse_contents($contents)) // Set $action, $person, $pars
 {
@@ -51,3 +47,4 @@ foreach ($returned as $value)
 	}
 }*/
 end:
+file_put_contents($argv[1],serialize($iMagine));
