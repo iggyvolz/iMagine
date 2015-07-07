@@ -15,7 +15,7 @@ trait auth_code
 		if ($args[0] === strtolower(IMAGINE_UPDATE_CODE))
 		{
 			return array(\iMagine\_('Your authorization code has been accepted.  You may proceed.'));
-			$iMagine->valid_session=TRUE:
+			$iMagine->valid_session=TRUE;
 		}
 		return array(\iMagine\_('Your authorization code has been denied.  Please ensure you typed it correctly.'));
 	}
