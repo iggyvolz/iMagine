@@ -1,6 +1,6 @@
 <?php
 
-namespace iMagine_functions;
+namespace people_functions;
 
 trait auth_code
 {

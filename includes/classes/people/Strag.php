@@ -7,5 +7,6 @@ class Strag extends Person
 	public function __construct()
 	{
 		$this->energy=IMAGINE_STRAG_STARTING_ENERGY;
+		$this->dreamcreatures=[new Freep()];
 	}
 }
