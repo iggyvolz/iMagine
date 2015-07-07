@@ -9,11 +9,11 @@ trait magine
 		global $iMagine;
 		if(!isset($this->dreamcreatures[$dreamcreature]))
 		{
-			return [sprintf(\iMagine\_("%s: Who is %s?"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature)];
+			return [sprintf(\iMagine\_("%s: Who is %s?"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature))];
 		}
 		if(!$this->dreamcreatures[$dreamcreature]->indreamplane)
 		{
-			return [sprintf(\iMagine\_("%s: %s is already in battle!"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature)];
+			return [sprintf(\iMagine\_("%s: %s is already in battle!"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature))];
 		}
 		$this->dreamcreatures[$dreamcreature]->indreamplane=false;
 		$this->energy-=100;
