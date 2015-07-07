@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>iMagine</title>
+
+        <!-- dependencies -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- initialize -->
+    <script src="js/init.min.js"></script>
+
+    <link rel="stylesheet" href="css/init.min.css" />
+</head>
+<body>
+
+    <p id="errors"></p>
+
+    <form onsubmit="reload();
+			return false">
+		<p><input type="text" id="contents" autofocus autocomplete="off" /><input type="submit" id="submit" /></p>
+    </form>
+
+    <p><textarea id="results" readonly rows="4" cols="60"></textarea></p>
+
+
+    <aside style="float:left;">
+		<p style="text-align:center;">Tony</p>
+		<p style="text-align:center;" id="tony_energy_disp">1000</p>
+		<input type="range" min="0" max="1000" id="tony_energy" disabled value="1000">
+    </aside>
+
+
+    <aside style="float:left;">
+		<p style="text-align:center;">Edyn</p>
+		<p style="text-align:center;" id="edyn_energy_disp">1000</p>
+		<input type="range" min="0" max="1000" id="edyn_energy" disabled value="1000">
+    </aside>
+
+    <aside style="float:left;">
+		<p style="text-align:center;">Strag</p>
+		<p style="text-align:center;" id="strag_energy_disp">1000</p>
+		<input type="range" min="0" max="1000" id="strag_energy" disabled value="1000">
+    </aside>
+
+</body>
+</html>
