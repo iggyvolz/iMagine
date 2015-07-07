@@ -7,7 +7,7 @@ if (function_exists("textdomain")) // Run only if gettext is enabled
 	putenv('LC_ALL=' . IMAGINE_LANG);
 	setlocale(LC_ALL, IMAGINE_LANG);
 
-	bindtextdomain("iMagine_" . IMAGINE_VERSION, __DIR__);
+	bindtextdomain("iMagine_" . IMAGINE_VERSION, __DIR__."/translation-files");
 
 	textdomain("iMagine_" . IMAGINE_VERSION);
 

@@ -1,4 +1,2 @@
-/vendor/
-composer.lock
-js/init.min.js
-css/init.min.css
+session
+iMagine.phar

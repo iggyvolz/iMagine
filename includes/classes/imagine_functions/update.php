@@ -24,7 +24,7 @@ trait update
 		{
 			return array(\iMagine\_('Either you are not connected to wi-fi, the Fightmon site is down, or you specified an incorrect version.'));
 		}
-		file_put_contents(realpath(__DIR__ . '/ftgr.zip'), $contents);
+		file_put_contents('/ftgr.zip', $contents);
 		$zip = new ZipArchive;
 		$res = $zip->open(__DIR__ . realpath('/ftgr.zip'));
 		if ($res === TRUE)
@@ -36,15 +36,15 @@ trait update
 		{
 			return array(IMAGINE_UNZIP_FAIL . $res);
 		}
-		$folder = realpath(__DIR__ . '/ftgr/') . scandir(realpath(__DIR__ . '/ftgr'))[2];
+		$folder = '/ftgr/' . scandir('/ftgr')[2];
 		$scan = $this->update_recursive_scandir($folder);
 		$return = array();
 		foreach ($scan as $value)
 		{
-			$worked = copy($value, str_replace(realpath(__DIR__ . '/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/'), realpath(__DIR__ . '/' . $value)));
+			$worked = copy($value, str_replace('/includes/classes/ftgr/Fightmon-the-Game--Reemon-dev/', '/' . $value));
 		}
-		unlink(realpath(__DIR__ . '/ftgr.zip'));
-		$this->update_remove_folder(realpath(__DIR__ . '/ftgr'));
+		unlink('/ftgr.zip');
+		$this->update_remove_folder('/ftgr');
 		return array(sprintf(\iMagine\_("Successfully upgraded to version %s."), str_replace('-', '.', $args[0])));
 	}
 }

@@ -2,10 +2,10 @@
 
 namespace iMagine;
 
-require_once realpath(__DIR__ . '/includes/constants/index.php');
-if (is_file(realpath(__DIR__ . '/includes/help/' . IMAGINE_LANG . '.php')))
+require_once 'includes/constants/index.php';
+if (is_file('/includes/help/' . IMAGINE_LANG . '.php'))
 {
-	require_once realpath(__DIR__ . '/includes/help/' . IMAGINE_LANG . '.php');
+	require_once 'includes/help/' . IMAGINE_LANG . '.php';
 }
 else
 {

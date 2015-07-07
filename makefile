@@ -1,7 +1,5 @@
-all: minifycss minifyjs test
-minifycss:
-	@yuicompressor css/init.css -o css/init.min.css
-minifyjs:
-	@yuicompressor js/init.js -o js/init.min.js
-test:
-	@php test.php "$(url)"
+target:=iMagine.phar
+php:=php
+d:=$$
+generate-phar:
+	@$(php) -d phar.readonly=Off generate-phar.php $(target)
