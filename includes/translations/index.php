@@ -14,7 +14,7 @@ if (function_exists("textdomain")) // Run only if gettext is enabled
 
 	bind_textdomain_codeset("iMagine_" . IMAGINE_VERSION, 'UTF-8'); // Use UTF-8
 }
-if (!function_exists("_"))
+if (!function_exists("iMagine\_"))
 {
 
 	function _($return)

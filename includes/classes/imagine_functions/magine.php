@@ -8,6 +8,6 @@ trait magine
 	{
 		global $iMagine;
 		$iMagine->people[$person]->energy-=100;
-		return [sprintf(\_("%s: With this animite, I magine %s!"),ucfirst($person),ucfirst($dreamcreature)),ucfirst($dreamcreature).": ".["furok"=>_("Let the fur fly!")][$dreamcreature]];
+		return [sprintf(\iMagine\_("%s: With this animite, I magine %s!"),ucfirst($person),ucfirst($dreamcreature)),ucfirst($dreamcreature).": ".["furok"=>_("Let the fur fly!")][$dreamcreature]];
 	}
 }
