@@ -4,15 +4,15 @@ namespace people_functions;
 
 trait auth_code
 {
-	public function auth_code($args = NULL)
+	public function auth_code($arg=NULL,...$excess)
 	{
+		return array(\iMagine\_("WARNING - The Update function has been removed temporarily due to changes in iMagine's structure."));
 		global $iMagine;
-		//return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to changes in FTG:R's structure.  Please check the dev-update branch for development of this feature."));
-		if ($args === NULL)
+		if ($arg === NULL)
 		{
 			return array(\iMagine\_('This function requires a parameter.  Please see the documentation.'));
 		}
-		if ($args[0] === strtolower(IMAGINE_UPDATE_CODE))
+		if ($arg === strtolower(IMAGINE_UPDATE_CODE))
 		{
 			return array(\iMagine\_('Your authorization code has been accepted.  You may proceed.'));
 			$iMagine->valid_session=TRUE;

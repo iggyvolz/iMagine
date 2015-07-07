@@ -4,7 +4,7 @@ namespace people_functions;
 
 trait changeto
 {
-	public function changeto($args = NULL)
+	public function changeto(...$excess)
 	{
 		global $iMagine;
 		$iMagine->me = explode('\\', get_class($this))[1];

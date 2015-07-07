@@ -4,7 +4,7 @@ namespace people_functions;
 
 trait magine
 {
-	public function magine($person=NULL,$dreamcreature=NULL,...$excess)
+	public function magine($dreamcreature=NULL,...$excess)
 	{
 		global $iMagine;
 		$iMagine->people[$person]->energy-=100;

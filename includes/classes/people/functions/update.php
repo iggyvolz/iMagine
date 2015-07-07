@@ -4,10 +4,10 @@ namespace people_functions;
 
 trait update
 {
-	public function update($args = NULL)
+	public function update(...$excess)
 	{
-		global $iMagine;
-		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to the iMagine move."));
+		return array(\iMagine\_("The update functions have been removed temporarily due to changes in iMagine's structure."));
+			global $iMagine;
 		if (!$iMagine->valid_session)
 		{
 			return array(\iMagine\_('You cannot update.  Please enter the update code with auth_code()'));
