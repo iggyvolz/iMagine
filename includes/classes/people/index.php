@@ -2,9 +2,9 @@
 
 namespace iMagine;
 
-require_once realpath(__DIR__ . '/Tony.php');
-require_once realpath(__DIR__ . '/Strag.php');
-require_once realpath(__DIR__ . '/Edyn.php');
+require_once 'includes/classes/people/Tony.php';
+require_once 'includes/classes/people/Strag.php';
+require_once 'includes/classes/people/Edyn.php';
 $tony=new Tony;
 $edyn=new Edyn;
 $strag=new Strag;

@@ -3,12 +3,12 @@
 namespace iMagine;
 
 // Intentionally non-alphabetized.  In order of prerequisition.
-require_once realpath(__DIR__ . '/error/index.php');
-require_once realpath(__DIR__ . '/constants/index.php');
-require_once realpath(__DIR__ . '/translations/index.php');
-require_once realpath(__DIR__ . '/classes/index.php');
-require_once realpath(__DIR__ . '/parse_contents/index.php');
+require_once 'includes/error/index.php';
+require_once 'includes/constants/index.php';
+require_once 'includes/translations/index.php';
+require_once 'includes/classes/index.php';
+require_once 'includes/parse_contents/index.php';
 if (!defined('IMAGINE_DIE')) // run modified die()
 {
-	require_once realpath(__DIR__ . '/page_render/index.php');
+	require_once 'includes/page_render/index.php';
 }

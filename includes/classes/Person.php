@@ -1,7 +1,7 @@
 <?php
 
 namespace iMagine;
-require_once realpath(__DIR__.'/imagine_functions/index.php');
+require_once 'includes/classes/imagine_functions/index.php';
 class Person
 {
 	use \iMagine_functions\_cutscene;
@@ -16,9 +16,6 @@ class Person
 	use \iMagine_functions\debug;
 	use \iMagine_functions\help;
 	use \iMagine_functions\magine;
-	use \iMagine_functions\mock_battle;
-	use \iMagine_functions\reset;
-	use \iMagine_functions\reset_battle;
 	use \iMagine_functions\test;
 	use \iMagine_functions\update;
 	use \iMagine_functions\version;
