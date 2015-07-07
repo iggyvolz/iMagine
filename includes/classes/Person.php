@@ -4,8 +4,6 @@ namespace iMagine;
 require_once realpath(__DIR__.'/imagine_functions/index.php');
 class Person
 {
-	use \iMagine_functions\__construct;
-	use \iMagine_functions\__destruct;
 	use \iMagine_functions\_cutscene;
 	use \iMagine_functions\_debug_off;
 	use \iMagine_functions\_debug_on;

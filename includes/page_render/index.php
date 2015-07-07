@@ -23,9 +23,9 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = $response;
-			if (!empty($_SESSION['iMagine']['returns']))
+			if (!empty($iMagine->returns))
 			{
-				foreach ($_SESSION['iMagine']['returns'] as $value)
+				foreach ($iMagine->returns as $value)
 				{
 					$response.=PHP_EOL;
 					$response.=$value;
@@ -68,9 +68,9 @@ if (!defined("IMAGINE_NO_OUTPUT"))
 			$response.=PHP_EOL;
 			$response.=_("For help and credits, type help then press enter.");
 			$response = trim($response);
-			if (!empty($_SESSION['iMagine']['returns']))
+			if (!empty($iMagine->returns))
 			{
-				foreach ($_SESSION['iMagine']['returns'] as $value)
+				foreach ($iMagine->returns as $value)
 				{
 					$response.=PHP_EOL;
 					$response.=$value;

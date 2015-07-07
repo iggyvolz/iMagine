@@ -6,9 +6,9 @@ trait reset
 {
 	public function reset($args = NULL)
 	{
-		global $initial_session;
-		session_destroy();
-		$_SESSION['iMagine'] = $initial_session;
+		global $iMagine;
+		unset($_SESSION['iMagine']);
+		$iMagine=new iMagine();
 		define('IMAGINE_REFRESH', TRUE);
 		return array('');
 	}

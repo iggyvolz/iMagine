@@ -1,6 +1,6 @@
 <?php
 
-$avaliable_battles[] = 'example';
+/*$avaliable_battles[] = 'example';
 _('example');
 
 class example extends battle
@@ -14,3 +14,4 @@ class example extends battle
 	}
 
 }
+*/

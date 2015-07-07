@@ -1,5 +1,5 @@
 <?php
-
+/*
 $avaliable_battles = array();
 
 class battle
@@ -86,3 +86,4 @@ class battle
 	}
 
 }
+*/

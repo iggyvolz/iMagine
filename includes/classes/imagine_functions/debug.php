@@ -6,31 +6,35 @@ trait debug
 {
 	public function debug($args = NULL)
 	{
+		global $iMagine;
 		if (!IMAGINE_DEBUG)
 		{
 			return array(\iMagine\_('Sorry, debug mode has been disabled by an administrator.'));
 		}
-		if (func_num_args() == 0 AND $_SESSION['iMagine']['debug'])
+		if (count($args)===0)
 		{
-			return $this->_debug_off();
-		}
-		if (func_num_args() == 0 AND !$_SESSION['iMagine']['debug'])
-		{
-			return $this->_debug_on();
+			if($iMagine->debug)
+			{
+				return $this->_debug_off();
+			}
+			else
+			{
+				return $this->_debug_on();
+			}
 		}
 		if ($args[0] == 'on')
 		{
 			return $this->_debug_on();
 		}
-		if ($args[0] == 'off')
+		else
 		{
 			return $this->_debug_off();
 		}
-		if ($_SESSION['iMagine']['debug'])
+		if ($iMagine->debug)
 		{
 			return $this->_debug_off();
 		}
-		if (!$_SESSION['iMagine']['debug'])
+		else
 		{
 			return $this->_debug_on();
 		}

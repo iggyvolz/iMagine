@@ -6,8 +6,9 @@ trait update
 {
 	public function update($args = NULL)
 	{
+		global $iMagine;
 		return array(\iMagine\_("WARNING - The Update function has been removed until further notice due to the iMagine move."));
-		if (!$_SESSION['iMagine']['valid_session'])
+		if (!$iMagine->valid_session)
 		{
 			return array(\iMagine\_('You cannot update.  Please enter the update code with auth_code()'));
 		}
