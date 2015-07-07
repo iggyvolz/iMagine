@@ -4,7 +4,6 @@ namespace iMagine;
 require_once 'includes/classes/imagine_functions/index.php';
 class Person
 {
-	use \iMagine_functions\_cutscene;
 	use \iMagine_functions\_debug_off;
 	use \iMagine_functions\_debug_on;
 	use \iMagine_functions\_move;
@@ -12,7 +11,6 @@ class Person
 	use \iMagine_functions\_update_remove_folder;
 	use \iMagine_functions\auth_code;
 	use \iMagine_functions\changeto;
-	use \iMagine_functions\cutscene;
 	use \iMagine_functions\debug;
 	use \iMagine_functions\magine;
 	use \iMagine_functions\test;
