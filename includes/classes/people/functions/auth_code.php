@@ -6,7 +6,7 @@ trait auth_code
 {
 	public function auth_code($arg=NULL,...$excess)
 	{
-		return array(\iMagine\_("WARNING - The Update function has been removed temporarily due to changes in iMagine's structure."));
+		return array(\iMagine\_("The update functions have been removed temporarily due to changes in iMagine's structure."));
 		global $iMagine;
 		if ($arg === NULL)
 		{
