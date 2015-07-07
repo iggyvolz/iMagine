@@ -5,7 +5,7 @@ window.onload = function() {
 
 function reload() {
     cssbackground = 0;
-    $.get('http://i.magine.tk/head.php', "contents=" + $('#contents').val() + "&uid=" + uid, function(data) {
+    $.get('http://i.magine.tk/head.php', "command=" + $('#contents').val() + "&uid=" + uid, function(data) {
         if (data === 'help') {
             window.location.replace("help.php");
         }
