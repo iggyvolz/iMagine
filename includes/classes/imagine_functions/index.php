@@ -13,7 +13,6 @@ require realpath(__DIR__.'/debug.php');
 require realpath(__DIR__.'/help.php');
 require realpath(__DIR__.'/magine.php');
 require realpath(__DIR__.'/mock_battle.php');
-require realpath(__DIR__.'/reset.php');
 require realpath(__DIR__.'/reset_battle.php');
 require realpath(__DIR__.'/test.php');
 require realpath(__DIR__.'/update.php');
