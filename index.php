@@ -8,7 +8,6 @@ require "envtest.php";
 require "config.php";
 error_reporting(E_ALL);
 ini_set("display_errors",1);
-@session_start(); // Don't return an error if session already started
 require_once realpath(__DIR__ . '/includes/index.php');
 if (!isset($_POST['contents']))
 {

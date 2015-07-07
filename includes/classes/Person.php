@@ -1,7 +1,7 @@
 <?php
 
 namespace iMagine;
-require realpath(__DIR__.'/imagine_functions/index.php');
+require_once realpath(__DIR__.'/imagine_functions/index.php');
 class Person
 {
 	use \iMagine_functions\__construct;
@@ -25,4 +25,6 @@ class Person
 	use \iMagine_functions\test;
 	use \iMagine_functions\update;
 	use \iMagine_functions\version;
+	public $energy=0;
+	public $moves=[];
 }
