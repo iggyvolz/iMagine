@@ -5,6 +5,7 @@ namespace iMagine;
 require "config.php";
 error_reporting(E_ALL);
 ini_set("display_errors",1);
+define("FROM_INDEX",true);
 require_once 'includes/index.php';
 $iMagine=unserialize(file_get_contents($argv[1]));
 $contents=$argv[2];
