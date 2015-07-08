@@ -1,0 +1,85 @@
+<HEAD>
+	<title>iMagine - Documenation</title>
+	<style>
+	@import url(http://fonts.googleapis.com/css?family=Oswald);
+	@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+		.italic
+		{
+			font-style:italic;
+		}
+		.header{
+			font-family:"Oswald",'Arial';
+			font-size:50px;
+			text-align:center;
+			background-color:#dedede;
+			width:96%;
+			padding:3%;
+		}
+		body,html{
+			font-family:"Open Sans",Calibri,Arial;
+			margin:0;
+			padding:0;
+		}
+		.main{
+			margin:10px;
+		}
+	</style>
+</HEAD>
+<BODY>
+<div class="header">iMagine Documentation</div>
+<hr style="margin:0;" /><br/>
+<div class="main">
+	Please note: This program is in development.  The help page may not be completely up-to-date, please <a href="https://github.com/iggyvolz/iMagine/issues">check current issues</a> or, if none exist, <a href="https://github.com/iggyvolz/iMagine/issues/new">add a new one</a>.
+	<h2>Download</h2>
+	<p>For non-developers, you may with to simply use the <a href="https://iggyvolz.github.com/iMagine/head.html">pre-built version</a>.  However, if you would like to run iMagine on your own computer, you will need to have PHP 5.6.0.  GNU Make is also recommended, but it can be worked around if not installed.
+	<p>First, run make reset-session session-target=<path-to-desired-session-file>.  session-target can be omitted and it will default to the file session.  Then you can run php index.php <path-to-session-file> <command>.  Remember to escape the session file and the command.</p>
+	<p>You may also wish to compile a phar archive of the entire project - you may do so by running make generate-phar phar-target=<path-to-phar-file>.  Again, phar-taget can be omitted.  The phar file can now be treated just like index.php.</p>
+  <p>If you would prefer not to compile yourself, the latest successfully compiling binary is built by  <a href="http://192.99.42.178:8080">Jenkins</a> shortly after each commit.</p>
+  <p>If you would prefer to simply use point-releases (these point-releases are tested more thoroughly), please see the <a href="https://github.com/iggyvolz/iMagine/releases">Github Releases Page</a>.</p>
+  <h2>Syntax</h2>
+	<p>All commands are case-insensitive and will be converted immediately to all lowercase.  The syntax is: person.action(parameter).  However, the person and/or the parameter can be omitted for some functions.  For example, the function version requires no name or parameters.  Any of these will do the same thing:<p>
+	<ul>
+		<li>i.version()</li>
+		<li>i.version(foo)</li>
+		<li>i.version</li>
+		<li>version()</li>
+		<li>version(foo)</li>
+		<li>version</li>
+	</ul>
+	<p>As you noticed in the example above, you can use the person i.  This is the person you are currently playing as (you can switch using the switchto command).  You can also refer to anyone by name in the person spot (for example, tony.reset).</p>
+	<h2>People</h2>
+	<h3>Tony</h3>
+	Tony is selected by default.  For more info, see the <a href="http://magination.wikia.com/wiki/Tony_Jones_(TV_Series)">Magi Nation Wiki</a>.
+	<h4>Furok</h4>
+	Furok is Tony's main dream creature and the only one currently implemented in the game. (see <a href="https://github.com/iggyvolz/iMagine/issues/12">#12</a>)
+	<h3>Edyn</h3>
+	For more info, see the <a href="http://magination.wikia.com/wiki/Edyn">Magi Nation Wiki</a>.
+	<h4>Ugger</h4>
+	Ugger is Edyn's main dream creature and the only one currently implemented in the game. (see <a href="https://github.com/iggyvolz/iMagine/issues/13">#13</a>)
+	<h3>Strag</h3>
+	For more info, see the <a href="http://magination.wikia.com/wiki/Strag">Magi Nation Wiki</a>.
+	<h4>Freep</h4>
+	Freep is Strag's main dream creature and the only one currently implemented in the game. (see <a href="https://github.com/iggyvolz/iMagine/issues/14">#14</a>)
+	<h2>Functions</h2>
+	<h3>Changeto</h3>
+	<p class="italic">Note - Name is technically optional, but this function is pointless if the name is not included or "i" is used.  Name must be a valid person.  Parameters are optional and will be ignored if included.</p>
+	This changes the value of the person i (or no person) to the person in the name.
+	<h3>Magine</h3>
+	<p class="italic">Note - Name is optional, defaulting to "i".  If included, it must be a valid person.  Parameter is required to be a valid dream creature that is owned by the person listed in name and be in the dream plane before being magined.  In addition, the person must have at least 100 energy to spend on magining the dream creature.</p>
+	This "magines" a Dream Creature.  It costs 100 energy (subject to change).  It brings the Dream Creature in parameter from the Dream Plane (where they rest) to the real world, where they can fight (coming soon).  For more info, see the <a href="http://magination.wikia.com/wiki/Animite#In_the_TV_Series">Magi Nation Wiki</a>.  Person must be a valid person.  Parameter must be a Dream Creature that is in the Dream Plane.  Person must have Parameter's Animite (the stone used to magine dream creatures), that is, you cannot magine someone else's Dream Creature.
+	<h3>ToTheDreamPlane</h3>
+	<p class="italic">Note - Name is required to be a valid dream creature that is in battle before this action is called.  Parameter is optional and will be ignored if included.</p>
+	This returns a Dream Creature to the Dream Plane.  For more info, see the <a href="http://magination.wikia.com/wiki/Animite#In_the_TV_Series">Magi Nation Wiki</a>.  Person must be a Dream Creature that is active (not in the Dream Plane).  Parameter is ignored.
+	<h3>Version</h3>
+  <p class="italic">Note - Name and parameters are optional and will be ignored if included.</p>
+  This returns the current version of the software.  If it is a development version, it will also include the latest commit number.
+	<h3>Help</h3>
+  <p class="italic">Note - Implimentation of this function is client-specific.  It is recommended that simply "help" is accepted and redirected to a help page similar to this one.</p>
+  <h2>Credit</h2>
+	<p>To see all authors of this software, please see the <a href="http://github.com/iggyvolz/iMagine">GitHub repository</a></p>
+	<p>Magi-Nation and its respective characters, names, spells, etc. are copyrighted by Interactive Imagination Corporation, 2i, and Cookie Jar Entertainment. This game was created in the fan base and claims no affiliation with the copyright holders.</p>
+	<p>A considerable amount of information for the game is taken from the <a href="http://magination.wikia.com/">Magi Nation Wiki</a>, including names of characters, statistics, plot line summaries, etc.  These are copyright of Interactive Imagination Corporation, 2i, and Cookie Jar Entertainment (see above).</p>
+	<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</p>
+	<p>We offer no guarantee or warranty that this software will work as described, or even at all.  We reserve the right to discontinue this software at any time.  You use this software at your own risk, and the software is subject to change dramatically between versions.</p>
+</div>
+</BODY>
