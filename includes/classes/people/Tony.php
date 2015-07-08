@@ -7,6 +7,6 @@ class Tony extends Person
 	public function __construct()
 	{
 		$this->energy=IMAGINE_TONY_STARTING_ENERGY;
-		$this->dreamcreatures=["furok"=>new Furok()];
+		$this->dreamcreatures=["furok"=>new Furok("Tony")];
 	}
 }
