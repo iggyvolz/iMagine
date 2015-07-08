@@ -8,24 +8,52 @@ ini_set("display_errors",1);
 define("FROM_INDEX",true);
 require_once 'includes/index.php';
 $iMagine=unserialize(file_get_contents($argv[1]));
+register_shutdown_function(function(){file_put_contents($argv[1],serialize($iMagine));});
 $contents=$argv[2];
 $iMagine->returns[] = '>' . $contents;
-if (parse_contents($contents)) // Set $action, $person, $pars
+list($person,$action,$pars)=parse_contents($contents);
+if(isset($iMagine->people[$person]))
 {
-	$iMagine->returns[] = 'Who is ' . $person . '???';
-	goto end;
-}
-if (!is_callable(array($iMagine->people[$person], $action)) OR $action[0] === '_')
-{
-	$iMagine->returns[] = ucfirst($person) . ': How do I "' . $action . '"?';
+	if (!is_callable(array($iMagine->people[$person], $action)) OR $action[0] === '_')
+	{
+		$iMagine->returns[] = ucfirst($person) . ': How do I "' . $action . '"?';
+	}
+	else
+	{
+		$returned = call_user_func(array($iMagine->people[$person], $action), ...$pars);
+		foreach ($returned as $value)
+		{
+			$iMagine->returns[] = $value;
+		}
+	}
 }
 else
 {
-	$returned = call_user_func(array($iMagine->people[$person], $action), ...$pars);
-	foreach ($returned as $value)
+	$owner=null;
+	foreach(array_keys($iMagine->people) as $possibleowner)
 	{
-		$iMagine->returns[] = $value;
+		if(isset($iMagine->people[$possibleowner]->dreamcreatures[$person]))
+		{
+			$owner=$possibleowner;
+		}
+	}
+	if($owner)
+	{
+		if (!is_callable(array($iMagine->people[$owner]->dreamcreatures[$person], $action)) OR $action[0] === '_')
+		{
+			$iMagine->returns[] = ucfirst($person) . ': How do I "' . $action . '"?';
+		}
+		else
+		{
+			$returned = call_user_func(array($iMagine->people[$owner]->dreamcreatures[$person], $action), ...$pars);
+			foreach ($returned as $value)
+			{
+				$iMagine->returns[] = $value;
+			}
+		}
+	}
+	else
+	{
+		$iMagine->returns[] = 'Who is ' . $person . '???';
 	}
 }
-end:
-file_put_contents($argv[1],serialize($iMagine));

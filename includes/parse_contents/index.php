@@ -2,9 +2,9 @@
 
 namespace iMagine;
 
-function parse_contents($contents) // Returns true if invalid person.  Invalid action is checked elsewhere
+function parse_contents($contents)
 {
-	global $iMagine, $action, $person, $pars;
+	global $iMagine;
 	if (strpos($contents, '.') === false)
 	{
 		$actionWithPars = $contents;
@@ -20,17 +20,6 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 	else
 	{
 		$person = explode('.', $contents)[0];
-		if (!in_array($person, array(
-					strtolower(_("Tony")),
-					strtolower(_("Edyn")),
-					strtolower(_("Strag")),
-					strtolower(_("Furok")),
-					strtolower(_("Freep")),
-					strtolower(_("Ugger"))
-				))) // Prevent access of unwanted variables
-		{
-			return true;
-		}
 	}
 	$action = explode('(', $actionWithPars)[0];
 	if (strpos($contents, '(') === false)
@@ -43,5 +32,5 @@ function parse_contents($contents) // Returns true if invalid person.  Invalid a
 		$pars = explode(')', $pars)[0];
 		$pars = explode(',', $pars);
 	}
-	return false;
+	return [$person,$action,$pars];
 }
