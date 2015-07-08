@@ -15,6 +15,10 @@ trait magine
 		{
 			return [sprintf(\iMagine\_("%s: %s is already in battle!"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature))];
 		}
+		if($this->energy<100)
+		{
+			return [sprintf(\iMagine\_("%s: I don't have enough energy to magine %s!"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature))];
+		}
 		$this->dreamcreatures[$dreamcreature]->indreamplane=false;
 		$this->energy-=100;
 		return [sprintf(\iMagine\_("%s: With this animite, I magine %s!"),ucfirst(\iMagine\_(explode("\\",get_class($this))[1])),ucfirst($dreamcreature)),ucfirst($dreamcreature).": ".["furok"=>\iMagine\_("Let the fur fly!")][$dreamcreature]];
