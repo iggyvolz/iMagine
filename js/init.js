@@ -1,6 +1,14 @@
 window.onload = function() {
     $('#results').scrollTop($('#results').prop('scrollHeight'));
-    uid = Math.floor(Math.random() * 100000);
+    if (localStorage&&localStorage.iMagineUID)
+    {
+      uid = Number(localStorage.iMagineUID);
+    }
+    else
+    {
+      uid = Math.floor(Math.random() * 100000);
+      localStorage.iMagineUID=uid;
+    }
 };
 
 function reload() {
