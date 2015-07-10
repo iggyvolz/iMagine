@@ -18,7 +18,7 @@ function reload() {
         $('#tony_energy_disp').html(data.tony_energy);
         $('#edyn_energy_disp').html(data.edyn_energy);
         $('#strag_energy_disp').html(data.strag_energy);
-        console.log(data.dump);
+        console.log(data);
         $('#errors').html(data.errors);
     }, "json").fail(function(data) {
         console.log(data);
