@@ -4,12 +4,12 @@ window.onload = function() {
 };
 
 function reload() {
-    if ($('#contents').val() === "help") {
-        window.location.replace("help.html");
-    }
     $('#results').val($('#results').val()+"\n>"+$('#contents').val());
     var conts=$('#contents').val();
     $('#contents').val("");
+        if (conts === "help") {
+            window.location.replace("help.html");
+        }
     $.get('http://i.magine.tk/head.php', "command=" + conts + "&uid=" + uid, function(data) {
         $('#results').val($('#results').val()+"\n"+data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
