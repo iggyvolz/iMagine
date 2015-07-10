@@ -7,7 +7,7 @@ function reload() {
     if ($('#contents').val() === "help") {
         window.location.replace("help.html");
     }
-    $('#results').val($('#results').val()+"\n"+$('#contents').val());
+    $('#results').val($('#results').val()+"\n>"+$('#contents').val());
     $('#contents').val("");
     $.get('http://i.magine.tk/head.php', "command=" + $('#contents').val() + "&uid=" + uid, function(data) {
         $('#results').val($('#results').val()+"\n"+data.response);
