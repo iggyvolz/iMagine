@@ -25,7 +25,7 @@ function reload() {
         handled=true;
     }
     if (conts === "reset") {
-        localStorage.removeItem("iMagineUID");
+        localStorage.setItem("iMagineUID",Math.floor(Math.random() * 100000));
         localStorage.removeItem("iMagineResults");
         window.location.reload();
         handled=true;
