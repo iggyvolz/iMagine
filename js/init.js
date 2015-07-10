@@ -19,9 +19,13 @@ function reload() {
     $('#results').val($('#results').val()+"\n>"+$('#contents').val());
     var conts=$('#contents').val();
     $('#contents').val("");
-        if (conts === "help") {
-            window.location.replace("help.html");
-        }
+    if (conts === "help") {
+        window.location.replace("help.html");
+    }
+    if (localStorage)
+    {
+      localStorage.iMagineResults=$('#results').val();
+    }
     $.get('http://i.magine.tk/head.php', "command=" + conts + "&uid=" + uid, function(data) {
         $('#results').val($('#results').val()+"\n"+data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
