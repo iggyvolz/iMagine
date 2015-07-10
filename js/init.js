@@ -7,7 +7,7 @@ window.onload = function() {
     else
     {
       uid = Math.floor(Math.random() * 100000);
-      localStorage.setItem("iMagineUID",uid.tostring());
+      localStorage.setItem("iMagineUID",uid);
     }
     if (localStorage&&localStorage.getItem("iMagineResults"))
     {
