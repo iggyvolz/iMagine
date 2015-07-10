@@ -10,7 +10,6 @@ require_once 'includes/index.php';
 $iMagine=unserialize(file_get_contents($argv[1]));
 register_shutdown_function(function(){global $iMagine,$argv;file_put_contents($argv[1],serialize($iMagine));page_render();});
 $contents=$argv[2];
-$iMagine->returns[] = '>' . $contents;
 list($person,$action,$pars)=parse_contents($contents);
 if(isset($iMagine->people[$person]))
 {
