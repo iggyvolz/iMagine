@@ -8,8 +8,9 @@ function reload() {
         window.location.replace("help.html");
     }
     $('#results').val($('#results').val()+"\n>"+$('#contents').val());
+    var conts=$('#contents').val();
     $('#contents').val("");
-    $.get('http://i.magine.tk/head.php', "command=" + $('#contents').val() + "&uid=" + uid, function(data) {
+    $.get('http://i.magine.tk/head.php', "command=" + conts + "&uid=" + uid, function(data) {
         $('#results').val($('#results').val()+"\n"+data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
         $('#tony_energy').val(data.tony_energy);
