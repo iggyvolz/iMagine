@@ -6,16 +6,12 @@ function page_render()
 {
 	global $iMagine;
 	$DIR=__DIR__;
-	$response = sprintf(_("Welcome to iMagine %s!"), ((is_dir(__DIR__."/../../.git")&&`git 2>&1|grep "command not found"`===NULL)?(explode("-",`cd "$DIR";git describe --tags|tr -d '\n'`)[0]):(IMAGINE_VERSION)));
-	$response.=PHP_EOL;
-	$response.=_("For help and credits, type help then press enter.");
-	$response = trim($response);
+	$response="";
 	if (!empty($iMagine->returns))
 	{
 		foreach ($iMagine->returns as $value)
 		{
-			$response.=PHP_EOL;
-			$response.=$value;
+			$response.=$value.PHP_EOL;
 		}
 	}
 	$globals_dump = $GLOBALS;
