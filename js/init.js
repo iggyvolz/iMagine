@@ -7,9 +7,10 @@ function reload() {
     if ($('#contents').val() === "help") {
         window.location.replace("help.html");
     }
+    $('#results').val($('#results').val()+"\n"+$('#contents').val());
+    $('#contents').val("");
     $.get('http://i.magine.tk/head.php', "command=" + $('#contents').val() + "&uid=" + uid, function(data) {
-        $('#contents').val("");
-        $('#results').val(data.response);
+        $('#results').val($('#results').val()+"\n"+data.response);
         $('#results').scrollTop($('#results').prop("scrollHeight"));
         $('#tony_energy').val(data.tony_energy);
         $('#edyn_energy').val(data.edyn_energy);
