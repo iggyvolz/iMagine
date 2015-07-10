@@ -9,6 +9,10 @@ window.onload = function() {
       uid = Math.floor(Math.random() * 100000);
       localStorage.iMagineUID=uid;
     }
+    if (localStorage&&localStorage.iMagineResults)
+    {
+      $('#results').val(localStorage.iMagineResults);
+    }
 };
 
 function reload() {
@@ -34,4 +38,8 @@ function reload() {
         $('#errors').html(data.responseText);
         $('#contents').val("");
     });
+    if (localStorage)
+    {
+      localStorage.iMagineResults=$('#results').val();
+    }
 }
